@@ -557,34 +557,14 @@
           "en": "Direct register configuration for RCC, GPIO, TIM, EXTI, USART, and NVIC"
         },
         {
-          "ko": "TIM2를 1MHz free-running counter로 구성해 초음파 ECHO 펄스 폭을 마이크로초 단위 측정",
-          "ja": "TIM2を1MHzフリーランニングカウンタとして構成し、超音波ECHOパルス幅をマイクロ秒単位で計測",
-          "en": "Configured TIM2 as a 1 MHz free-running counter to measure ultrasonic ECHO pulse width in microseconds"
-        },
-        {
           "ko": "USART2 수신 인터럽트는 32바이트 링 버퍼 적재만 수행하고 파싱은 메인 루프로 분리",
           "ja": "USART2受信割り込みは32バイトリングバッファへの格納だけに限定し、解析をメインループへ分離",
           "en": "Reduced the USART2 receive ISR to filling a 32-byte ring buffer and moved parsing to the main loop"
         },
         {
-          "ko": "진입 10cm·이탈 15cm 임계값과 3회 연속 확인으로 경계 구간 채터링 억제",
-          "ja": "進入10cm・離脱15cmのしきい値と3回連続確認で境界付近のチャタリングを抑制",
-          "en": "Suppressed boundary chatter with 10 cm entry and 15 cm exit thresholds plus three consecutive confirmations"
-        },
-        {
-          "ko": "TIM5 20kHz PWM으로 H-bridge 제어, 방향 전환 전 출력 차단으로 즉시 역전 방지",
-          "ja": "TIM5の20kHz PWMでHブリッジを制御し、方向転換前の出力遮断で即時反転を防止",
-          "en": "Controlled an H-bridge with 20 kHz TIM5 PWM and disabled outputs before direction changes to prevent instant reversal"
-        },
-        {
           "ko": "ATmega128A의 active-low ARM/E-STOP·디바운스·heartbeat timeout·latch·watchdog로 2-MCU 안전 구조 설계",
           "ja": "ATmega128Aのactive-low ARM/E-STOP、デバウンス、heartbeat timeout、latch、watchdogによる2-MCU安全構成を設計",
           "en": "Designed a two-MCU safety structure using ATmega128A active-low ARM/E-STOP, debounce, heartbeat timeout, latch state, and watchdog"
-        },
-        {
-          "ko": "I2C 센서와 ADC 데이터를 DMA로 수신해 CPU의 프레임 조립 부담 제거",
-          "ja": "I2CセンサーとADCデータをDMAで受信し、CPUのフレーム組み立て負荷を削減",
-          "en": "Used DMA for I2C sensor and ADC reception to remove frame-assembly work from the CPU"
         }
       ],
       "technologies": [
@@ -636,11 +616,6 @@
           "en": "Received anomaly events from five microservices in real time through a Kafka CDC pipeline"
         },
         {
-          "ko": "질문 카테고리·분류 신뢰도·RAG 컨텍스트·히스토리 4단계로 Agent 조합을 동적 선택",
-          "ja": "質問カテゴリ・分類信頼度・RAGコンテキスト・履歴の4段階でAgent構成を動的選択",
-          "en": "Dynamically selected agent combinations using question category, classification confidence, RAG context, and history"
-        },
-        {
           "ko": "Gemini 원인분석·GPT-4 해결전략·Clova 비용평가 결과를 Claude가 중재",
           "ja": "Geminiの原因分析・GPT-4の解決戦略・Clovaの費用評価をClaudeが仲裁",
           "en": "Used Claude to mediate Gemini root-cause analysis, GPT-4 resolution strategies, and Clova cost estimates"
@@ -651,19 +626,9 @@
           "en": "Stopped early on consensus and capped discussions at three rounds"
         },
         {
-          "ko": "Agent 실패를 failed_agents에 기록하고 나머지 워크플로우 지속",
-          "ja": "Agent障害をfailed_agentsに記録し、残りのワークフローを継続",
-          "en": "Recorded individual agent failures and continued the remaining workflow"
-        },
-        {
           "ko": "ChromaDB와 Elasticsearch를 병렬 조회하고 한쪽 장애 시에도 결과 제공",
           "ja": "ChromaDBとElasticsearchを並列検索し、片方の障害時も結果を提供",
           "en": "Queried ChromaDB and Elasticsearch in parallel and continued when either engine failed"
-        },
-        {
-          "ko": "Redis·Elasticsearch 장애 전파를 fallback과 로컬 캐시로 차단",
-          "ja": "Redis・Elasticsearch障害の伝播をフォールバックとローカルキャッシュで遮断",
-          "en": "Stopped Redis and Elasticsearch failures from cascading through fallback paths and a local cache"
         }
       ],
       "technologies": [
@@ -734,21 +699,6 @@
           "en": "Separated Spring Boot API orchestration from FastAPI data pipelines and model serving"
         },
         {
-          "ko": "KAMIS 가격 데이터 약 5,000건을 매일 자동 수집",
-          "ja": "KAMIS価格データ約5,000件を毎日自動収集",
-          "en": "Automatically collected about 5,000 KAMIS price records per day"
-        },
-        {
-          "ko": "24지역×15품목×2등급 호출에 exponential backoff·세션 재사용·연도별 분할 적용",
-          "ja": "24地域×15品目×2等級の呼び出しにexponential backoff・セッション再利用・年単位分割を適用",
-          "en": "Applied exponential backoff, session reuse, and year-based chunking across 24 regions, 15 products, and two grades"
-        },
-        {
-          "ko": "팀원이 개발한 PyTorch LSTM 모델의 서빙 아키텍처와 백엔드 구축",
-          "ja": "チームメンバーが開発したPyTorch LSTMモデルの配信アーキテクチャとバックエンドを構築",
-          "en": "Built the serving architecture and backend for a PyTorch LSTM model developed by a teammate"
-        },
-        {
           "ko": "Nginx 504 병목을 레이어별로 추적해 추론 응답 60초에서 30초로 단축",
           "ja": "Nginx 504のボトルネックをレイヤー別に追跡し、推論応答を60秒から30秒へ短縮",
           "en": "Traced an Nginx 504 bottleneck layer by layer and reduced inference response time from 60 to 30 seconds"
@@ -757,11 +707,6 @@
           "ko": "EBS 8GB Full로 인한 서버 다운을 50GB 확장·로그 로테이션으로 복구",
           "ja": "EBS 8GBの容量枯渇による停止を50GBへの拡張とログローテーションで復旧",
           "en": "Recovered from an EBS 8 GB disk-full outage by expanding to 50 GB and adding log rotation"
-        },
-        {
-          "ko": "배치 자원 경합을 FastAPI 분리로 해결하고 VPC·보안그룹·IAM·SSH 제한 재정비",
-          "ja": "バッチのリソース競合をFastAPI分離で解消し、VPC・セキュリティグループ・IAM・SSH制限を再整備",
-          "en": "Resolved batch resource contention by separating FastAPI workloads and revised VPC, security group, IAM, and SSH controls"
         }
       ],
       "technologies": [
@@ -781,6 +726,14 @@
         "en": "Korea Agro-Fisheries & Food Trade Corporation President's Award · 8th of 56 teams"
       },
       "links": [
+        {
+          "label": {
+            "ko": "데모",
+            "ja": "デモ",
+            "en": "Demo"
+          },
+          "url": "https://ugly-pick.netlify.app/"
+        },
         {
           "label": {
             "ko": "데이터·서빙 저장소",
@@ -846,16 +799,6 @@
           "en": "Separated raw and processed data and used checkpoints for restartable collection"
         },
         {
-          "ko": "Parquet·PyArrow로 최종 246,980건 저장",
-          "ja": "Parquet・PyArrowで最終246,980件を保存",
-          "en": "Stored the final 246,980 records with Parquet and PyArrow"
-        },
-        {
-          "ko": "PDF URL 56,569건 중 6,067건을 내려받아 전문 5,684건 확보",
-          "ja": "PDF URL 56,569件から6,067件を取得し、全文5,684件を確保",
-          "en": "Downloaded 6,067 of 56,569 PDF URLs and secured 5,684 full-text papers"
-        },
-        {
           "ko": "Full-text 5,684·Abstract 12,163·Title 229,133으로 최종 분리",
           "ja": "Full-text 5,684・Abstract 12,163・Title 229,133に最終分類",
           "en": "Final split: 5,684 full text, 12,163 abstract, and 229,133 title-only records"
@@ -915,11 +858,6 @@
           "en": "Implemented REST APIs connecting emotional states with daily and monthly spending"
         },
         {
-          "ko": "CoolSMS 연동 스케줄링 알림과 Kakao OAuth 2.0 구현",
-          "ja": "CoolSMS連携のスケジュール通知とKakao OAuth 2.0を実装",
-          "en": "Implemented scheduled CoolSMS notifications and Kakao OAuth 2.0"
-        },
-        {
           "ko": "AWS EC2·Route 53·ALB·HTTPS 프로덕션 환경 구축",
           "ja": "AWS EC2・Route 53・ALB・HTTPSの本番環境を構築",
           "en": "Built a production environment with AWS EC2, Route 53, ALB, and HTTPS"
@@ -951,6 +889,14 @@
         "en": "Handong Software Competition Encouragement Award"
       },
       "links": [
+        {
+          "label": {
+            "ko": "데모",
+            "ja": "デモ",
+            "en": "Demo"
+          },
+          "url": "https://ssobbi.netlify.app/"
+        },
         {
           "label": {
             "ko": "조직 저장소",
@@ -993,11 +939,6 @@
       },
       "highlights": [
         {
-          "ko": "MBTI식 맵기 레벨 테스트를 서비스 진입점으로 설계",
-          "ja": "MBTI形式の辛さレベル診断をサービスの入口として設計",
-          "en": "Designed an MBTI-style spice-level test as the service entry point"
-        },
-        {
           "ko": "44명 설문을 직접 설계·진행해 81.8% 긍정 반응 확인",
           "ja": "44名対象のアンケートを設計・実施し81.8%の肯定的反応を確認",
           "en": "Designed and ran a 44-person survey that returned 81.8% positive responses"
@@ -1011,11 +952,6 @@
           "ko": "외부 API 호출 약 70% 절감, 응답 300ms에서 50ms로 개선",
           "ja": "外部API呼び出しを約70%削減し、応答を300msから50msへ改善",
           "en": "Reduced external API calls by about 70% and latency from 300 ms to 50 ms"
-        },
-        {
-          "ko": "NCP 실서비스 배포·운영과 Google OAuth2·Kakao Maps 연동",
-          "ja": "NCPでの本番デプロイ・運用とGoogle OAuth2・Kakao Maps連携",
-          "en": "Deployed and operated on NCP with Google OAuth2 and Kakao Maps integration"
         },
         {
           "ko": "기획 담당자 이탈 후 기획 공백을 메우고 팀 구조 재정립",
