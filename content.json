@@ -2003,11 +2003,6 @@
       "ja": "韓東大学校",
       "en": "Handong Global University"
     },
-    "school": {
-      "ko": "전산전자공학부",
-      "ja": "電算電子工学部",
-      "en": "School of Computer Science and Electrical Engineering"
-    },
     "major": {
       "ko": "전자공학 · 컴퓨터공학 전공",
       "ja": "電子工学・コンピュータ工学専攻",
@@ -2021,12 +2016,6 @@
         "ja": "2020.03〜2026.02・卒業",
         "en": "March 2020 – February 2026 · Graduated"
       }
-    },
-    "gpa": "3.55 / 4.50",
-    "details": {
-      "ko": "전공 평점 3.58 · 백분위 90.5 · 총 130학점",
-      "ja": "専攻GPA 3.58・百分位90.5・取得130単位",
-      "en": "Major GPA 3.58 · 90.5 percentile score · 130 credits"
     }
   },
   "credentials": {
@@ -2046,17 +2035,7 @@
         }
       }
     ],
-    "languages": [
-      {
-        "name": "TOEIC",
-        "score": "815"
-      },
-      {
-        "name": "TOEIC Speaking",
-        "score": "IH",
-        "date": "2025-08"
-      }
-    ],
+    "languages": [],
     "military": {
       "ko": "병역 이행 · 의무경찰 · 2021.02 ~ 2022.08 · 병장 만기제대",
       "ja": "兵役履行済み・義務警察・2021.02〜2022.08・兵長満期除隊",

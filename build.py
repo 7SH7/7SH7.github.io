@@ -121,9 +121,9 @@ COPY: dict[str, dict[str, str]] = {
         "en": "Technologies are paired with the context in which they were used.",
     },
     "education_intro": {
-        "ko": "전자·컴퓨터공학 기반과 검증된 자격·어학 정보.",
-        "ja": "電子・コンピュータ工学の基礎と確認済みの資格・語学情報。",
-        "en": "Electrical and computer engineering foundations with verified credentials and language scores.",
+        "ko": "전자·컴퓨터공학 기반과 보유 자격.",
+        "ja": "電子・コンピュータ工学の基礎と保有資格。",
+        "en": "Electrical and computer engineering foundations and held credentials.",
     },
     "contact_intro": {
         "ko": "프로젝트와 기술 판단의 근거는 아래 공개 링크에서 확인 가능.",
@@ -141,7 +141,7 @@ COPY: dict[str, dict[str, str]] = {
     "table_stack": {"ko": "기술", "ja": "技術", "en": "Technology"},
     "table_context": {"ko": "사용 맥락", "ja": "使用文脈", "en": "Usage context"},
     "education_card": {"ko": "학력", "ja": "学歴", "en": "Education"},
-    "credentials_card": {"ko": "자격 · 어학 · 병역", "ja": "資格・語学・兵役", "en": "Credentials, Languages & Service"},
+    "credentials_card": {"ko": "자격 · 병역", "ja": "資格・兵役", "en": "Credentials & Service"},
     "certifications": {"ko": "자격", "ja": "資格", "en": "Certifications"},
     "languages": {"ko": "어학", "ja": "語学", "en": "Languages"},
     "pending_value": {"ko": "교체 필요", "ja": "要更新", "en": "Replace before publishing"},
@@ -717,6 +717,12 @@ class Renderer:
             f'{" · " + esc(item["date"]) if item.get("date") else ""}</li>'
             for item in credentials["languages"]
         )
+        language_block = ""
+        if languages:
+            language_block = (
+                self.localized("h3", "credentials.languages", COPY["languages"])
+                + f"<ul>{languages}</ul>"
+            )
         return (
             '<section class="section" id="education"><div class="container">'
             f'{self.section_heading("07", "education", sections["education"], "education_intro")}'
@@ -724,18 +730,13 @@ class Renderer:
             '<article class="panel">'
             f'{self.localized("p", "education.card.label", COPY["education_card"], ATTR_EYEBROW)}'
             f'{self.localized("h3", "education.institution", education["institution"])}'
-            f'{self.localized("p", "education.school", education["school"], ATTR_META)}'
             f'{self.localized("p", "education.major", education["major"])}'
-            f'{self.localized("p", "education.period", education["period"]["display"], ATTR_META)}'
-            f'<p><strong>GPA {esc(education["gpa"])}</strong></p>'
-            f'{self.localized("p", "education.details", education["details"], ATTR_MUTED)}'
             '</article>'
             '<article class="panel">'
             f'{self.localized("p", "credentials.card.label", COPY["credentials_card"], ATTR_EYEBROW)}'
             f'{self.localized("h3", "credentials.certifications", COPY["certifications"])}'
             f'<ul>{certifications}</ul>'
-            f'{self.localized("h3", "credentials.languages", COPY["languages"])}'
-            f'<ul>{languages}</ul>'
+            f'{language_block}'
             f'{self.localized("p", "credentials.military", credentials["military"], ATTR_MUTED)}'
             '</article>'
             '</div></div></section>'
@@ -841,6 +842,10 @@ def validate_output(document: str) -> None:
         raise ValueError(f"Generated HTML is missing required content: {missing}")
 
     prohibited = (
+        "GPA",
+        "TOE" + "IC",
+        "전공 " + "평점",
+        "백분위",
         "AI Dev" + "Ops",
         "assume" + "_role",
         "agent-" + "readonly",
