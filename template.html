@@ -608,13 +608,23 @@
       position: relative;
       display: grid;
       gap: 0.75rem;
+      width: 100%;
       padding: clamp(1.25rem, 3vw, 2rem);
       padding-right: clamp(3.25rem, 6vw, 4.5rem);
-      list-style: none;
+      border: 0;
+      background: none;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
     }
 
-    .project-overview::-webkit-details-marker {
-      display: none;
+    .project-overview::after {
+      transition: transform 200ms ease;
+    }
+
+    .project-overview:hover::after {
+      transform: scale(1.25);
     }
 
     .project-overview::after {
@@ -626,14 +636,6 @@
       font-family: var(--mono);
       font-size: 1.4rem;
       line-height: 1;
-    }
-
-    .project-card[open] .project-overview {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-card[open] .project-overview::after {
-      content: "−";
     }
 
     .project-title {
@@ -1099,12 +1101,6 @@
       background: var(--panel);
     }
 
-    .screen a {
-      display: block;
-      overflow: hidden;
-      line-height: 0;
-    }
-
     .screen img {
       width: 100%;
       height: auto;
@@ -1119,7 +1115,97 @@
       border-color: var(--signal);
     }
 
-    .screen figcaption {
+    /* Project detail opens over the page rather than inside the grid, so a
+       card never pushes its neighbours down. */
+    .project-dialog {
+      width: min(calc(100vw - 2rem), 56rem);
+      max-height: min(calc(100svh - 3rem), 52rem);
+      padding: 0;
+      overflow: hidden auto;
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) * 1.4);
+      background: var(--panel);
+      color: var(--text);
+      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.6);
+      overscroll-behavior: contain;
+    }
+
+    .project-dialog::backdrop {
+      background: rgba(6, 9, 11, 0.76);
+      backdrop-filter: blur(4px);
+    }
+
+    .dialog-dismiss {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0.6rem 0.6rem 0;
+    }
+
+    .dialog-dismiss button {
+      display: grid;
+      place-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: rgba(10, 14, 17, 0.85);
+      color: var(--muted);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color 140ms ease, color 140ms ease;
+    }
+
+    .dialog-dismiss button:hover {
+      border-color: var(--signal);
+      color: var(--signal);
+    }
+
+    .dialog-figure {
+      margin-top: -3rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel-raised);
+    }
+
+    .dialog-figure img {
+      width: 100%;
+      height: auto;
+    }
+
+    .dialog-body {
+      padding: clamp(1.25rem, 3vw, 2rem);
+    }
+
+    .dialog-body > .tag-list:first-child {
+      margin-top: 0;
+    }
+
+    .dialog-body h3 {
+      margin-top: 0.75rem;
+    }
+
+    .dialog-body .actions {
+      margin-top: 0;
+      padding-top: 1.25rem;
+    }
+
+    .screen button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .screen-caption {
       display: flex;
       flex-wrap: wrap;
       gap: 0.25rem 0.7rem;
@@ -1129,12 +1215,12 @@
       line-height: 1.5;
     }
 
-    .screen figcaption strong {
+    .screen-caption strong {
       font-family: var(--condensed);
       font-size: 1.05rem;
     }
 
-    .screen figcaption .meta {
+    .screen-caption .meta {
       font-size: 0.82rem;
     }
 
@@ -1573,6 +1659,27 @@
       });
 
       if (filterButtons.length) setFilter("all");
+
+      const dialogs = [...document.querySelectorAll("dialog.project-dialog")];
+
+      document.querySelectorAll("[data-open-dialog]").forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          const dialog = document.getElementById(trigger.dataset.openDialog);
+          if (dialog && typeof dialog.showModal === "function") {
+            dialog.showModal();
+            dialog.scrollTop = 0;
+          }
+        });
+      });
+
+      dialogs.forEach((dialog) => {
+        // A click that lands on the dialog element itself is a click on the
+        // backdrop, since the panel's own children cover everything inside it.
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) dialog.close();
+        });
+      });
+
     })();
   </script>
 </body>

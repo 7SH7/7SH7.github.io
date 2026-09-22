@@ -131,6 +131,11 @@
         "ko": "원본 저장소",
         "ja": "オリジナルリポジトリ",
         "en": "Original repository"
+      },
+      "close": {
+        "ko": "닫기",
+        "ja": "閉じる",
+        "en": "Close"
       }
     }
   },
@@ -2327,7 +2332,8 @@
         "ko": "규격외 농산물 가격 예측",
         "ja": "規格外農産物の価格予測",
         "en": "Price forecasting for off-grade produce"
-      }
+      },
+      "project": "ugly-pick"
     },
     {
       "src": "assets/ssobbi.jpg",
@@ -2341,7 +2347,8 @@
         "ko": "감정 기반 소비 관리",
         "ja": "感情ベースの支出管理",
         "en": "Emotion-aware spending management"
-      }
+      },
+      "project": "ssobbi"
     },
     {
       "src": "assets/hot-spot.jpg",
@@ -2355,7 +2362,8 @@
         "ko": "맵기 특화 맛집 리뷰",
         "ja": "辛さ特化の飲食店レビュー",
         "en": "Spice-focused restaurant reviews"
-      }
+      },
+      "project": "hot-spot"
     },
     {
       "src": "assets/viaflight.jpg",
@@ -2369,7 +2377,8 @@
         "ko": "경유지 여행 일정 설계",
         "ja": "経由地の旅程設計",
         "en": "Layover itinerary planning"
-      }
+      },
+      "project": "viaflight"
     }
   ]
 }

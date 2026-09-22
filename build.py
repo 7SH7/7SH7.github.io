@@ -478,8 +478,21 @@ class Renderer:
             '</div></section>'
         )
 
-    def project_card(self, project: dict[str, Any], compact: bool = False) -> str:
+    def screenshot_for(self, project_id: str) -> dict[str, Any] | None:
+        for shot in self.content.get("screenshots") or []:
+            if shot.get("project") == project_id:
+                return shot
+        return None
+
+    def project_card(self, project: dict[str, Any], compact: bool = False) -> tuple[str, str]:
+        """Return the grid card and the dialog it opens.
+
+        The card carries only what is worth scanning: the name and the outcome.
+        Everything else lives in the dialog, so opening one project no longer
+        pushes the rest of the grid down the page.
+        """
         project_id = project["id"]
+        dialog_id = f"project-{project_id}"
         categories = project["categories"]
         highlights = project.get("highlights", [])
         evidence = ""
@@ -512,7 +525,7 @@ class Renderer:
             "span",
             f"project.{project_id}.name",
             project["name"],
-            'class="project-title" role="heading" aria-level="4"',
+            'class="project-title"',
         )
         project_outcome = self.localized(
             "span",
@@ -526,18 +539,41 @@ class Renderer:
             self.content["meta"]["ui"]["details"],
             'class="project-more"',
         )
-        return (
-            f'<details class="{classes}" data-project-categories="{esc(" ".join(categories))}">'
-            '<summary class="project-overview">'
+        figure = ""
+        if shot := self.screenshot_for(project_id):
+            figure = (
+                '<div class="dialog-figure">'
+                f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
+                '</div>'
+            )
+        card = (
+            f'<article class="{classes}" data-project-categories="{esc(" ".join(categories))}">'
+            f'<button type="button" class="project-overview" data-open-dialog="{dialog_id}">'
             f'{project_name}{project_outcome}{project_more}'
-            '</summary><div class="project-detail">'
-            f'{self.category_badges(categories, f"project.{project_id}")}'
+            '</button></article>'
+        )
+        title = self.localized(
+            "h3",
+            f"project.{project_id}.name",
+            project["name"],
+            f'id="{dialog_id}-title"',
+        )
+        dialog = (
+            f'<dialog class="project-dialog" id="{dialog_id}" aria-labelledby="{dialog_id}-title">'
+            '<form method="dialog" class="dialog-dismiss">'
+            f'<button type="submit" {self.translated_aria_attrs(f"project.{project_id}.close", self.content["meta"]["ui"]["close"])}>&times;</button>'
+            '</form>'
+            f'{figure}'
+            '<div class="dialog-body">'
+            f'{self.category_badges(categories, f"dialog.{project_id}")}'
+            f'{title}'
             f'{recognition}<p class="meta">{meta}</p>'
             f'{evidence}'
             f'{self.tags(project.get("technologies", []))}'
-            f'{self.links(project.get("links"), f"project.{project_id}")}'
-            '</div></details>'
+            f'{self.links(project.get("links"), f"dialog.{project_id}")}'
+            '</div></dialog>'
         )
+        return card, dialog
 
     def repository_card(self, repository: dict[str, Any], index: int) -> str:
         categories = repository["categories"]
@@ -570,12 +606,12 @@ class Renderer:
             return ""
         items = "".join(
             '<figure class="screen">'
-            f'<a href="{esc(shot["url"])}" target="_blank" rel="noopener">'
+            f'<button type="button" data-open-dialog="project-{esc(shot["project"])}">'
             f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
-            '</a><figcaption>'
+            '<span class="screen-caption">'
             + self.localized("strong", f"screen.{index}.label", shot["label"])
             + self.localized("span", f"screen.{index}.caption", shot["caption"], ATTR_META)
-            + '</figcaption></figure>'
+            + '</span></button></figure>'
             for index, shot in enumerate(screenshots)
         )
         return (
@@ -598,8 +634,17 @@ class Renderer:
             self.content["featured_projects"],
             key=lambda project: FEATURED_ORDER.index(project["id"]),
         )
-        featured_cards = "".join(self.project_card(project) for project in featured)
-        additional_cards = "".join(self.project_card(project, compact=True) for project in self.content["other_projects"])
+        dialogs: list[str] = []
+        featured_cards = ""
+        for project in featured:
+            card, dialog = self.project_card(project)
+            featured_cards += card
+            dialogs.append(dialog)
+        additional_cards = ""
+        for project in self.content["other_projects"]:
+            card, dialog = self.project_card(project, compact=True)
+            additional_cards += card
+            dialogs.append(dialog)
         repositories = "".join(
             self.repository_card(repository, index)
             for index, repository in enumerate(self.content["repository_links"])
@@ -623,6 +668,7 @@ class Renderer:
             f'{self.localized("p", "projects.repositories.intro", COPY["repositories_intro"], ATTR_SECTION_INTRO)}'
             f'<div class="compact-grid repo-grid">{repositories}</div>'
             '</div></details>'
+            f'{"".join(dialogs)}'
             '</div></section>'
         )
 
