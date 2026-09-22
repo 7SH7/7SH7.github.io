@@ -808,7 +808,7 @@ def validate_content(content: dict[str, Any]) -> None:
     expected_counts = {
         "experience": 5,
         "featured_projects": 4,
-        "other_projects": 9,
+        "other_projects": 8,
         "activities": 10,
         # External organizers only; on-campus and club wins were removed
         # deliberately, so a change here should be deliberate too.

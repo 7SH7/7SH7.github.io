@@ -1206,69 +1206,57 @@
       ]
     },
     {
-      "id": "tanghulu-analysis",
+      "id": "dive-projects",
       "categories": [
         "ai-data"
       ],
       "name": {
-        "ko": "싱푸탕후루 매출 데이터 분석",
-        "ja": "シンフータンフル売上データ分析",
-        "en": "Xingfu Tanghulu Sales Data Analysis"
-      },
-      "period": {
-        "start": "2025",
-        "end": "2025",
-        "display": {
-          "ko": "2025 · DIVE",
-          "ja": "2025・DIVE",
-          "en": "2025 · DIVE"
-        }
-      },
-      "role": {
-        "ko": "데이터 분석 학회 프로젝트",
-        "ja": "データ分析サークルプロジェクト",
-        "en": "Data Analytics Society Project"
-      },
-      "summary": {
-        "ko": "교내 매장 매출의 상품 연관성을 분석해 묶음 판매라는 비즈니스 질문으로 전환하고, 결과를 마케팅학회에 전달해 실제 이벤트 기획으로 연결.",
-        "ja": "学内店舗の売上から商品間の関連性を分析し、セット販売というビジネス課題へ変換。結果をマーケティング学会へ共有し、実際のイベント企画につなげた。",
-        "en": "Analyzed product associations in campus-store sales, reframed the result as a bundle-sales question, and handed it to the marketing society for a real campaign."
-      },
-      "technologies": [
-        "Python",
-        "Pandas",
-        "NumPy"
-      ]
-    },
-    {
-      "id": "ev-charging-dashboard",
-      "categories": [
-        "ai-data"
-      ],
-      "name": {
-        "ko": "전기차 충전소 대시보드",
-        "ja": "電気自動車充電所ダッシュボード",
-        "en": "EV Charging Station Dashboard"
+        "ko": "DIVE 데이터 분석 학회 프로젝트",
+        "ja": "DIVE データ分析サークル プロジェクト",
+        "en": "DIVE Data Analytics Society Projects"
       },
       "period": {
         "start": "2024",
-        "end": "2024",
+        "end": "2025",
         "display": {
-          "ko": "2024",
-          "ja": "2024",
-          "en": "2024"
+          "ko": "2024 ~ 2025",
+          "ja": "2024〜2025",
+          "en": "2024 – 2025"
         }
       },
       "role": {
-        "ko": "데이터 병합·전처리·시각화",
-        "ja": "データ統合・前処理・可視化",
-        "en": "Data Integration, Preprocessing & Visualization"
+        "ko": "데이터 분석 · 시각화",
+        "ja": "データ分析・可視化",
+        "en": "Data Analysis & Visualization"
       },
       "summary": {
-        "ko": "환경공단 API 데이터를 병합·전처리해 전기차 충전소 시각화 대시보드 구축.",
-        "ja": "韓国環境公団APIのデータを統合・前処理し、電気自動車充電所の可視化ダッシュボードを構築。",
-        "en": "Merged and preprocessed Korea Environment Corporation API data to build an EV charging-station visualization dashboard."
-      }
+        "ko": "교내 데이터 분석 학회에서 매장 매출 연관성 분석과 공공데이터 시각화 두 건을 수행.",
+        "ja": "学内のデータ分析サークルで、店舗売上の関連性分析と公共データの可視化の2件を実施。",
+        "en": "Two projects in a campus data analytics society: association analysis of store sales, and public-data visualization."
+      },
+      "highlights": [
+        {
+          "ko": "싱푸탕후루 교내 매장 매출에서 상품 연관성을 분석해 묶음 판매라는 비즈니스 질문으로 전환",
+          "ja": "シンフータンフルの学内店舗売上から商品間の関連性を分析し、セット販売というビジネス課題へ変換",
+          "en": "Analyzed product associations in Xingfu Tanghulu campus-store sales and reframed them as a bundle-sales question"
+        },
+        {
+          "ko": "분석 결과를 마케팅학회에 전달해 실제 이벤트 기획으로 연결",
+          "ja": "分析結果をマーケティング学会へ共有し、実際のイベント企画につなげた",
+          "en": "Handed the findings to the marketing society, where they became an actual campaign"
+        },
+        {
+          "ko": "환경공단 API 데이터를 병합·전처리해 전기차 충전소 시각화 대시보드 구축",
+          "ja": "韓国環境公団APIのデータを統合・前処理し、電気自動車充電所の可視化ダッシュボードを構築",
+          "en": "Merged and preprocessed Korea Environment Corporation API data into an EV charging-station dashboard"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Association Analysis"
+      ]
     }
   ],
   "awards": [
@@ -2155,36 +2143,6 @@
       }
     },
     {
-      "name": "study_spring",
-      "url": "https://github.com/7SH7/study_spring",
-      "language": "Java",
-      "kind": "original",
-      "featured": false,
-      "categories": [
-        "backend"
-      ],
-      "description": {
-        "ko": "Spring 학습 기록",
-        "ja": "Spring学習記録",
-        "en": "Spring study notes"
-      }
-    },
-    {
-      "name": "_webflux_",
-      "url": "https://github.com/7SH7/_webflux_",
-      "language": "Java",
-      "kind": "original",
-      "featured": false,
-      "categories": [
-        "backend"
-      ],
-      "description": {
-        "ko": "Reactive Spring·WebFlux 학습",
-        "ja": "Reactive Spring・WebFlux学習",
-        "en": "Reactive Spring and WebFlux study"
-      }
-    },
-    {
       "name": "opensource_copet",
       "url": "https://github.com/7SH7/opensource_copet",
       "language": "Python",
@@ -2197,21 +2155,6 @@
         "ko": "포렌식 자동 분류 CLI · 규칙/RAG/로컬 LLM 기반 리포팅",
         "ja": "フォレンジック自動分類CLI・ルール／RAG／ローカルLLMによるレポート",
         "en": "Forensic auto-classification CLI with rule, RAG, and local-LLM reporting"
-      }
-    },
-    {
-      "name": "unsloth",
-      "url": "https://github.com/7SH7/unsloth",
-      "language": null,
-      "kind": "fork",
-      "featured": false,
-      "categories": [
-        "ai-data"
-      ],
-      "description": {
-        "ko": "Unsloth 커널 학습용 포크",
-        "ja": "Unslothカーネル学習用フォーク",
-        "en": "Fork for studying Unsloth kernels"
       }
     }
   ],
