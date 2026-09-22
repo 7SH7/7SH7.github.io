@@ -55,21 +55,6 @@ COPY: dict[str, dict[str, str]] = {
         "ja": "INFRASTRUCTURE · CLOUD · EMBEDDED",
         "en": "INFRASTRUCTURE · CLOUD · EMBEDDED",
     },
-    "hero_evidence_role": {
-        "ko": "AWS 서울 리전 라이브 운영",
-        "ja": "AWSソウルリージョンでライブ運用",
-        "en": "Live operations in the AWS Seoul Region",
-    },
-    "hero_evidence_embedded": {
-        "ko": "STM32F411 레지스터 직접 제어",
-        "ja": "STM32F411レジスタを直接制御",
-        "en": "Direct STM32F411 register control",
-    },
-    "hero_evidence_backend": {
-        "ko": "Java · Spring Boot · Terraform",
-        "ja": "Java · Spring Boot · Terraform",
-        "en": "Java · Spring Boot · Terraform",
-    },
     "live_intro": {
         "ko": "말이 아니라 현재 동작하는 서비스와 운영 책임으로 증명.",
         "ja": "言葉ではなく、稼働中のサービスと運用責任で証明。",
@@ -287,12 +272,18 @@ class Renderer:
 
     def hero(self) -> str:
         profile = self.content["profile"]
-        live = self.content["live_service"]
+        # Name and role lead, then the headline. The evidence that used to sit
+        # in a side column repeats verbatim in the live section and the project
+        # cards below it, and one of its three lines put embedded work at the
+        # top of a page whose argument is cloud and backend.
+        byline = {
+            language: f'{profile["name"][language]} · {profile["title"][language]}'
+            for language in LANGUAGES
+        }
         return (
             '<section class="hero" id="top">'
-            '<div class="container hero-grid">'
-            '<div>'
-            f'{self.localized("p", "hero.eyebrow", COPY["hero_eyebrow"], ATTR_EYEBROW)}'
+            '<div class="container hero-stack">'
+            f'{self.localized("p", "hero.byline", byline, ATTR_EYEBROW)}'
             f'{self.localized("h1", "hero.headline", profile["headline"])}'
             f'{self.localized("p", "hero.summary", profile["summary"], ATTR_HERO_LEDE)}'
             '<div class="tag-list">'
@@ -303,16 +294,6 @@ class Renderer:
             f'<a class="button button--primary" href="#live">{self.localized_text("hero.cta.live", self.content["meta"]["ui"]["view_live"])}</a>'
             f'<a class="button" href="https://github.com/7SH7">{self.localized_text("hero.cta.code", self.content["meta"]["ui"]["view_code"])}</a>'
             '</div>'
-            '</div>'
-            '<aside class="hero-evidence" aria-label="Evidence">'
-            f'{self.localized("p", "hero.name", profile["name"], ATTR_EYEBROW)}'
-            f'{self.localized("h2", "hero.title", profile["title"])}'
-            '<ul class="evidence-list">'
-            f'<li>{self.localized_text("hero.evidence.role", COPY["hero_evidence_role"])}</li>'
-            f'<li>{self.localized_text("hero.evidence.embedded", COPY["hero_evidence_embedded"])}</li>'
-            f'<li>{self.localized_text("hero.evidence.backend", COPY["hero_evidence_backend"])}</li>'
-            '</ul>'
-            '</aside>'
             '</div></section>'
         )
 

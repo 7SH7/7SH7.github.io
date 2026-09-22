@@ -383,14 +383,11 @@
       padding-block: clamp(4.5rem, 10vw, 8rem);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.55fr);
-      gap: clamp(2.5rem, 7vw, 6rem);
-      align-items: end;
+    .hero-stack {
+      max-width: 60rem;
     }
 
-    .hero-grid > *,
+    .hero-stack > *,
     .live-card > *,
     .project-card > *,
     .timeline-item > * {
@@ -402,16 +399,6 @@
       margin-bottom: 1.75rem;
       color: var(--muted);
       font-size: clamp(1.05rem, 2vw, 1.28rem);
-    }
-
-    .hero-evidence {
-      padding: 1.25rem 0 0 1.35rem;
-      border-top: 1px solid var(--border);
-      border-left: 3px solid var(--signal);
-    }
-
-    .hero-evidence > :last-child {
-      margin-bottom: 0;
     }
 
     .live-card,
@@ -1026,7 +1013,6 @@
       }
 
       .section-heading,
-      .hero-grid,
       .live-card {
         grid-template-columns: 1fr;
       }
@@ -1037,10 +1023,6 @@
 
       .hero {
         min-height: auto;
-      }
-
-      .hero-evidence {
-        max-width: 40rem;
       }
 
       .stats-grid {

@@ -13,9 +13,9 @@
       "en": "Seunghwan Kim | Infrastructure & Cloud Engineer"
     },
     "description": {
-      "ko": "레지스터 수준 임베디드부터 AWS 라이브 운영까지, 구현과 운영의 증거를 모은 포트폴리오.",
-      "ja": "レジスタレベルの組み込み開発からAWS上のライブ運用まで、実装と運用の実績をまとめたポートフォリオ。",
-      "en": "A portfolio of implementation and operations evidence, spanning register-level embedded work and live AWS operations."
+      "ko": "AWS 라이브 운영부터 레지스터 수준 임베디드까지, 구현과 운영의 증거를 모은 포트폴리오.",
+      "ja": "AWSライブ運用からレジスタレベルの組み込み開発まで、実装と運用の実績をまとめたポートフォリオ。",
+      "en": "A portfolio of implementation and operations evidence, from live AWS operations to register-level embedded systems."
     },
     "sections": {
       "live": {
@@ -147,9 +147,9 @@
       "en": "Infrastructure & Cloud Engineer"
     },
     "headline": {
-      "ko": "레지스터 수준 임베디드부터 AWS 라이브 운영까지",
-      "ja": "レジスタレベルの組み込み開発からAWSライブ運用まで",
-      "en": "From register-level embedded systems to live AWS operations"
+      "ko": "AWS 라이브 운영부터 레지스터 수준 임베디드까지",
+      "ja": "AWSライブ運用からレジスタレベルの組み込み開発まで",
+      "en": "From live AWS operations to register-level embedded systems"
     },
     "summary": {
       "ko": "Java와 Spring Boot 기반 백엔드, Terraform 기반 클라우드 인프라, STM32 레지스터 제어를 프로젝트와 운영 환경에서 구현. 문제를 코드·인프라·하드웨어 경계에서 추적하고 재발하기 어려운 구조로 개선.",
