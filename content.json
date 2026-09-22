@@ -217,7 +217,66 @@
       "AWS",
       "Terraform",
       "GitHub Actions"
-    ]
+    ],
+    "architecture": {
+      "title": {
+        "ko": "MICEMore 운영 구성 보기",
+        "ja": "MICEMoreの運用構成を見る",
+        "en": "View the MICEMore operating setup"
+      },
+      "caption": {
+        "ko": "공개용으로 일반화한 구성도입니다. 서브넷 구조, 탐지·알림 스택, 내부 식별자와 운영 자동화 경로는 포함하지 않습니다.",
+        "ja": "公開用に一般化した構成図です。サブネット構成、検知・通知スタック、内部識別子、運用自動化の経路は含みません。",
+        "en": "A generalized diagram prepared for publication. Subnet layout, the detection and alerting stack, internal identifiers, and automation paths are excluded."
+      },
+      "labels": {
+        "users": {
+          "ko": "이용자",
+          "ja": "利用者",
+          "en": "Users"
+        },
+        "app": {
+          "ko": "애플리케이션",
+          "ja": "アプリケーション",
+          "en": "Application"
+        },
+        "database": {
+          "ko": "데이터베이스",
+          "ja": "データベース",
+          "en": "Database"
+        },
+        "region": {
+          "ko": "AWS 서울 리전",
+          "ja": "AWSソウルリージョン",
+          "en": "AWS Seoul Region"
+        },
+        "zone_a": {
+          "ko": "가용영역 A",
+          "ja": "アベイラビリティゾーン A",
+          "en": "Availability Zone A"
+        },
+        "zone_b": {
+          "ko": "가용영역 B",
+          "ja": "アベイラビリティゾーン B",
+          "en": "Availability Zone B"
+        },
+        "balancer": {
+          "ko": "로드 밸런서",
+          "ja": "ロードバランサー",
+          "en": "Load balancer"
+        },
+        "pipeline": {
+          "ko": "빌드 · 테스트 검증",
+          "ja": "ビルド・テスト検証",
+          "en": "Build and test validation"
+        },
+        "provision": {
+          "ko": "인프라 프로비저닝",
+          "ja": "インフラのプロビジョニング",
+          "en": "Infrastructure provisioning"
+        }
+      }
+    }
   },
   "stats": [
     {

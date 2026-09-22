@@ -90,6 +90,16 @@ COPY: dict[str, dict[str, str]] = {
     },
     "featured_projects": {"ko": "대표 프로젝트", "ja": "主要プロジェクト", "en": "Featured projects"},
     "additional_projects": {"ko": "추가 프로젝트", "ja": "その他のプロジェクト", "en": "Additional projects"},
+    "more_projects_summary": {
+        "ko": "추가 프로젝트와 공개 저장소 보기",
+        "ja": "その他のプロジェクトと公開リポジトリを見る",
+        "en": "View additional projects and public repositories",
+    },
+    "more_activities_summary": {
+        "ko": "활동 전체 보기",
+        "ja": "活動一覧を見る",
+        "en": "View the full activity list",
+    },
     "repositories_intro": {
         "ko": "공개 저장소의 성격과 포크 여부를 구분해 제시. 프로젝트 역할 설명은 저장소 소유권과 별개.",
         "ja": "公開リポジトリの性格とForkの有無を明示。プロジェクトでの役割はリポジトリ所有権とは別に記載。",
@@ -326,23 +336,8 @@ class Renderer:
         live_links = [{"label": self.content["meta"]["ui"]["view_live"], "url": live["url"]}]
         architecture_markup = ""
         if architecture := live.get("architecture"):
-            source = esc(architecture["src"])
-            architecture_caption = self.localized(
-                "figcaption",
-                "live.architecture.caption",
-                architecture["caption"],
-                'id="micemore-architecture-caption"',
-            )
-            architecture_markup = (
-                '<details class="architecture-disclosure" id="micemore-architecture">'
-                f'<summary>{self.localized_text("live.architecture.title", architecture["title"])}</summary>'
-                '<figure class="architecture-figure">'
-                f'<a href="{source}" target="_blank" rel="noopener" aria-labelledby="micemore-architecture-caption">'
-                f'<img src="{source}" alt="" width="1562" height="1336" loading="lazy" decoding="async">'
-                '</a>'
-                f'{architecture_caption}'
-                '</figure></details>'
-            )
+            architecture_markup = self.architecture_figure(architecture)
+
         return (
             '<section class="section" id="live"><div class="container">'
             f'{self.section_heading("01", "live", sections["live"], "live_intro")}'
@@ -362,6 +357,118 @@ class Renderer:
             f'<div class="stats-grid" {stats_aria}>{stats}</div>'
             '</div></section>'
         )
+
+    def architecture_figure(self, architecture: dict[str, Any]) -> str:
+        """Render a generalized operating diagram.
+
+        Everything here is deliberately coarse. The diagram states that the
+        service runs across two availability zones behind a load balancer and
+        that changes reach it through a validated pipeline. It carries no
+        subnet layout, no detection stack, no internal identifiers, and no
+        automation path, because a published diagram is a permanent one.
+        """
+        label = architecture["labels"]
+
+        def node(key: str, x: int, y: int, w: int, h: int, sub: str = "") -> str:
+            text_y = y + (h // 2) + (0 if not sub else -6)
+            body = (
+                f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="7"/>'
+                + self.localized(
+                    "text",
+                    f"architecture.{key}",
+                    label[key],
+                    f'x="{x + w // 2}" y="{text_y}" class="diagram-label"',
+                )
+            )
+            if sub:
+                body += (
+                    f'<text x="{x + w // 2}" y="{text_y + 19}" class="diagram-sub">{esc(sub)}</text>'
+                )
+            return f'<g class="diagram-node">{body}</g>'
+
+        def plain(name: str, x: int, y: int, w: int, h: int, sub: str = "") -> str:
+            text_y = y + (h // 2) + (0 if not sub else -6)
+            body = (
+                f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="7"/>'
+                f'<text x="{x + w // 2}" y="{text_y}" class="diagram-label">{esc(name)}</text>'
+            )
+            if sub:
+                body += f'<text x="{x + w // 2}" y="{text_y + 19}" class="diagram-sub">{esc(sub)}</text>'
+            return f'<g class="diagram-node">{body}</g>'
+
+        def arrow(x1: int, y1: int, x2: int, y2: int) -> str:
+            return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" class="diagram-flow"/>'
+
+        pipeline = (
+            plain("GitHub", 24, 26, 150, 54)
+            + arrow(174, 53, 218, 53)
+            + plain("GitHub Actions", 222, 26, 210, 54, sub=self.plain_text(label["pipeline"]))
+            + arrow(432, 53, 476, 53)
+            + plain("Terraform", 480, 26, 180, 54, sub=self.plain_text(label["provision"]))
+            + arrow(570, 80, 570, 126)
+        )
+
+        zones = (
+            '<g class="diagram-zone">'
+            '<rect x="404" y="150" width="212" height="70" rx="7"/>'
+            + self.localized(
+                "text", "architecture.zone_a", label["zone_a"], 'x="414" y="170" class="diagram-zone-label"'
+            )
+            + '</g><g class="diagram-zone">'
+            '<rect x="404" y="240" width="212" height="70" rx="7"/>'
+            + self.localized(
+                "text", "architecture.zone_b", label["zone_b"], 'x="414" y="260" class="diagram-zone-label"'
+            )
+            + '</g>'
+            + node("app", 420, 178, 180, 34)
+            + node("app", 420, 268, 180, 34)
+        )
+
+        region = (
+            '<g class="diagram-region">'
+            '<rect x="16" y="126" width="868" height="208" rx="10"/>'
+            + self.localized(
+                "text", "architecture.region", label["region"], 'x="32" y="148" class="diagram-region-label"'
+            )
+            + '</g>'
+            + node("balancer", 176, 212, 180, 44)
+            + zones
+            + node("database", 652, 212, 200, 44, sub="Multi-AZ")
+            + arrow(356, 234, 400, 200)
+            + arrow(356, 234, 400, 268)
+            + arrow(620, 200, 648, 230)
+            + arrow(620, 268, 648, 238)
+        )
+
+        entry = node("users", 16, 356, 150, 44) + arrow(170, 378, 250, 378) + arrow(266, 370, 266, 260)
+
+        diagram = (
+            '<svg class="architecture-diagram" viewBox="0 0 900 410" role="img" '
+            f'{self.translated_aria_attrs("architecture.alt", architecture["caption"])}>'
+            '<defs><marker id="diagram-arrow" viewBox="0 0 10 10" refX="9" refY="5" '
+            'markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
+            '<path d="M0 0 L10 5 L0 10 z"/></marker></defs>'
+            f'{pipeline}{region}{entry}'
+            '<text x="16" y="404" class="diagram-sub diagram-note">HTTPS</text>'
+            '</svg>'
+        )
+
+        caption = self.localized(
+            "figcaption",
+            "live.architecture.caption",
+            architecture["caption"],
+            'id="micemore-architecture-caption"',
+        )
+        return (
+            '<details class="architecture-disclosure" id="micemore-architecture">'
+            f'<summary>{self.localized_text("live.architecture.title", architecture["title"])}</summary>'
+            f'<figure class="architecture-figure">{diagram}{caption}</figure>'
+            '</details>'
+        )
+
+    @staticmethod
+    def plain_text(value: dict[str, str]) -> str:
+        return value["ko"]
 
     def experience_section(self) -> str:
         sections = self.content["meta"]["sections"]
@@ -500,13 +607,16 @@ class Renderer:
             f'{esc(COPY["filter_status"]["ko"])}</p>'
             f'{self.localized("h3", "projects.featured.heading", COPY["featured_projects"])}'
             f'<div class="project-grid">{featured_cards}</div>'
-            '<hr>'
+            '<details class="more-disclosure">'
+            f'<summary>{self.localized_text("projects.more.summary", COPY["more_projects_summary"])}</summary>'
+            '<div class="more-disclosure-body">'
             f'{self.localized("h3", "projects.additional.heading", COPY["additional_projects"])}'
             f'<div class="compact-grid">{additional_cards}</div>'
             '<hr>'
             f'{self.localized("h3", "projects.repositories.heading", sections["repositories"])}'
             f'{self.localized("p", "projects.repositories.intro", COPY["repositories_intro"], ATTR_SECTION_INTRO)}'
             f'<div class="compact-grid repo-grid">{repositories}</div>'
+            '</div></details>'
             '</div></section>'
         )
 
@@ -563,9 +673,14 @@ class Renderer:
         return (
             '<section class="section" id="activities"><div class="container">'
             f'{self.section_heading("05", "activities", sections["activities"], "activities_intro")}'
+            '<details class="more-disclosure">'
+            f'<summary>{self.localized_text("activities.more.summary", COPY["more_activities_summary"])}</summary>'
+            '<div class="more-disclosure-body">'
             '<div class="table-wrap"><table class="responsive-table">'
             f'<thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody>'
-            '</table></div></div></section>'
+            '</table></div>'
+            '</div></details>'
+            '</div></section>'
         )
 
     def skills_section(self) -> str:

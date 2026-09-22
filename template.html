@@ -451,7 +451,8 @@
       margin-top: 1.5rem;
     }
 
-    .architecture-disclosure {
+    .architecture-disclosure,
+    .more-disclosure {
       margin-top: 1rem;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -460,7 +461,8 @@
       background: var(--panel);
     }
 
-    .architecture-disclosure > summary {
+    .architecture-disclosure > summary,
+    .more-disclosure > summary {
       padding: 1rem 1.25rem;
     }
 
@@ -955,6 +957,73 @@
     .site-header {
       background: rgba(10, 14, 17, 0.82);
       backdrop-filter: blur(16px) saturate(140%);
+    }
+
+    .more-disclosure {
+      margin-top: clamp(1.5rem, 4vw, 2.25rem);
+    }
+
+    .more-disclosure-body {
+      padding: 0 clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem);
+      border-top: 1px solid var(--border);
+    }
+
+    .more-disclosure-body > h3 {
+      margin-top: 1.5rem;
+    }
+
+    .architecture-diagram {
+      width: 100%;
+      height: auto;
+    }
+
+    .diagram-node rect {
+      fill: var(--panel-raised);
+      stroke: var(--border);
+    }
+
+    .diagram-region rect,
+    .diagram-zone rect {
+      fill: none;
+      stroke: var(--border);
+      stroke-dasharray: 5 4;
+    }
+
+    .diagram-label {
+      fill: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      text-anchor: middle;
+    }
+
+    .diagram-sub,
+    .diagram-zone-label,
+    .diagram-region-label {
+      fill: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-anchor: middle;
+    }
+
+    .diagram-zone-label,
+    .diagram-region-label,
+    .diagram-note {
+      text-anchor: start;
+    }
+
+    .diagram-region-label {
+      fill: var(--signal);
+      letter-spacing: 0.08em;
+    }
+
+    .diagram-flow {
+      stroke: var(--signal);
+      stroke-width: 1.5;
+      marker-end: url(#diagram-arrow);
+    }
+
+    .architecture-diagram marker path {
+      fill: var(--signal);
     }
 
     @media (max-width: 860px) {
