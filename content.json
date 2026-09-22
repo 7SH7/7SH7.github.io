@@ -2230,38 +2230,6 @@
       }
     },
     {
-      "name": "choreography-with-deadline",
-      "url": "https://github.com/7SH7/choreography-with-deadline",
-      "language": "Vue",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "마감시간을 고려한 choreography 실습",
-        "ja": "期限を考慮したchoreography実習",
-        "en": "Choreography practice with deadline handling"
-      }
-    },
-    {
-      "name": "kafka-scaling",
-      "url": "https://github.com/7SH7/kafka-scaling",
-      "language": null,
-      "kind": "fork",
-      "featured": false,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "Kafka 스케일링 학습 저장소",
-        "ja": "Kafkaスケーリング学習リポジトリ",
-        "en": "Kafka scaling study repository"
-      }
-    },
-    {
       "name": "CMS",
       "url": "https://github.com/7SH7/CMS",
       "language": "TypeScript",
