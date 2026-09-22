@@ -1674,11 +1674,8 @@
       "items": [
         "DDD",
         "Multi-tenancy",
-        "Stateless",
-        "Privacy by Design",
         "Idempotency",
-        "Atomic Commit",
-        "Read/Write Model Separation"
+        "Privacy by Design"
       ],
       "context": {
         "ko": "서비스 요구사항과 운영 제약에 맞춘 시스템 설계",
@@ -1694,12 +1691,8 @@
         "en": "Distributed Systems"
       },
       "items": [
-        "Kafka",
-        "CDC",
         "Event-driven Architecture",
         "MSA",
-        "Saga",
-        "CQRS",
         "Graceful Degradation"
       ],
       "context": {
@@ -1719,8 +1712,6 @@
         "MySQL 8",
         "MariaDB",
         "SQLite",
-        "Redis",
-        "Elasticsearch",
         "ChromaDB",
         "Caffeine Cache",
         "Flyway",
@@ -1770,9 +1761,6 @@
       },
       "items": [
         "Docker",
-        "Kubernetes",
-        "AKS",
-        "Helm",
         "Nginx",
         "Terraform",
         "GitHub Actions"
@@ -1878,9 +1866,7 @@
         "en": "Frontend"
       },
       "items": [
-        "Next.js 16",
         "React 19",
-        "Tailwind CSS 4",
         "Thymeleaf",
         "jQuery"
       ],
