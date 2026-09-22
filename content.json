@@ -490,19 +490,34 @@
       },
       "highlights": [
         {
-          "ko": "Terraform 기반 인프라 코드 관리",
-          "ja": "TerraformによるInfrastructure as Code",
-          "en": "Infrastructure as code with Terraform"
+          "ko": "Terraform으로 인프라를 코드로 관리하고, GitHub Actions에서 빌드·테스트 검증을 통과한 것만 배포",
+          "ja": "Terraformでインフラをコードとして管理し、GitHub Actionsのビルド・テスト検証を通過したものだけをデプロイ",
+          "en": "Infrastructure as code with Terraform, deploying only what passes build and test validation in GitHub Actions"
         },
         {
-          "ko": "GitHub Actions에서 빌드·테스트 검증 후 배포",
-          "ja": "GitHub Actionsでビルド・テスト検証後にデプロイ",
-          "en": "GitHub Actions deployment after build and test validation"
+          "ko": "AWS 서울 리전에서 두 개의 가용영역에 걸친 구성으로 운영",
+          "ja": "AWSソウルリージョンで2つのアベイラビリティゾーンにまたがる構成で運用",
+          "en": "Running across two availability zones in the AWS Seoul Region"
         },
         {
-          "ko": "AWS 서울 리전 라이브 운영",
-          "ja": "AWSソウルリージョンでライブ運用",
-          "en": "Live operations in the AWS Seoul Region"
+          "ko": "NFC 태깅 응답 경로를 AI 처리와 분리해, AI가 느려져도 태깅 자체는 지연되지 않도록 설계",
+          "ja": "NFCタギングの応答経路をAI処理から分離し、AIが遅延してもタギング自体は遅れない設計に",
+          "en": "Separated the NFC tap response path from AI processing so a slow model never delays the tap itself"
+        },
+        {
+          "ko": "AI 도슨트가 모델이 생성한 문장을 그대로 내보내지 않는 구조로 설계해 환각을 차단",
+          "ja": "AIドーセントがモデルの生成文をそのまま出さない構造にし、ハルシネーションを遮断",
+          "en": "Designed the AI docent so no model-written sentence reaches a visitor, removing hallucination as a failure mode"
+        },
+        {
+          "ko": "대화 상태를 저장하지 않는 설계로 다수 동시 응대를 수평 확장만으로 처리",
+          "ja": "対話状態を保持しない設計により、多数の同時応対を水平スケールのみで処理",
+          "en": "Kept the docent stateless, so many simultaneous visitors are handled by scaling out alone"
+        },
+        {
+          "ko": "한국어·영어·일본어를 지원하고, 번역문은 사람이 승인한 뒤에만 발행",
+          "ja": "韓国語・英語・日本語に対応し、翻訳文は人の承認を経てから公開",
+          "en": "Serves Korean, English and Japanese, with translations published only after a human approves them"
         }
       ],
       "technologies": [
@@ -1946,12 +1961,6 @@
         "STM32F411",
         "ATmega128A",
         "Register-level C",
-        "RCC",
-        "GPIO",
-        "TIM",
-        "EXTI",
-        "USART",
-        "NVIC",
         "I2C",
         "ADC",
         "DMA",
