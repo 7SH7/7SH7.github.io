@@ -1007,6 +1007,83 @@
       fill: var(--signal);
     }
 
+    /* Section rhythm: give each band its own surface so the page reads as
+       chapters rather than one long table. The live section is the centrepiece,
+       so it gets the light; the rest alternate a quiet tint. */
+    main > section {
+      position: relative;
+      isolation: isolate;
+    }
+
+    main > section + section {
+      border-top: 0;
+    }
+
+    main > #live {
+      padding-block: clamp(5rem, 9vw, 8.5rem);
+      border-block: 1px solid var(--border);
+      background:
+        radial-gradient(64% 58% at 50% 0%, rgba(79, 209, 197, 0.1), transparent 72%),
+        linear-gradient(180deg, #0D141A, var(--bg) 88%);
+    }
+
+    main > #experience,
+    main > #awards,
+    main > #skills,
+    main > #contact {
+      border-block: 1px solid var(--border);
+      background: rgba(17, 25, 32, 0.5);
+    }
+
+    /* The numeral is the chapter marker, so let it act like one. */
+    .section-label {
+      display: block;
+      margin-bottom: 1rem;
+      font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+      letter-spacing: 0.16em;
+    }
+
+    .section-heading {
+      position: relative;
+      padding-top: 1.75rem;
+    }
+
+    .section-heading::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3.25rem;
+      height: 2px;
+      background: var(--signal);
+      content: "";
+    }
+
+    /* The numbers are the fastest read on the page; size them like it. */
+    .stats-grid {
+      margin-top: clamp(1.5rem, 4vw, 2.5rem);
+      gap: 1px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--border);
+    }
+
+    .stat {
+      border: 0;
+      border-radius: 0;
+      background: linear-gradient(158deg, var(--panel-raised), var(--panel) 62%);
+    }
+
+    .stat:hover {
+      transform: none;
+      background: var(--panel-raised);
+    }
+
+    .stat-value {
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      letter-spacing: -0.02em;
+    }
+
     @media (max-width: 860px) {
       :root {
         --header-height: 4rem;
