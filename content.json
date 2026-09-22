@@ -970,11 +970,6 @@
         "NCP",
         "AWS S3"
       ],
-      "recognition": {
-        "ko": "멋쟁이사자처럼 포트폴리오 해커톤 대상",
-        "ja": "LIKELIONポートフォリオハッカソン 大賞",
-        "en": "LIKELION Portfolio Hackathon Grand Prize"
-      },
       "links": [
         {
           "label": {
@@ -1026,11 +1021,6 @@
         "AWS",
         "Google Maps API"
       ],
-      "recognition": {
-        "ko": "홀리데이 해커톤 대상",
-        "ja": "ホリデーハッカソン 大賞",
-        "en": "Holiday Hackathon Grand Prize"
-      },
       "links": [
         {
           "label": {
@@ -1378,42 +1368,6 @@
         "ko": "제10회 농림축산식품 공공데이터 활용 창업경진대회 · Ugly Pick · 56팀 중 8위",
         "ja": "第10回農林畜産食品公共データ活用創業コンテスト・Ugly Pick・56チーム中8位",
         "en": "10th Agri-food Public Data Startup Competition · Ugly Pick · 8th of 56 teams"
-      }
-    },
-    {
-      "date": "2024",
-      "title": {
-        "ko": "포트폴리오 해커톤 대상 · 5팀 중 1위",
-        "ja": "ポートフォリオハッカソン 大賞・5チーム中1位",
-        "en": "Portfolio Hackathon Grand Prize · 1st of 5 teams"
-      },
-      "issuer": {
-        "ko": "멋쟁이사자처럼",
-        "ja": "LIKELION",
-        "en": "LIKELION"
-      },
-      "context": {
-        "ko": "Hot Spot",
-        "ja": "Hot Spot",
-        "en": "Hot Spot"
-      }
-    },
-    {
-      "date": "2024",
-      "title": {
-        "ko": "홀리데이 해커톤 대상 · 5팀 중 1위",
-        "ja": "ホリデーハッカソン 大賞・5チーム中1位",
-        "en": "Holiday Hackathon Grand Prize · 1st of 5 teams"
-      },
-      "issuer": {
-        "ko": "멋쟁이사자처럼",
-        "ja": "LIKELION",
-        "en": "LIKELION"
-      },
-      "context": {
-        "ko": "ViaFlight",
-        "ja": "ViaFlight",
-        "en": "ViaFlight"
       }
     }
   ],

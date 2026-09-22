@@ -952,13 +952,14 @@ def validate_content(content: dict[str, Any]) -> None:
         "featured_projects": 7,
         "other_projects": 6,
         "activities": 10,
+        # External organizers only; on-campus and club wins were removed
+        # deliberately, so a change here should be deliberate too.
+        "awards": 5,
     }
     for key, expected in expected_counts.items():
         actual = len(content.get(key, []))
         if actual != expected:
             raise ValueError(f"{key}: expected {expected}, found {actual}")
-    if len(content.get("awards", [])) < 7:
-        raise ValueError("At least seven verified awards are required")
 
     for project in content["featured_projects"] + content["other_projects"]:
         categories = set(project.get("categories", []))
@@ -1013,6 +1014,8 @@ def validate_output(document: str) -> None:
         raise ValueError(f"Generated HTML is missing required content: {missing}")
 
     prohibited = (
+        "포트폴리오 " + "해커톤 대상",
+        "홀리데이 " + "해커톤 대상",
         "한동" + "대 SW",
         "한동" + "대 데이터",
         "GPA",
