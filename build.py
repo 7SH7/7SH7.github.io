@@ -72,7 +72,6 @@ COPY: dict[str, dict[str, str]] = {
         "en": "Filter by discipline; every entry states role, contribution, metrics, and available evidence.",
     },
     "featured_projects": {"ko": "대표 프로젝트", "ja": "主要プロジェクト", "en": "Featured projects"},
-    "screens_heading": {"ko": "서비스 화면", "ja": "サービス画面", "en": "Service screens"},
     "additional_projects": {"ko": "추가 프로젝트", "ja": "その他のプロジェクト", "en": "Additional projects"},
     "more_projects_summary": {
         "ko": "추가 프로젝트와 공개 저장소 보기",
@@ -593,6 +592,121 @@ class Renderer:
             '</div></article>'
         )
 
+    def screenshot_for(self, project_id: str) -> dict[str, Any] | None:
+        for shot in self.content.get("screenshots") or []:
+            if shot.get("project") == project_id:
+                return shot
+        return None
+
+    def project_card(self, project: dict[str, Any], compact: bool = False) -> tuple[str, str]:
+        """Return the grid card and the dialog it opens.
+
+        The card carries only what is worth scanning: the name and the outcome.
+        Everything else lives in the dialog, so opening one project no longer
+        pushes the rest of the grid down the page.
+        """
+        project_id = project["id"]
+        dialog_id = f"project-{project_id}"
+        categories = project["categories"]
+        highlights = project.get("highlights", [])
+        evidence = ""
+        if highlights:
+            evidence = '<ul class="evidence-list">' + "".join(
+                f'<li>{self.localized_text(f"project.{project_id}.highlight.{index}", value)}</li>'
+                for index, value in enumerate(highlights)
+            ) + "</ul>"
+        period = ""
+        if project.get("period"):
+            period = self.localized(
+                "span",
+                f"project.{project_id}.period",
+                project["period"]["display"],
+            )
+        role = self.localized_text(f"project.{project_id}.role", project["role"])
+        meta = " · ".join(part for part in (period, role) if part)
+        recognition = ""
+        if project.get("recognition"):
+            recognition = self.localized(
+                "span",
+                f"project.{project_id}.recognition",
+                project["recognition"],
+                'class="badge badge--accent"',
+            )
+        classes = "project-card"
+        if compact:
+            classes += " project-card--compact"
+        project_name = self.localized(
+            "span",
+            f"project.{project_id}.name",
+            project["name"],
+            'class="project-title"',
+        )
+        project_outcome = self.localized(
+            "span",
+            f"project.{project_id}.summary",
+            project["summary"],
+            'class="project-outcome"',
+        )
+        project_more = self.localized(
+            "span",
+            f"project.{project_id}.details",
+            self.content["meta"]["ui"]["details"],
+            'class="project-more"',
+        )
+        figure = ""
+        if shot := self.screenshot_for(project_id):
+            figure = (
+                '<div class="dialog-figure">'
+                f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
+                '</div>'
+            )
+        card = (
+            f'<article class="{classes}" data-project-categories="{esc(" ".join(categories))}">'
+            f'<button type="button" class="project-overview" data-open-dialog="{dialog_id}">'
+            f'{project_name}{project_outcome}{project_more}'
+            '</button></article>'
+        )
+        title = self.localized(
+            "h3",
+            f"project.{project_id}.name",
+            project["name"],
+            f'id="{dialog_id}-title"',
+        )
+        dialog = (
+            f'<dialog class="project-dialog" id="{dialog_id}" aria-labelledby="{dialog_id}-title">'
+            '<form method="dialog" class="dialog-dismiss">'
+            f'<button type="submit" {self.translated_aria_attrs(f"project.{project_id}.close", self.content["meta"]["ui"]["close"])}>&times;</button>'
+            '</form>'
+            f'{figure}'
+            '<div class="dialog-body">'
+            f'{self.category_badges(categories, f"dialog.{project_id}")}'
+            f'{title}'
+            f'{recognition}<p class="meta">{meta}</p>'
+            f'{evidence}'
+            f'{self.tags(project.get("technologies", []))}'
+            f'{self.links(project.get("links"), f"dialog.{project_id}")}'
+            '</div></dialog>'
+        )
+        return card, dialog
+
+    def repository_card(self, repository: dict[str, Any], index: int) -> str:
+        categories = repository["categories"]
+        kind = repository.get("kind", "original")
+        kind_label = self.content["meta"]["ui"]["fork" if kind == "fork" else "original"]
+        language = f'<span class="tag">{esc(repository["language"])}</span>' if repository.get("language") else ""
+        return (
+            f'<article class="card repo-card" data-project-categories="{esc(" ".join(categories))}">'
+            '<div class="tag-list">'
+            f'{self.localized("span", f"repository.{index}.kind", kind_label, ATTR_BADGE)}'
+            f'{language}'
+            '</div>'
+            f'<h3><code>{esc(repository["name"])}</code></h3>'
+            f'{self.localized("p", f"repository.{index}.description", repository["description"])}'
+            '<div class="actions">'
+            f'<a class="button" href="{esc(repository["url"])}">{self.localized_text(f"repository.{index}.open", COPY["open_repository"])}</a>'
+            '</div></article>'
+        )
+
     def screens_strip(self) -> str:
         """A row of real screens, so the page has something to look at.
 
@@ -655,7 +769,6 @@ class Renderer:
             f'<div class="project-filters" {filter_aria}>{filters}</div>'
             '<p class="sr-only" aria-live="polite" data-filter-status data-i18n="filter.status">'
             f'{esc(COPY["filter_status"]["ko"])}</p>'
-            f'{self.screens_strip()}'
             f'{self.localized("h3", "projects.featured.heading", COPY["featured_projects"])}'
             f'<div class="project-grid">{featured_cards}</div>'
             '<details class="more-disclosure">'

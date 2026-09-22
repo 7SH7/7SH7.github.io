@@ -1086,35 +1086,6 @@
       letter-spacing: -0.02em;
     }
 
-    .screen-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      margin-bottom: clamp(2.5rem, 6vw, 4rem);
-    }
-
-    .screen {
-      margin: 0;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      background: var(--panel);
-    }
-
-    .screen img {
-      width: 100%;
-      height: auto;
-      transition: transform 400ms ease;
-    }
-
-    .screen:hover img {
-      transform: scale(1.03);
-    }
-
-    .screen:hover {
-      border-color: var(--signal);
-    }
-
     /* Project detail opens over the page rather than inside the grid, so a
        card never pushes its neighbours down. */
     .project-dialog {
@@ -1193,37 +1164,6 @@
       padding-top: 1.25rem;
     }
 
-    .screen button {
-      display: block;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background: none;
-      color: inherit;
-      font: inherit;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .screen-caption {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 0.7rem;
-      align-items: baseline;
-      padding: 0.85rem 1rem;
-      border-top: 1px solid var(--border);
-      line-height: 1.5;
-    }
-
-    .screen-caption strong {
-      font-family: var(--condensed);
-      font-size: 1.05rem;
-    }
-
-    .screen-caption .meta {
-      font-size: 0.82rem;
-    }
-
     @media (max-width: 860px) {
       :root {
         --header-height: 4rem;
@@ -1246,9 +1186,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .screen-grid {
-        grid-template-columns: 1fr;
-      }
 
       .project-grid,
       .compact-grid,

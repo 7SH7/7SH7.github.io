@@ -2321,64 +2321,20 @@
   ],
   "screenshots": [
     {
-      "src": "assets/ugly-pick.jpg",
-      "url": "https://ugly-pick.netlify.app/",
-      "label": {
-        "ko": "Ugly Pick",
-        "ja": "Ugly Pick",
-        "en": "Ugly Pick"
-      },
-      "caption": {
-        "ko": "규격외 농산물 가격 예측",
-        "ja": "規格外農産物の価格予測",
-        "en": "Price forecasting for off-grade produce"
-      },
-      "project": "ugly-pick"
+      "project": "ugly-pick",
+      "src": "assets/ugly-pick.jpg"
     },
     {
-      "src": "assets/ssobbi.jpg",
-      "url": "https://ssobbi.netlify.app/",
-      "label": {
-        "ko": "SSOBBI",
-        "ja": "SSOBBI",
-        "en": "SSOBBI"
-      },
-      "caption": {
-        "ko": "감정 기반 소비 관리",
-        "ja": "感情ベースの支出管理",
-        "en": "Emotion-aware spending management"
-      },
-      "project": "ssobbi"
+      "project": "ssobbi",
+      "src": "assets/ssobbi.jpg"
     },
     {
-      "src": "assets/hot-spot.jpg",
-      "url": "https://github.com/7SH7/hotspot_local",
-      "label": {
-        "ko": "Hot Spot",
-        "ja": "Hot Spot",
-        "en": "Hot Spot"
-      },
-      "caption": {
-        "ko": "맵기 특화 맛집 리뷰",
-        "ja": "辛さ特化の飲食店レビュー",
-        "en": "Spice-focused restaurant reviews"
-      },
-      "project": "hot-spot"
+      "project": "hot-spot",
+      "src": "assets/hot-spot.jpg"
     },
     {
-      "src": "assets/viaflight.jpg",
-      "url": "https://github.com/7SH7/viaflight_local",
-      "label": {
-        "ko": "ViaFlight",
-        "ja": "ViaFlight",
-        "en": "ViaFlight"
-      },
-      "caption": {
-        "ko": "경유지 여행 일정 설계",
-        "ja": "経由地の旅程設計",
-        "en": "Layover itinerary planning"
-      },
-      "project": "viaflight"
+      "project": "viaflight",
+      "src": "assets/viaflight.jpg"
     }
   ]
 }
