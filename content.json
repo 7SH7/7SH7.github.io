@@ -888,11 +888,6 @@
         "Kakao OAuth",
         "CoolSMS"
       ],
-      "recognition": {
-        "ko": "한동대 SW 공모전 장려상",
-        "ja": "韓東大学校SWコンテスト 奨励賞",
-        "en": "Handong Software Competition Encouragement Award"
-      },
       "links": [
         {
           "label": {
@@ -976,9 +971,9 @@
         "AWS S3"
       ],
       "recognition": {
-        "ko": "멋쟁이사자처럼 포트폴리오 해커톤 대상 · 한동대 SW 공모전 우수상",
-        "ja": "LIKELIONポートフォリオハッカソン大賞・韓東大学校SWコンテスト優秀賞",
-        "en": "LIKELION Portfolio Hackathon Grand Prize · Handong Software Competition Excellence Award"
+        "ko": "멋쟁이사자처럼 포트폴리오 해커톤 대상",
+        "ja": "LIKELIONポートフォリオハッカソン 大賞",
+        "en": "LIKELION Portfolio Hackathon Grand Prize"
       },
       "links": [
         {
@@ -1032,9 +1027,9 @@
         "Google Maps API"
       ],
       "recognition": {
-        "ko": "홀리데이 해커톤 대상 · 한동대 SW 공모전 우수상",
-        "ja": "ホリデーハッカソン大賞・韓東大学校SWコンテスト優秀賞",
-        "en": "Holiday Hackathon Grand Prize · Handong Software Competition Excellence Award"
+        "ko": "홀리데이 해커톤 대상",
+        "ja": "ホリデーハッカソン 大賞",
+        "en": "Holiday Hackathon Grand Prize"
       },
       "links": [
         {
@@ -1291,11 +1286,6 @@
         "ko": "환경공단 API 데이터를 병합·전처리해 전기차 충전소 시각화 대시보드 구축.",
         "ja": "韓国環境公団APIのデータを統合・前処理し、電気自動車充電所の可視化ダッシュボードを構築。",
         "en": "Merged and preprocessed Korea Environment Corporation API data to build an EV charging-station visualization dashboard."
-      },
-      "recognition": {
-        "ko": "한동대 데이터 분석 경진대회 우수상",
-        "ja": "韓東大学校データ分析コンテスト 優秀賞",
-        "en": "Handong Data Analysis Competition Excellence Award"
       }
     }
   ],
@@ -1391,78 +1381,6 @@
       }
     },
     {
-      "date": "2024-11",
-      "title": {
-        "ko": "SW 공모전 우수상",
-        "ja": "SWコンテスト 優秀賞",
-        "en": "Software Competition Excellence Award"
-      },
-      "issuer": {
-        "ko": "한동대 SW중심대학",
-        "ja": "韓東大学校 SW中心大学",
-        "en": "Handong SW-Centered University"
-      },
-      "context": {
-        "ko": "Hot Spot",
-        "ja": "Hot Spot",
-        "en": "Hot Spot"
-      }
-    },
-    {
-      "date": "2024-11",
-      "title": {
-        "ko": "SW 공모전 우수상",
-        "ja": "SWコンテスト 優秀賞",
-        "en": "Software Competition Excellence Award"
-      },
-      "issuer": {
-        "ko": "한동대 SW중심대학",
-        "ja": "韓東大学校 SW中心大学",
-        "en": "Handong SW-Centered University"
-      },
-      "context": {
-        "ko": "ViaFlight",
-        "ja": "ViaFlight",
-        "en": "ViaFlight"
-      }
-    },
-    {
-      "date": "2024-11",
-      "title": {
-        "ko": "SW 공모전 장려상",
-        "ja": "SWコンテスト 奨励賞",
-        "en": "Software Competition Encouragement Award"
-      },
-      "issuer": {
-        "ko": "한동대 SW중심대학",
-        "ja": "韓東大学校 SW中心大学",
-        "en": "Handong SW-Centered University"
-      },
-      "context": {
-        "ko": "SSOBBI",
-        "ja": "SSOBBI",
-        "en": "SSOBBI"
-      }
-    },
-    {
-      "date": "2024-11",
-      "title": {
-        "ko": "데이터 분석 경진대회 우수상",
-        "ja": "データ分析コンテスト 優秀賞",
-        "en": "Data Analysis Competition Excellence Award"
-      },
-      "issuer": {
-        "ko": "한동대 SW중심대학",
-        "ja": "韓東大学校 SW中心大学",
-        "en": "Handong SW-Centered University"
-      },
-      "context": {
-        "ko": "전기차 충전소 대시보드",
-        "ja": "電気自動車充電所ダッシュボード",
-        "en": "EV Charging Station Dashboard"
-      }
-    },
-    {
       "date": "2024",
       "title": {
         "ko": "포트폴리오 해커톤 대상 · 5팀 중 1위",
@@ -1547,6 +1465,11 @@
         "ko": "AI 개발자 과정. 기초 모델링, LangChain·LangGraph, React·Spring Boot 웹개발, AWS·Docker 인프라 학습.",
         "ja": "AI開発者課程。基礎モデリング、LangChain・LangGraph、React・Spring Boot Web開発、AWS・Dockerインフラを学習。",
         "en": "AI developer program covering foundational modeling, LangChain, LangGraph, React and Spring Boot web development, AWS, and Docker."
+      },
+      "organization": {
+        "ko": "KT",
+        "ja": "KT",
+        "en": "KT"
       }
     },
     {
@@ -1569,6 +1492,11 @@
         "ko": "Cloud Foundations, Cloud Architecting, Machine Learning Foundations 이수.",
         "ja": "Cloud Foundations、Cloud Architecting、Machine Learning Foundationsを修了。",
         "en": "Completed Cloud Foundations, Cloud Architecting, and Machine Learning Foundations."
+      },
+      "organization": {
+        "ko": "AWS",
+        "ja": "AWS",
+        "en": "AWS"
       }
     },
     {
@@ -1591,6 +1519,11 @@
         "ko": "딥러닝, Kaggle, Gemma 기반 LLM 파인튜닝 학습.",
         "ja": "ディープラーニング、Kaggle、GemmaベースのLLMファインチューニングを学習。",
         "en": "Studied deep learning, Kaggle workflows, and Gemma-based LLM fine-tuning."
+      },
+      "organization": {
+        "ko": "Google",
+        "ja": "Google",
+        "en": "Google"
       }
     },
     {
@@ -1613,6 +1546,11 @@
         "ko": "백엔드 과정 수료 후 13기 운영진·백엔드 멘토로 신입 교육과 해커톤 준비 지원.",
         "ja": "バックエンド課程修了後、第13期運営・バックエンドメンターとして新人教育とハッカソン準備を支援。",
         "en": "After completing the backend track, served as a 13th-cohort organizer and backend mentor for new-member training and hackathon preparation."
+      },
+      "organization": {
+        "ko": "멋쟁이사자처럼",
+        "ja": "LIKELION",
+        "en": "LIKELION"
       }
     },
     {

@@ -1013,6 +1013,8 @@ def validate_output(document: str) -> None:
         raise ValueError(f"Generated HTML is missing required content: {missing}")
 
     prohibited = (
+        "한동" + "대 SW",
+        "한동" + "대 데이터",
         "GPA",
         "TOE" + "IC",
         "전공 " + "평점",
