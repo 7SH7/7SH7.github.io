@@ -851,7 +851,6 @@ def validate_output(document: str) -> None:
         "Event" + "Bridge",
         "AIDEVOPS" + "_LIVE",
         "architecture.png",
-        "직업능력" + "심사평가원",
         "정확도 30" + "% 향상",
         "정보처리" + "기사" + " 필기",
         "AWS " + "SAA" + " 준비",

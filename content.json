@@ -34,9 +34,9 @@
         "en": "Projects"
       },
       "awards": {
-        "ko": "수상",
-        "ja": "受賞",
-        "en": "Awards"
+        "ko": "수상 · 선정",
+        "ja": "受賞・選定",
+        "en": "Awards & Selections"
       },
       "activities": {
         "ko": "교육 · 활동 · 오픈소스",
@@ -1359,6 +1359,78 @@
     }
   ],
   "awards": [
+    {
+      "date": "2026-06",
+      "title": {
+        "ko": "제18회 예비관광벤처 지원사업 선정 · 수행 중",
+        "ja": "第18回 予備観光ベンチャー支援事業 選定・遂行中",
+        "en": "18th Tourism Venture Startup Program · in progress"
+      },
+      "issuer": {
+        "ko": "문화체육관광부 · 한국관광공사",
+        "ja": "文化体育観光部・韓国観光公社",
+        "en": "Ministry of Culture, Sports and Tourism · Korea Tourism Organization"
+      },
+      "context": {
+        "ko": "MICEMore · 예비 부문 전국 15개 팀 선발 · 2026.11까지 수행",
+        "ja": "MICEMore・予備部門で全国15チームに選抜・2026.11まで遂行",
+        "en": "MICEMore · one of 15 teams selected nationally · running through November 2026"
+      }
+    },
+    {
+      "date": "2026",
+      "title": {
+        "ko": "예비 관광 스타트업 최종 선정",
+        "ja": "予備観光スタートアップ 最終選定",
+        "en": "Selected as an early-stage tourism startup"
+      },
+      "issuer": {
+        "ko": "경상북도 · 경북문화관광공사",
+        "ja": "慶尚北道・慶北文化観光公社",
+        "en": "Gyeongsangbuk-do · Gyeongbuk Culture and Tourism Organization"
+      },
+      "context": {
+        "ko": "2026 경북 관광 스타트업 공모전 · MICEMore",
+        "ja": "2026 慶北観光スタートアップコンテスト・MICEMore",
+        "en": "2026 Gyeongbuk Tourism Startup Competition · MICEMore"
+      }
+    },
+    {
+      "date": "2026",
+      "title": {
+        "ko": "콘텐츠 융합팩토리 선정 · 수행 중",
+        "ja": "コンテンツ融合ファクトリー 選定・遂行中",
+        "en": "Content Convergence Factory · in progress"
+      },
+      "issuer": {
+        "ko": "경북문화재단 콘텐츠진흥원",
+        "ja": "慶北文化財団 コンテンツ振興院",
+        "en": "Gyeongbuk Content Promotion Agency"
+      },
+      "context": {
+        "ko": "경북콘텐츠코리아랩 · MICEMore",
+        "ja": "慶北コンテンツコリアラボ・MICEMore",
+        "en": "Gyeongbuk Content Korea Lab · MICEMore"
+      }
+    },
+    {
+      "date": "2025-09",
+      "title": {
+        "ko": "직업능력심사평가원 원장상",
+        "ja": "職業能力審査評価院 院長賞",
+        "en": "President's Award, Korea Skills Quality Authority"
+      },
+      "issuer": {
+        "ko": "직업능력심사평가원",
+        "ja": "職業能力審査評価院",
+        "en": "Korea Skills Quality Authority"
+      },
+      "context": {
+        "ko": "KDT 해커톤",
+        "ja": "KDTハッカソン",
+        "en": "KDT Hackathon"
+      }
+    },
     {
       "date": "2025-08",
       "title": {
