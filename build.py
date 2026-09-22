@@ -21,8 +21,7 @@ OUTPUT_PATH = ROOT / "index.html"
 LANGUAGES = ("ko", "ja", "en")
 PROJECT_CATEGORIES = {"cloud", "embedded", "backend", "ai-data"}
 # MICEMore leads the live section already, so the project grid opens with the next
-# strongest cloud and backend work. The lead card spans the grid; the remaining six
-# fill three even rows behind it.
+# strongest cloud and backend work. Every card is the same size.
 FEATURED_ORDER = (
     "ugly-pick",
     "smart-factory-multi-agent",
@@ -32,7 +31,6 @@ FEATURED_ORDER = (
     "vehicle-diagnostics-r300",
     "micemore",
 )
-LEAD_PROJECT_ID = FEATURED_ORDER[0]
 ATTR_SECTION_INTRO = 'class="section-intro"'
 ATTR_EYEBROW = 'class="eyebrow"'
 ATTR_HERO_LEDE = 'class="hero-lede"'
@@ -528,7 +526,6 @@ class Renderer:
         classes = "project-card"
         if compact:
             classes += " project-card--compact"
-        featured_attr = ' data-featured="true"' if project_id == LEAD_PROJECT_ID else ""
         project_name = self.localized(
             "span",
             f"project.{project_id}.name",
@@ -548,7 +545,7 @@ class Renderer:
             'class="project-more"',
         )
         return (
-            f'<details class="{classes}" data-project-categories="{esc(" ".join(categories))}"{featured_attr}>'
+            f'<details class="{classes}" data-project-categories="{esc(" ".join(categories))}">'
             '<summary class="project-overview">'
             f'{project_name}{project_outcome}{project_more}'
             '</summary><div class="project-detail">'
