@@ -24,9 +24,6 @@ PROJECT_CATEGORIES = {"cloud", "embedded", "backend", "ai-data"}
 # strongest cloud and backend work. Every card is the same size.
 FEATURED_ORDER = (
     "ugly-pick",
-    "smart-factory-multi-agent",
-    "ssobbi",
-    "hot-spot",
     "llm-for-science",
     "vehicle-diagnostics-r300",
     "micemore",
@@ -38,6 +35,7 @@ ATTR_BADGE = 'class="badge"'
 ATTR_STAT_LABEL = 'class="stat-label"'
 ATTR_LIVE_BADGE = 'class="badge badge--live"'
 ATTR_META = 'class="meta"'
+ATTR_DIALOG_LEDE = 'class="dialog-lede"'
 ATTR_MUTED = 'class="muted"'
 ATTR_TIMELINE_DATE = 'class="timeline-date"'
 ATTR_GENERATED_NOTE = 'class="meta generated-note"'
@@ -567,6 +565,7 @@ class Renderer:
             f'{self.category_badges(categories, f"dialog.{project_id}")}'
             f'{title}'
             f'{recognition}<p class="meta">{meta}</p>'
+            f'{self.localized("p", f"dialog.{project_id}.summary", project["summary"], ATTR_DIALOG_LEDE)}'
             f'{evidence}'
             f'{self.tags(project.get("technologies", []))}'
             f'{self.links(project.get("links"), f"dialog.{project_id}")}'
@@ -590,147 +589,6 @@ class Renderer:
             '<div class="actions">'
             f'<a class="button" href="{esc(repository["url"])}">{self.localized_text(f"repository.{index}.open", COPY["open_repository"])}</a>'
             '</div></article>'
-        )
-
-    def screenshot_for(self, project_id: str) -> dict[str, Any] | None:
-        for shot in self.content.get("screenshots") or []:
-            if shot.get("project") == project_id:
-                return shot
-        return None
-
-    def project_card(self, project: dict[str, Any], compact: bool = False) -> tuple[str, str]:
-        """Return the grid card and the dialog it opens.
-
-        The card carries only what is worth scanning: the name and the outcome.
-        Everything else lives in the dialog, so opening one project no longer
-        pushes the rest of the grid down the page.
-        """
-        project_id = project["id"]
-        dialog_id = f"project-{project_id}"
-        categories = project["categories"]
-        highlights = project.get("highlights", [])
-        evidence = ""
-        if highlights:
-            evidence = '<ul class="evidence-list">' + "".join(
-                f'<li>{self.localized_text(f"project.{project_id}.highlight.{index}", value)}</li>'
-                for index, value in enumerate(highlights)
-            ) + "</ul>"
-        period = ""
-        if project.get("period"):
-            period = self.localized(
-                "span",
-                f"project.{project_id}.period",
-                project["period"]["display"],
-            )
-        role = self.localized_text(f"project.{project_id}.role", project["role"])
-        meta = " · ".join(part for part in (period, role) if part)
-        recognition = ""
-        if project.get("recognition"):
-            recognition = self.localized(
-                "span",
-                f"project.{project_id}.recognition",
-                project["recognition"],
-                'class="badge badge--accent"',
-            )
-        classes = "project-card"
-        if compact:
-            classes += " project-card--compact"
-        project_name = self.localized(
-            "span",
-            f"project.{project_id}.name",
-            project["name"],
-            'class="project-title"',
-        )
-        project_outcome = self.localized(
-            "span",
-            f"project.{project_id}.summary",
-            project["summary"],
-            'class="project-outcome"',
-        )
-        project_more = self.localized(
-            "span",
-            f"project.{project_id}.details",
-            self.content["meta"]["ui"]["details"],
-            'class="project-more"',
-        )
-        figure = ""
-        if shot := self.screenshot_for(project_id):
-            figure = (
-                '<div class="dialog-figure">'
-                f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
-                '</div>'
-            )
-        card = (
-            f'<article class="{classes}" data-project-categories="{esc(" ".join(categories))}">'
-            f'<button type="button" class="project-overview" data-open-dialog="{dialog_id}">'
-            f'{project_name}{project_outcome}{project_more}'
-            '</button></article>'
-        )
-        title = self.localized(
-            "h3",
-            f"project.{project_id}.name",
-            project["name"],
-            f'id="{dialog_id}-title"',
-        )
-        dialog = (
-            f'<dialog class="project-dialog" id="{dialog_id}" aria-labelledby="{dialog_id}-title">'
-            '<form method="dialog" class="dialog-dismiss">'
-            f'<button type="submit" {self.translated_aria_attrs(f"project.{project_id}.close", self.content["meta"]["ui"]["close"])}>&times;</button>'
-            '</form>'
-            f'{figure}'
-            '<div class="dialog-body">'
-            f'{self.category_badges(categories, f"dialog.{project_id}")}'
-            f'{title}'
-            f'{recognition}<p class="meta">{meta}</p>'
-            f'{evidence}'
-            f'{self.tags(project.get("technologies", []))}'
-            f'{self.links(project.get("links"), f"dialog.{project_id}")}'
-            '</div></dialog>'
-        )
-        return card, dialog
-
-    def repository_card(self, repository: dict[str, Any], index: int) -> str:
-        categories = repository["categories"]
-        kind = repository.get("kind", "original")
-        kind_label = self.content["meta"]["ui"]["fork" if kind == "fork" else "original"]
-        language = f'<span class="tag">{esc(repository["language"])}</span>' if repository.get("language") else ""
-        return (
-            f'<article class="card repo-card" data-project-categories="{esc(" ".join(categories))}">'
-            '<div class="tag-list">'
-            f'{self.localized("span", f"repository.{index}.kind", kind_label, ATTR_BADGE)}'
-            f'{language}'
-            '</div>'
-            f'<h3><code>{esc(repository["name"])}</code></h3>'
-            f'{self.localized("p", f"repository.{index}.description", repository["description"])}'
-            '<div class="actions">'
-            f'<a class="button" href="{esc(repository["url"])}">{self.localized_text(f"repository.{index}.open", COPY["open_repository"])}</a>'
-            '</div></article>'
-        )
-
-    def screens_strip(self) -> str:
-        """A row of real screens, so the page has something to look at.
-
-        Four of these projects shipped a front end worth showing; the rest are
-        backend or embedded work with no screen to photograph. Rather than let
-        that unevenness show up as cards with and without images, the screens
-        sit together in one strip above the grid.
-        """
-        screenshots = self.content.get("screenshots") or []
-        if not screenshots:
-            return ""
-        items = "".join(
-            '<figure class="screen">'
-            f'<button type="button" data-open-dialog="project-{esc(shot["project"])}">'
-            f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
-            '<span class="screen-caption">'
-            + self.localized("strong", f"screen.{index}.label", shot["label"])
-            + self.localized("span", f"screen.{index}.caption", shot["caption"], ATTR_META)
-            + '</span></button></figure>'
-            for index, shot in enumerate(screenshots)
-        )
-        return (
-            f'{self.localized("h3", "projects.screens.heading", COPY["screens_heading"])}'
-            f'<div class="screen-grid">{items}</div>'
         )
 
     def projects_section(self) -> str:
@@ -949,8 +807,8 @@ class Renderer:
 def validate_content(content: dict[str, Any]) -> None:
     expected_counts = {
         "experience": 5,
-        "featured_projects": 7,
-        "other_projects": 6,
+        "featured_projects": 4,
+        "other_projects": 9,
         "activities": 10,
         # External organizers only; on-campus and club wins were removed
         # deliberately, so a change here should be deliberate too.

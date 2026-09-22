@@ -576,84 +576,6 @@
       ]
     },
     {
-      "id": "smart-factory-multi-agent",
-      "categories": [
-        "ai-data",
-        "backend",
-        "cloud"
-      ],
-      "name": {
-        "ko": "AI 기반 자동차 스마트 팩토리 공정별 결함 탐지·모니터링 플랫폼",
-        "ja": "AIベース自動車スマートファクトリー工程別欠陥検知・監視プラットフォーム",
-        "en": "AI-based Automotive Smart Factory Defect Detection & Monitoring Platform"
-      },
-      "period": {
-        "start": "2025-07",
-        "end": "2025-08",
-        "display": {
-          "ko": "2025.07 ~ 2025.08 · 5주",
-          "ja": "2025.07〜2025.08・5週間",
-          "en": "July 2025 – August 2025 · 5 weeks"
-        }
-      },
-      "role": {
-        "ko": "이벤트 파이프라인 설계 · Multi-LLM Agent 구현 · 기여도 30%",
-        "ja": "イベントパイプライン設計・Multi-LLM Agent実装・貢献度30%",
-        "en": "Event Pipeline Design & Multi-LLM Agent Implementation · 30% contribution"
-      },
-      "summary": {
-        "ko": "Kafka 이벤트 파이프라인과 LangGraph 기반 다중 LLM 워크플로우를 구현하고 개별 구성 요소의 장애를 격리.",
-        "ja": "KafkaイベントパイプラインとLangGraphベースの複数LLMワークフローを実装し、各コンポーネントの障害を分離。",
-        "en": "Implemented a Kafka event pipeline and LangGraph multi-LLM workflow with component-level fault isolation."
-      },
-      "highlights": [
-        {
-          "ko": "Kafka CDC 방식으로 5개 마이크로서비스의 이상 이벤트 실시간 수신",
-          "ja": "Kafka CDC方式で5つのマイクロサービスから異常イベントをリアルタイム受信",
-          "en": "Received anomaly events from five microservices in real time through a Kafka CDC pipeline"
-        },
-        {
-          "ko": "Gemini 원인분석·GPT-4 해결전략·Clova 비용평가 결과를 Claude가 중재",
-          "ja": "Geminiの原因分析・GPT-4の解決戦略・Clovaの費用評価をClaudeが仲裁",
-          "en": "Used Claude to mediate Gemini root-cause analysis, GPT-4 resolution strategies, and Clova cost estimates"
-        },
-        {
-          "ko": "합의 시 조기 종료하고 최대 3 Round로 LLM 호출 상한 설정",
-          "ja": "合意時に早期終了し、最大3ラウンドでLLM呼び出しを制限",
-          "en": "Stopped early on consensus and capped discussions at three rounds"
-        },
-        {
-          "ko": "ChromaDB와 Elasticsearch를 병렬 조회하고 한쪽 장애 시에도 결과 제공",
-          "ja": "ChromaDBとElasticsearchを並列検索し、片方の障害時も結果を提供",
-          "en": "Queried ChromaDB and Elasticsearch in parallel and continued when either engine failed"
-        }
-      ],
-      "technologies": [
-        "FastAPI",
-        "LangGraph",
-        "Kafka",
-        "Redis",
-        "Elasticsearch",
-        "ChromaDB",
-        "GPT-4",
-        "Gemini",
-        "Clova",
-        "Claude",
-        "AKS",
-        "Docker"
-      ],
-      "links": [
-        {
-          "label": {
-            "ko": "저장소",
-            "ja": "リポジトリ",
-            "en": "Repository"
-          },
-          "url": "https://github.com/7SH7/multi_agent"
-        }
-      ]
-    },
-    {
       "id": "ugly-pick",
       "categories": [
         "cloud",
@@ -817,6 +739,86 @@
           "url": "https://pseudo-lab.com/events/pseudocon-2026"
         }
       ]
+    }
+  ],
+  "other_projects": [
+    {
+      "id": "smart-factory-multi-agent",
+      "categories": [
+        "ai-data",
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "AI 기반 자동차 스마트 팩토리 공정별 결함 탐지·모니터링 플랫폼",
+        "ja": "AIベース自動車スマートファクトリー工程別欠陥検知・監視プラットフォーム",
+        "en": "AI-based Automotive Smart Factory Defect Detection & Monitoring Platform"
+      },
+      "period": {
+        "start": "2025-07",
+        "end": "2025-08",
+        "display": {
+          "ko": "2025.07 ~ 2025.08 · 5주",
+          "ja": "2025.07〜2025.08・5週間",
+          "en": "July 2025 – August 2025 · 5 weeks"
+        }
+      },
+      "role": {
+        "ko": "이벤트 파이프라인 설계 · Multi-LLM Agent 구현 · 기여도 30%",
+        "ja": "イベントパイプライン設計・Multi-LLM Agent実装・貢献度30%",
+        "en": "Event Pipeline Design & Multi-LLM Agent Implementation · 30% contribution"
+      },
+      "summary": {
+        "ko": "Kafka 이벤트 파이프라인과 LangGraph 기반 다중 LLM 워크플로우를 구현하고 개별 구성 요소의 장애를 격리.",
+        "ja": "KafkaイベントパイプラインとLangGraphベースの複数LLMワークフローを実装し、各コンポーネントの障害を分離。",
+        "en": "Implemented a Kafka event pipeline and LangGraph multi-LLM workflow with component-level fault isolation."
+      },
+      "highlights": [
+        {
+          "ko": "Kafka CDC 방식으로 5개 마이크로서비스의 이상 이벤트 실시간 수신",
+          "ja": "Kafka CDC方式で5つのマイクロサービスから異常イベントをリアルタイム受信",
+          "en": "Received anomaly events from five microservices in real time through a Kafka CDC pipeline"
+        },
+        {
+          "ko": "Gemini 원인분석·GPT-4 해결전략·Clova 비용평가 결과를 Claude가 중재",
+          "ja": "Geminiの原因分析・GPT-4の解決戦略・Clovaの費用評価をClaudeが仲裁",
+          "en": "Used Claude to mediate Gemini root-cause analysis, GPT-4 resolution strategies, and Clova cost estimates"
+        },
+        {
+          "ko": "합의 시 조기 종료하고 최대 3 Round로 LLM 호출 상한 설정",
+          "ja": "合意時に早期終了し、最大3ラウンドでLLM呼び出しを制限",
+          "en": "Stopped early on consensus and capped discussions at three rounds"
+        },
+        {
+          "ko": "ChromaDB와 Elasticsearch를 병렬 조회하고 한쪽 장애 시에도 결과 제공",
+          "ja": "ChromaDBとElasticsearchを並列検索し、片方の障害時も結果を提供",
+          "en": "Queried ChromaDB and Elasticsearch in parallel and continued when either engine failed"
+        }
+      ],
+      "technologies": [
+        "FastAPI",
+        "LangGraph",
+        "Kafka",
+        "Redis",
+        "Elasticsearch",
+        "ChromaDB",
+        "GPT-4",
+        "Gemini",
+        "Clova",
+        "Claude",
+        "AKS",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/multi_agent"
+        }
+      ]
     },
     {
       "id": "ssobbi",
@@ -972,9 +974,7 @@
           "url": "https://github.com/7SH7/hotspot_local"
         }
       ]
-    }
-  ],
-  "other_projects": [
+    },
     {
       "id": "viaflight",
       "categories": [
