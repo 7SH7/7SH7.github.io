@@ -72,6 +72,7 @@ COPY: dict[str, dict[str, str]] = {
         "en": "Filter by discipline; every entry states role, contribution, metrics, and available evidence.",
     },
     "featured_projects": {"ko": "대표 프로젝트", "ja": "主要プロジェクト", "en": "Featured projects"},
+    "screens_heading": {"ko": "서비스 화면", "ja": "サービス画面", "en": "Service screens"},
     "additional_projects": {"ko": "추가 프로젝트", "ja": "その他のプロジェクト", "en": "Additional projects"},
     "more_projects_summary": {
         "ko": "추가 프로젝트와 공개 저장소 보기",
@@ -556,6 +557,32 @@ class Renderer:
             '</div></article>'
         )
 
+    def screens_strip(self) -> str:
+        """A row of real screens, so the page has something to look at.
+
+        Four of these projects shipped a front end worth showing; the rest are
+        backend or embedded work with no screen to photograph. Rather than let
+        that unevenness show up as cards with and without images, the screens
+        sit together in one strip above the grid.
+        """
+        screenshots = self.content.get("screenshots") or []
+        if not screenshots:
+            return ""
+        items = "".join(
+            '<figure class="screen">'
+            f'<a href="{esc(shot["url"])}" target="_blank" rel="noopener">'
+            f'<img src="{esc(shot["src"])}" alt="" width="1200" height="600" loading="lazy" decoding="async">'
+            '</a><figcaption>'
+            + self.localized("strong", f"screen.{index}.label", shot["label"])
+            + self.localized("span", f"screen.{index}.caption", shot["caption"], ATTR_META)
+            + '</figcaption></figure>'
+            for index, shot in enumerate(screenshots)
+        )
+        return (
+            f'{self.localized("h3", "projects.screens.heading", COPY["screens_heading"])}'
+            f'<div class="screen-grid">{items}</div>'
+        )
+
     def projects_section(self) -> str:
         sections = self.content["meta"]["sections"]
         labels = self.content["meta"]["category_labels"]
@@ -583,6 +610,7 @@ class Renderer:
             f'<div class="project-filters" {filter_aria}>{filters}</div>'
             '<p class="sr-only" aria-live="polite" data-filter-status data-i18n="filter.status">'
             f'{esc(COPY["filter_status"]["ko"])}</p>'
+            f'{self.screens_strip()}'
             f'{self.localized("h3", "projects.featured.heading", COPY["featured_projects"])}'
             f'<div class="project-grid">{featured_cards}</div>'
             '<details class="more-disclosure">'
@@ -800,6 +828,10 @@ def validate_content(content: dict[str, Any]) -> None:
     architecture_src = content["live_service"].get("architecture", {}).get("src")
     if architecture_src and not (ROOT / architecture_src).is_file():
         raise ValueError(f"Architecture image not found: {architecture_src}")
+
+    for shot in content.get("screenshots") or []:
+        if not (ROOT / shot["src"]).is_file():
+            raise ValueError(f"Screenshot not found: {shot['src']}")
 
 
 def validate_output(document: str) -> None:
