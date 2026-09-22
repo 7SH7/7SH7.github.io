@@ -1,0 +1,15 @@
+# Private source material used to prepare the public portfolio
+reference.txt
+*.pdf
+micemore_structure.png
+김승환_통합_마스터_이력서.md
+
+# Local tooling
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.qa/
+
+# OMC runtime state
+.omc/

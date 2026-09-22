@@ -1,0 +1,2303 @@
+{
+  "meta": {
+    "updated_at": "2026-09-22",
+    "default_locale": "ko",
+    "locales": [
+      "ko",
+      "ja",
+      "en"
+    ],
+    "site_title": {
+      "ko": "김승환 | 인프라 · 클라우드 엔지니어",
+      "ja": "キム・スンファン | インフラ・クラウドエンジニア",
+      "en": "Seunghwan Kim | Infrastructure & Cloud Engineer"
+    },
+    "description": {
+      "ko": "레지스터 수준 임베디드부터 AWS 라이브 운영까지, 구현과 운영의 증거를 모은 포트폴리오.",
+      "ja": "レジスタレベルの組み込み開発からAWS上のライブ運用まで、実装と運用の実績をまとめたポートフォリオ。",
+      "en": "A portfolio of implementation and operations evidence, spanning register-level embedded work and live AWS operations."
+    },
+    "sections": {
+      "live": {
+        "ko": "라이브 서비스",
+        "ja": "ライブサービス",
+        "en": "Live Service"
+      },
+      "experience": {
+        "ko": "경력",
+        "ja": "経歴",
+        "en": "Experience"
+      },
+      "projects": {
+        "ko": "프로젝트",
+        "ja": "プロジェクト",
+        "en": "Projects"
+      },
+      "awards": {
+        "ko": "수상",
+        "ja": "受賞",
+        "en": "Awards"
+      },
+      "activities": {
+        "ko": "교육 · 활동 · 오픈소스",
+        "ja": "教育・活動・オープンソース",
+        "en": "Education, Activities & Open Source"
+      },
+      "skills": {
+        "ko": "기술 스택",
+        "ja": "技術スタック",
+        "en": "Technical Skills"
+      },
+      "education": {
+        "ko": "학력 · 자격",
+        "ja": "学歴・資格",
+        "en": "Education & Credentials"
+      },
+      "contact": {
+        "ko": "연락",
+        "ja": "連絡先",
+        "en": "Contact"
+      },
+      "repositories": {
+        "ko": "대표 저장소",
+        "ja": "主なリポジトリ",
+        "en": "Selected Repositories"
+      }
+    },
+    "category_labels": {
+      "all": {
+        "ko": "전체",
+        "ja": "すべて",
+        "en": "All"
+      },
+      "cloud": {
+        "ko": "클라우드 · 인프라",
+        "ja": "クラウド・インフラ",
+        "en": "Cloud & Infrastructure"
+      },
+      "embedded": {
+        "ko": "임베디드 · 온디바이스",
+        "ja": "組み込み・オンデバイス",
+        "en": "Embedded & On-device"
+      },
+      "backend": {
+        "ko": "백엔드 · 분산시스템",
+        "ja": "バックエンド・分散システム",
+        "en": "Backend & Distributed"
+      },
+      "ai-data": {
+        "ko": "AI · 데이터",
+        "ja": "AI・データ",
+        "en": "AI & Data"
+      }
+    },
+    "ui": {
+      "view_live": {
+        "ko": "라이브 서비스 보기",
+        "ja": "ライブサービスを見る",
+        "en": "View live service"
+      },
+      "view_code": {
+        "ko": "코드 보기",
+        "ja": "コードを見る",
+        "en": "View code"
+      },
+      "view_demo": {
+        "ko": "시연 보기",
+        "ja": "デモを見る",
+        "en": "View demo"
+      },
+      "details": {
+        "ko": "상세 보기",
+        "ja": "詳細を見る",
+        "en": "View details"
+      },
+      "present": {
+        "ko": "현재",
+        "ja": "現在",
+        "en": "Present"
+      },
+      "live": {
+        "ko": "운영 중",
+        "ja": "運用中",
+        "en": "Live"
+      },
+      "fork": {
+        "ko": "포크 저장소",
+        "ja": "フォークリポジトリ",
+        "en": "Fork"
+      },
+      "original": {
+        "ko": "원본 저장소",
+        "ja": "オリジナルリポジトリ",
+        "en": "Original repository"
+      }
+    }
+  },
+  "profile": {
+    "name": {
+      "ko": "김승환",
+      "ja": "キム・スンファン",
+      "en": "Seunghwan Kim"
+    },
+    "romanized_name": "KIM, SEUNGHWAN",
+    "title": {
+      "ko": "인프라 · 클라우드 엔지니어",
+      "ja": "インフラ・クラウドエンジニア",
+      "en": "Infrastructure & Cloud Engineer"
+    },
+    "headline": {
+      "ko": "레지스터 수준 임베디드부터 AWS 라이브 운영까지",
+      "ja": "レジスタレベルの組み込み開発からAWSライブ運用まで",
+      "en": "From register-level embedded systems to live AWS operations"
+    },
+    "summary": {
+      "ko": "Java와 Spring Boot 기반 백엔드, Terraform 기반 클라우드 인프라, STM32 레지스터 제어를 프로젝트와 운영 환경에서 구현. 문제를 코드·인프라·하드웨어 경계에서 추적하고 재발하기 어려운 구조로 개선.",
+      "ja": "Java／Spring Bootバックエンド、Terraformによるクラウド基盤、STM32のレジスタ制御をプロジェクトと運用環境で実装。問題をコード・インフラ・ハードウェアの境界まで追跡し、再発しにくい構造へ改善。",
+      "en": "Built Java and Spring Boot backends, Terraform-managed cloud infrastructure, and STM32 register-level control in projects and live environments. Traces failures across software, infrastructure, and hardware boundaries, then removes their structural causes."
+    },
+    "location": {
+      "ko": "대한민국 대전",
+      "ja": "韓国・大田",
+      "en": "Daejeon, South Korea"
+    },
+    "education_summary": {
+      "ko": "한동대학교 전자공학 · 컴퓨터공학 전공, 2026.02 졸업",
+      "ja": "韓東大学校 電子工学・コンピュータ工学専攻、2026年2月卒業",
+      "en": "B.S. studies in Electrical Engineering and Computer Science, Handong Global University, graduated February 2026"
+    }
+  },
+  "live_service": {
+    "id": "micemore",
+    "name": "MICEMore",
+    "url": "https://m.micemore.com/",
+    "status": {
+      "ko": "AWS 서울 리전 운영 중",
+      "ja": "AWSソウルリージョンで運用中",
+      "en": "Live in the AWS Seoul Region"
+    },
+    "tagline": {
+      "ko": "AI 기반 MICE 통합 인터랙션 서비스",
+      "ja": "AIベースのMICE統合インタラクションサービス",
+      "en": "AI-powered integrated interaction service for MICE events"
+    },
+    "role": {
+      "ko": "개발 팀장 · 개발 인력 1명",
+      "ja": "開発リーダー・開発担当1名",
+      "en": "Development Lead · Sole Developer"
+    },
+    "summary": {
+      "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당하고 라이브 서비스를 운영.",
+      "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当し、ライブサービスを運用。",
+      "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations."
+    },
+    "evidence": [
+      {
+        "ko": "Terraform으로 인프라를 코드로 관리",
+        "ja": "Terraformでインフラをコードとして管理",
+        "en": "Infrastructure managed as code with Terraform"
+      },
+      {
+        "ko": "GitHub Actions에서 빌드·테스트 검증 후 배포",
+        "ja": "GitHub Actionsでビルド・テストを検証後にデプロイ",
+        "en": "Deployment through GitHub Actions after build and test validation"
+      },
+      {
+        "ko": "AWS 서울 리전 라이브 운영",
+        "ja": "AWSソウルリージョンでライブ運用",
+        "en": "Live operations in the AWS Seoul Region"
+      },
+      {
+        "ko": "장애 감지 시 AI가 원인 분석 초안을 작성하고, 사람이 검토해 PR로 반영. 자동 배포는 하지 않음",
+        "ja": "障害検知時はAIが原因分析のドラフトを作成し、人がレビューしてPRに反映。自動デプロイは行わない",
+        "en": "On incident detection an AI drafts the root-cause analysis; a person reviews it and applies it through a pull request. Nothing deploys automatically"
+      }
+    ],
+    "technologies": [
+      "AWS",
+      "Terraform",
+      "GitHub Actions"
+    ]
+  },
+  "stats": [
+    {
+      "value": "261,934 → 246,980",
+      "label": {
+        "ko": "논문 수집 → 정제",
+        "ja": "論文収集 → 精製",
+        "en": "Papers collected → curated"
+      }
+    },
+    {
+      "value": "200+",
+      "label": {
+        "ko": "고객 테스트 이슈 처리",
+        "ja": "顧客テスト課題を対応",
+        "en": "Customer test issues resolved"
+      }
+    },
+    {
+      "value": "1",
+      "label": {
+        "ko": "개발 인력으로 라이브 운영",
+        "ja": "開発担当1名でライブ運用",
+        "en": "Developer operating a live service"
+      }
+    },
+    {
+      "value": "70",
+      "label": {
+        "ko": "GitHub 공개 저장소",
+        "ja": "GitHub公開リポジトリ",
+        "en": "Public GitHub repositories"
+      },
+      "source": "GitHub API"
+    }
+  ],
+  "experience": [
+    {
+      "id": "micemore",
+      "period": {
+        "start": "2026-05",
+        "end": null,
+        "display": {
+          "ko": "2026.05 ~ 현재",
+          "ja": "2026.05〜現在",
+          "en": "May 2026 – Present"
+        }
+      },
+      "organization": {
+        "ko": "마이스모어 (MICEMore)",
+        "ja": "MICEMore（マイスモア）",
+        "en": "MICEMore"
+      },
+      "role": {
+        "ko": "창업팀 개발 팀장",
+        "ja": "創業チーム 開発リーダー",
+        "en": "Development Lead, Founding Team"
+      },
+      "summary": {
+        "ko": "개발 인력 1명으로 백엔드 전량과 AWS 인프라·배포를 단독 담당하고 서울 리전 라이브 운영.",
+        "ja": "開発担当1名としてバックエンド全体とAWSインフラ・デプロイを単独で担当し、ソウルリージョンでライブ運用。",
+        "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations in the Seoul Region."
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "라이브 서비스",
+            "ja": "ライブサービス",
+            "en": "Live service"
+          },
+          "url": "https://m.micemore.com/"
+        }
+      ]
+    },
+    {
+      "id": "pseudo-lab",
+      "period": {
+        "start": "2026-02",
+        "end": null,
+        "display": {
+          "ko": "2026.02 ~ 현재",
+          "ja": "2026.02〜現在",
+          "en": "February 2026 – Present"
+        }
+      },
+      "organization": {
+        "ko": "가짜연구소 (Pseudo Lab)",
+        "ja": "Pseudo Lab（ガチャ研究所）",
+        "en": "Pseudo Lab"
+      },
+      "role": {
+        "ko": "LLM for Science 오픈소스 연구",
+        "ja": "LLM for Science オープンソース研究",
+        "en": "LLM for Science Open-source Research"
+      },
+      "summary": {
+        "ko": "Semantic Scholar 논문 261,934건을 수집하고 3단계 검증을 거쳐 246,980건으로 정제.",
+        "ja": "Semantic Scholarの論文261,934件を収集し、3段階の検証を経て246,980件に精製。",
+        "en": "Collected 261,934 Semantic Scholar papers and curated them to 246,980 through a three-stage validation pipeline."
+      }
+    },
+    {
+      "id": "pusan-national-university",
+      "period": {
+        "start": "2026-01",
+        "end": "2026-02",
+        "display": {
+          "ko": "2026.01 ~ 2026.02",
+          "ja": "2026.01〜2026.02",
+          "en": "January 2026 – February 2026"
+        }
+      },
+      "organization": {
+        "ko": "부산대학교 정보화혁신본부",
+        "ja": "釜山大学校 情報化革新本部",
+        "en": "Pusan National University, Office of Information Innovation"
+      },
+      "role": {
+        "ko": "계약직 · 대학회계",
+        "ja": "契約職員・大学会計",
+        "en": "Contract Staff"
+      },
+      "summary": {
+        "ko": "학사 시스템 데이터 품질 개선, 산지니 AI 활용도 분석과 개선안 도출, AI 공모전 운영, 외부 솔루션 도입 검토.",
+        "ja": "学事システムのデータ品質改善、Sanjini AIの利用分析と改善案策定、AIコンテスト運営、外部ソリューション導入検討。",
+        "en": "Improved academic-system data quality, analyzed usage of the Sanjini AI service, proposed improvements, operated an AI contest, and evaluated external solutions."
+      }
+    },
+    {
+      "id": "hubiz-ict",
+      "period": {
+        "start": "2025-10",
+        "end": "2025-12",
+        "display": {
+          "ko": "2025.10 ~ 2025.12",
+          "ja": "2025.10〜2025.12",
+          "en": "October 2025 – December 2025"
+        }
+      },
+      "organization": {
+        "ko": "휴비즈아이씨티",
+        "ja": "Hubiz ICT",
+        "en": "Hubiz ICT"
+      },
+      "role": {
+        "ko": "풀스택 개발자 인턴",
+        "ja": "フルスタック開発インターン",
+        "en": "Full-stack Developer Intern"
+      },
+      "summary": {
+        "ko": "KISTI smartK2C 차세대 업무시스템 신규 개발. DB 설계부터 화면 연동까지 End-to-End 구현하고 고객 테스트 이슈 200건 이상 처리.",
+        "ja": "KISTI smartK2C次世代業務システムを新規開発。DB設計から画面連携までEnd-to-Endで実装し、顧客テスト課題200件以上に対応。",
+        "en": "Developed the next-generation KISTI smartK2C business system end to end, from database design to UI integration, and resolved more than 200 customer test issues."
+      }
+    },
+    {
+      "id": "likelion",
+      "period": {
+        "start": "2024-01",
+        "end": "2025-08",
+        "display": {
+          "ko": "2024.01 ~ 2025.08",
+          "ja": "2024.01〜2025.08",
+          "en": "January 2024 – August 2025"
+        }
+      },
+      "organization": {
+        "ko": "멋쟁이사자처럼 대학",
+        "ja": "LIKELION University",
+        "en": "LIKELION University"
+      },
+      "role": {
+        "ko": "13기 운영진 · 백엔드 멘토",
+        "ja": "第13期運営・バックエンドメンター",
+        "en": "13th Cohort Organizer & Backend Mentor"
+      },
+      "summary": {
+        "ko": "신입 기수 백엔드 교육과 해커톤 준비 지원.",
+        "ja": "新規メンバー向けバックエンド教育とハッカソン準備を支援。",
+        "en": "Taught backend development to new members and supported hackathon preparation."
+      }
+    }
+  ],
+  "featured_projects": [
+    {
+      "id": "micemore",
+      "categories": [
+        "cloud",
+        "backend"
+      ],
+      "name": {
+        "ko": "MICEMore — AI 기반 MICE 통합 인터랙션 서비스",
+        "ja": "MICEMore — AIベースのMICE統合インタラクションサービス",
+        "en": "MICEMore — AI-powered MICE Interaction Service"
+      },
+      "period": {
+        "start": "2026-05",
+        "end": null,
+        "display": {
+          "ko": "2026.05 ~ 현재",
+          "ja": "2026.05〜現在",
+          "en": "May 2026 – Present"
+        }
+      },
+      "role": {
+        "ko": "개발 팀장 · 개발 인력 1명",
+        "ja": "開発リーダー・開発担当1名",
+        "en": "Development Lead · Sole Developer"
+      },
+      "summary": {
+        "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당하고 서울 리전에서 라이브 서비스 운영.",
+        "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当し、ソウルリージョンでライブサービスを運用。",
+        "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations in the Seoul Region."
+      },
+      "highlights": [
+        {
+          "ko": "Terraform 기반 인프라 코드 관리",
+          "ja": "TerraformによるInfrastructure as Code",
+          "en": "Infrastructure as code with Terraform"
+        },
+        {
+          "ko": "GitHub Actions에서 빌드·테스트 검증 후 배포",
+          "ja": "GitHub Actionsでビルド・テスト検証後にデプロイ",
+          "en": "GitHub Actions deployment after build and test validation"
+        },
+        {
+          "ko": "AWS 서울 리전 라이브 운영",
+          "ja": "AWSソウルリージョンでライブ運用",
+          "en": "Live operations in the AWS Seoul Region"
+        }
+      ],
+      "technologies": [
+        "AWS",
+        "Terraform",
+        "GitHub Actions"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "라이브 서비스",
+            "ja": "ライブサービス",
+            "en": "Live service"
+          },
+          "url": "https://m.micemore.com/"
+        }
+      ]
+    },
+    {
+      "id": "vehicle-diagnostics-r300",
+      "categories": [
+        "embedded"
+      ],
+      "name": {
+        "ko": "차량 부품 상태 진단 시스템 (R300)",
+        "ja": "車両部品状態診断システム（R300）",
+        "en": "Vehicle Component Condition Monitoring System (R300)"
+      },
+      "period": null,
+      "role": {
+        "ko": "팀 프로젝트 · STM32 수집·통신 담당",
+        "ja": "チームプロジェクト・STM32データ収集／通信担当",
+        "en": "Team Project · STM32 Data Acquisition & Communications"
+      },
+      "summary": {
+        "ko": "HAL과 RTOS 없이 STM32F411 레지스터를 직접 설정하고, 고속 센서 수집·통신과 2-MCU 안전 구조 구현.",
+        "ja": "HAL／RTOSを使わずSTM32F411のレジスタを直接設定し、高速センサー収集・通信と2-MCU安全構成を実装。",
+        "en": "Configured STM32F411 registers directly without HAL or an RTOS, implementing high-rate sensor acquisition, communications, and a two-MCU safety structure."
+      },
+      "highlights": [
+        {
+          "ko": "3축 진동과 전류를 초당 1,000샘플로 수집하고 timestamp·CRC·프레임 손실·재시작 복구 처리",
+          "ja": "3軸振動と電流を毎秒1,000サンプルで収集し、timestamp・CRC・フレーム損失・再起動復旧を処理",
+          "en": "Collected three-axis vibration and current at 1,000 samples/s with timestamps, CRC, frame-loss handling, and restart recovery"
+        },
+        {
+          "ko": "RCC·GPIO·TIM·EXTI·USART·NVIC 레지스터 직접 설정",
+          "ja": "RCC・GPIO・TIM・EXTI・USART・NVICレジスタを直接設定",
+          "en": "Direct register configuration for RCC, GPIO, TIM, EXTI, USART, and NVIC"
+        },
+        {
+          "ko": "TIM2를 1MHz free-running counter로 구성해 초음파 ECHO 펄스 폭을 마이크로초 단위 측정",
+          "ja": "TIM2を1MHzフリーランニングカウンタとして構成し、超音波ECHOパルス幅をマイクロ秒単位で計測",
+          "en": "Configured TIM2 as a 1 MHz free-running counter to measure ultrasonic ECHO pulse width in microseconds"
+        },
+        {
+          "ko": "USART2 수신 인터럽트는 32바이트 링 버퍼 적재만 수행하고 파싱은 메인 루프로 분리",
+          "ja": "USART2受信割り込みは32バイトリングバッファへの格納だけに限定し、解析をメインループへ分離",
+          "en": "Reduced the USART2 receive ISR to filling a 32-byte ring buffer and moved parsing to the main loop"
+        },
+        {
+          "ko": "진입 10cm·이탈 15cm 임계값과 3회 연속 확인으로 경계 구간 채터링 억제",
+          "ja": "進入10cm・離脱15cmのしきい値と3回連続確認で境界付近のチャタリングを抑制",
+          "en": "Suppressed boundary chatter with 10 cm entry and 15 cm exit thresholds plus three consecutive confirmations"
+        },
+        {
+          "ko": "TIM5 20kHz PWM으로 H-bridge 제어, 방향 전환 전 출력 차단으로 즉시 역전 방지",
+          "ja": "TIM5の20kHz PWMでHブリッジを制御し、方向転換前の出力遮断で即時反転を防止",
+          "en": "Controlled an H-bridge with 20 kHz TIM5 PWM and disabled outputs before direction changes to prevent instant reversal"
+        },
+        {
+          "ko": "ATmega128A의 active-low ARM/E-STOP·디바운스·heartbeat timeout·latch·watchdog로 2-MCU 안전 구조 설계",
+          "ja": "ATmega128Aのactive-low ARM/E-STOP、デバウンス、heartbeat timeout、latch、watchdogによる2-MCU安全構成を設計",
+          "en": "Designed a two-MCU safety structure using ATmega128A active-low ARM/E-STOP, debounce, heartbeat timeout, latch state, and watchdog"
+        },
+        {
+          "ko": "I2C 센서와 ADC 데이터를 DMA로 수신해 CPU의 프레임 조립 부담 제거",
+          "ja": "I2CセンサーとADCデータをDMAで受信し、CPUのフレーム組み立て負荷を削減",
+          "en": "Used DMA for I2C sensor and ADC reception to remove frame-assembly work from the CPU"
+        }
+      ],
+      "technologies": [
+        "STM32F411",
+        "ATmega128A",
+        "C",
+        "I2C",
+        "ADC",
+        "DMA",
+        "UART",
+        "PWM"
+      ]
+    },
+    {
+      "id": "smart-factory-multi-agent",
+      "categories": [
+        "ai-data",
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "AI 기반 자동차 스마트 팩토리 공정별 결함 탐지·모니터링 플랫폼",
+        "ja": "AIベース自動車スマートファクトリー工程別欠陥検知・監視プラットフォーム",
+        "en": "AI-based Automotive Smart Factory Defect Detection & Monitoring Platform"
+      },
+      "period": {
+        "start": "2025-07",
+        "end": "2025-08",
+        "display": {
+          "ko": "2025.07 ~ 2025.08 · 5주",
+          "ja": "2025.07〜2025.08・5週間",
+          "en": "July 2025 – August 2025 · 5 weeks"
+        }
+      },
+      "role": {
+        "ko": "이벤트 파이프라인 설계 · Multi-LLM Agent 구현 · 기여도 30%",
+        "ja": "イベントパイプライン設計・Multi-LLM Agent実装・貢献度30%",
+        "en": "Event Pipeline Design & Multi-LLM Agent Implementation · 30% contribution"
+      },
+      "summary": {
+        "ko": "Kafka 이벤트 파이프라인과 LangGraph 기반 다중 LLM 워크플로우를 구현하고 개별 구성 요소의 장애를 격리.",
+        "ja": "KafkaイベントパイプラインとLangGraphベースの複数LLMワークフローを実装し、各コンポーネントの障害を分離。",
+        "en": "Implemented a Kafka event pipeline and LangGraph multi-LLM workflow with component-level fault isolation."
+      },
+      "highlights": [
+        {
+          "ko": "Kafka CDC 방식으로 5개 마이크로서비스의 이상 이벤트 실시간 수신",
+          "ja": "Kafka CDC方式で5つのマイクロサービスから異常イベントをリアルタイム受信",
+          "en": "Received anomaly events from five microservices in real time through a Kafka CDC pipeline"
+        },
+        {
+          "ko": "질문 카테고리·분류 신뢰도·RAG 컨텍스트·히스토리 4단계로 Agent 조합을 동적 선택",
+          "ja": "質問カテゴリ・分類信頼度・RAGコンテキスト・履歴の4段階でAgent構成を動的選択",
+          "en": "Dynamically selected agent combinations using question category, classification confidence, RAG context, and history"
+        },
+        {
+          "ko": "Gemini 원인분석·GPT-4 해결전략·Clova 비용평가 결과를 Claude가 중재",
+          "ja": "Geminiの原因分析・GPT-4の解決戦略・Clovaの費用評価をClaudeが仲裁",
+          "en": "Used Claude to mediate Gemini root-cause analysis, GPT-4 resolution strategies, and Clova cost estimates"
+        },
+        {
+          "ko": "합의 시 조기 종료하고 최대 3 Round로 LLM 호출 상한 설정",
+          "ja": "合意時に早期終了し、最大3ラウンドでLLM呼び出しを制限",
+          "en": "Stopped early on consensus and capped discussions at three rounds"
+        },
+        {
+          "ko": "Agent 실패를 failed_agents에 기록하고 나머지 워크플로우 지속",
+          "ja": "Agent障害をfailed_agentsに記録し、残りのワークフローを継続",
+          "en": "Recorded individual agent failures and continued the remaining workflow"
+        },
+        {
+          "ko": "ChromaDB와 Elasticsearch를 병렬 조회하고 한쪽 장애 시에도 결과 제공",
+          "ja": "ChromaDBとElasticsearchを並列検索し、片方の障害時も結果を提供",
+          "en": "Queried ChromaDB and Elasticsearch in parallel and continued when either engine failed"
+        },
+        {
+          "ko": "Redis·Elasticsearch 장애 전파를 fallback과 로컬 캐시로 차단",
+          "ja": "Redis・Elasticsearch障害の伝播をフォールバックとローカルキャッシュで遮断",
+          "en": "Stopped Redis and Elasticsearch failures from cascading through fallback paths and a local cache"
+        }
+      ],
+      "technologies": [
+        "FastAPI",
+        "LangGraph",
+        "Kafka",
+        "Redis",
+        "Elasticsearch",
+        "ChromaDB",
+        "GPT-4",
+        "Gemini",
+        "Clova",
+        "Claude",
+        "AKS",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/multi_agent"
+        }
+      ]
+    },
+    {
+      "id": "ugly-pick",
+      "categories": [
+        "cloud",
+        "backend",
+        "ai-data"
+      ],
+      "name": {
+        "ko": "Ugly Pick — 못난이 농산물 가격 투명성 서비스",
+        "ja": "Ugly Pick — 規格外農産物の価格透明化サービス",
+        "en": "Ugly Pick — Price Transparency for Imperfect Produce"
+      },
+      "period": {
+        "start": "2025-03",
+        "end": "2025-08",
+        "display": {
+          "ko": "2025.03 ~ 2025.08",
+          "ja": "2025.03〜2025.08",
+          "en": "March 2025 – August 2025"
+        }
+      },
+      "role": {
+        "ko": "8인 팀 · 백엔드·인프라 전담 · 기여도 50%",
+        "ja": "8名チーム・バックエンド／インフラ担当・貢献度50%",
+        "en": "8-person Team · Backend & Infrastructure · 50% contribution"
+      },
+      "summary": {
+        "ko": "현장 검증으로 기획을 피벗하고, Spring Boot와 FastAPI 기반 데이터 수집·모델 서빙 백엔드 및 AWS 운영 환경 구축.",
+        "ja": "現場検証を基に企画をピボットし、Spring BootとFastAPIによるデータ収集・モデル配信バックエンドとAWS運用環境を構築。",
+        "en": "Pivoted the product through field validation and built Spring Boot and FastAPI data collection, model-serving backends, and an AWS production environment."
+      },
+      "highlights": [
+        {
+          "ko": "포항시 농업기술센터 담당자에게 직접 가설을 검증하고 가격 예측 서비스로 피벗",
+          "ja": "浦項市農業技術センター担当者への直接検証を基に価格予測サービスへピボット",
+          "en": "Validated assumptions directly with Pohang Agricultural Technology Center and pivoted to price forecasting"
+        },
+        {
+          "ko": "Spring Boot API·오케스트레이션과 FastAPI 데이터 파이프라인·모델 서빙을 분리",
+          "ja": "Spring BootのAPI／オーケストレーションとFastAPIのデータパイプライン／モデル配信を分離",
+          "en": "Separated Spring Boot API orchestration from FastAPI data pipelines and model serving"
+        },
+        {
+          "ko": "KAMIS 가격 데이터 약 5,000건을 매일 자동 수집",
+          "ja": "KAMIS価格データ約5,000件を毎日自動収集",
+          "en": "Automatically collected about 5,000 KAMIS price records per day"
+        },
+        {
+          "ko": "24지역×15품목×2등급 호출에 exponential backoff·세션 재사용·연도별 분할 적용",
+          "ja": "24地域×15品目×2等級の呼び出しにexponential backoff・セッション再利用・年単位分割を適用",
+          "en": "Applied exponential backoff, session reuse, and year-based chunking across 24 regions, 15 products, and two grades"
+        },
+        {
+          "ko": "팀원이 개발한 PyTorch LSTM 모델의 서빙 아키텍처와 백엔드 구축",
+          "ja": "チームメンバーが開発したPyTorch LSTMモデルの配信アーキテクチャとバックエンドを構築",
+          "en": "Built the serving architecture and backend for a PyTorch LSTM model developed by a teammate"
+        },
+        {
+          "ko": "Nginx 504 병목을 레이어별로 추적해 추론 응답 60초에서 30초로 단축",
+          "ja": "Nginx 504のボトルネックをレイヤー別に追跡し、推論応答を60秒から30秒へ短縮",
+          "en": "Traced an Nginx 504 bottleneck layer by layer and reduced inference response time from 60 to 30 seconds"
+        },
+        {
+          "ko": "EBS 8GB Full로 인한 서버 다운을 50GB 확장·로그 로테이션으로 복구",
+          "ja": "EBS 8GBの容量枯渇による停止を50GBへの拡張とログローテーションで復旧",
+          "en": "Recovered from an EBS 8 GB disk-full outage by expanding to 50 GB and adding log rotation"
+        },
+        {
+          "ko": "배치 자원 경합을 FastAPI 분리로 해결하고 VPC·보안그룹·IAM·SSH 제한 재정비",
+          "ja": "バッチのリソース競合をFastAPI分離で解消し、VPC・セキュリティグループ・IAM・SSH制限を再整備",
+          "en": "Resolved batch resource contention by separating FastAPI workloads and revised VPC, security group, IAM, and SSH controls"
+        }
+      ],
+      "technologies": [
+        "Spring Boot",
+        "FastAPI",
+        "MySQL",
+        "PyTorch",
+        "AWS",
+        "Docker",
+        "Nginx",
+        "GitHub Actions",
+        "KAMIS API"
+      ],
+      "recognition": {
+        "ko": "한국농수산식품유통공사 사장상(우수상) · 56팀 중 8위",
+        "ja": "韓国農水産食品流通公社 社長賞（優秀賞）・56チーム中8位",
+        "en": "Korea Agro-Fisheries & Food Trade Corporation President's Award · 8th of 56 teams"
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "데이터·서빙 저장소",
+            "ja": "データ／配信リポジトリ",
+            "en": "Data & serving repository"
+          },
+          "url": "https://github.com/7SH7/ugly_price_predict"
+        },
+        {
+          "label": {
+            "ko": "백엔드 저장소",
+            "ja": "バックエンドリポジトリ",
+            "en": "Backend repository"
+          },
+          "url": "https://github.com/7SH7/ugly_back"
+        }
+      ]
+    },
+    {
+      "id": "llm-for-science",
+      "categories": [
+        "ai-data",
+        "backend"
+      ],
+      "name": {
+        "ko": "LLM for Science — 논문 데이터 파이프라인",
+        "ja": "LLM for Science — 論文データパイプライン",
+        "en": "LLM for Science — Research Paper Data Pipeline"
+      },
+      "period": {
+        "start": "2026-02",
+        "end": null,
+        "display": {
+          "ko": "2026.02 ~ 현재",
+          "ja": "2026.02〜現在",
+          "en": "February 2026 – Present"
+        }
+      },
+      "role": {
+        "ko": "가짜연구소 오픈소스 연구",
+        "ja": "Pseudo Lab オープンソース研究",
+        "en": "Pseudo Lab Open-source Research"
+      },
+      "summary": {
+        "ko": "대규모 논문 수집을 재개 가능한 파이프라인으로 만들고 단계별 중복·분야 검증을 통해 데이터셋 정제.",
+        "ja": "大規模論文収集を再開可能なパイプラインとして構築し、段階的な重複・分野検証でデータセットを精製。",
+        "en": "Built a resumable large-scale paper collection pipeline and curated the dataset through staged duplicate and relevance validation."
+      },
+      "highlights": [
+        {
+          "ko": "39개 키워드×11개 분야로 Semantic Scholar 논문 261,934건 수집",
+          "ja": "39キーワード×11分野でSemantic Scholar論文261,934件を収集",
+          "en": "Collected 261,934 Semantic Scholar papers across 39 keywords and 11 fields"
+        },
+        {
+          "ko": "해시 정확 중복 2,701건·Jaccard 유사 중복 40건·무관 분야 12,213건 제거",
+          "ja": "ハッシュ完全重複2,701件・Jaccard類似重複40件・無関係分野12,213件を除外",
+          "en": "Removed 2,701 exact hash duplicates, 40 Jaccard near-duplicates, and 12,213 off-topic records"
+        },
+        {
+          "ko": "raw·processed 분리와 checkpoint로 중단 지점부터 재개",
+          "ja": "raw／processed分離とcheckpointにより中断地点から再開",
+          "en": "Separated raw and processed data and used checkpoints for restartable collection"
+        },
+        {
+          "ko": "Parquet·PyArrow로 최종 246,980건 저장",
+          "ja": "Parquet・PyArrowで最終246,980件を保存",
+          "en": "Stored the final 246,980 records with Parquet and PyArrow"
+        },
+        {
+          "ko": "PDF URL 56,569건 중 6,067건을 내려받아 전문 5,684건 확보",
+          "ja": "PDF URL 56,569件から6,067件を取得し、全文5,684件を確保",
+          "en": "Downloaded 6,067 of 56,569 PDF URLs and secured 5,684 full-text papers"
+        },
+        {
+          "ko": "Full-text 5,684·Abstract 12,163·Title 229,133으로 최종 분리",
+          "ja": "Full-text 5,684・Abstract 12,163・Title 229,133に最終分類",
+          "en": "Final split: 5,684 full text, 12,163 abstract, and 229,133 title-only records"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Semantic Scholar API",
+        "Parquet",
+        "PyArrow"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "가짜연구소 프로젝트 목록",
+            "ja": "Pseudo Labプロジェクト一覧",
+            "en": "Pseudo Lab project listing"
+          },
+          "url": "https://pseudo-lab.com/events/pseudocon-2026"
+        }
+      ]
+    },
+    {
+      "id": "ssobbi",
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "SSOBBI — 감정 기반 재정 웰니스 서비스",
+        "ja": "SSOBBI — 感情ベースのファイナンシャルウェルネスサービス",
+        "en": "SSOBBI — Emotion-based Financial Wellness Service"
+      },
+      "period": {
+        "start": "2024-07",
+        "end": "2024-08",
+        "display": {
+          "ko": "2024.07 ~ 2024.08 · 3주",
+          "ja": "2024.07〜2024.08・3週間",
+          "en": "July 2024 – August 2024 · 3 weeks"
+        }
+      },
+      "role": {
+        "ko": "6인 팀 · 기획·백엔드·인프라 · 기여도 40%",
+        "ja": "6名チーム・企画／バックエンド／インフラ・貢献度40%",
+        "en": "6-person Team · Product, Backend & Infrastructure · 40% contribution"
+      },
+      "summary": {
+        "ko": "감정별 소비 패턴 분석과 알림 기능을 구현하고 AWS 프로덕션 환경을 구축. 멀티유저 테스트에서 데이터 혼선 버그를 발견해 재작성.",
+        "ja": "感情別消費パターン分析と通知機能を実装し、AWS本番環境を構築。マルチユーザーテストでデータ混線バグを発見し再実装。",
+        "en": "Built emotion-based spending analytics, notifications, and an AWS production environment, then found and rewrote a data-isolation flaw during multi-user testing."
+      },
+      "highlights": [
+        {
+          "ko": "감정 상태와 일간·월간 소비를 연결하는 REST API 구현",
+          "ja": "感情状態と日次・月次支出を結ぶREST APIを実装",
+          "en": "Implemented REST APIs connecting emotional states with daily and monthly spending"
+        },
+        {
+          "ko": "CoolSMS 연동 스케줄링 알림과 Kakao OAuth 2.0 구현",
+          "ja": "CoolSMS連携のスケジュール通知とKakao OAuth 2.0を実装",
+          "en": "Implemented scheduled CoolSMS notifications and Kakao OAuth 2.0"
+        },
+        {
+          "ko": "AWS EC2·Route 53·ALB·HTTPS 프로덕션 환경 구축",
+          "ja": "AWS EC2・Route 53・ALB・HTTPSの本番環境を構築",
+          "en": "Built a production environment with AWS EC2, Route 53, ALB, and HTTPS"
+        },
+        {
+          "ko": "실사용자 50명 테스트에서 다른 사용자의 데이터가 조회되는 문제 발견",
+          "ja": "実利用者50名のテストで他ユーザーのデータが表示される問題を発見",
+          "en": "Found cross-user data exposure during a 50-person user test"
+        },
+        {
+          "ko": "Map 오사용으로 인한 덮어쓰기를 로그로 추적해 모듈을 재작성하고 멀티유저 QA를 배포 체크리스트로 정착",
+          "ja": "Map誤用による上書きをログで追跡し、モジュールを再実装してマルチユーザーQAをデプロイ前チェックに定着",
+          "en": "Traced Map misuse that overwrote user data, rewrote the module, and made multi-user QA a deployment checklist item"
+        }
+      ],
+      "technologies": [
+        "Spring Boot",
+        "JPA",
+        "MySQL",
+        "AWS EC2",
+        "Route 53",
+        "ALB",
+        "Kakao OAuth",
+        "CoolSMS"
+      ],
+      "recognition": {
+        "ko": "한동대 SW 공모전 장려상",
+        "ja": "韓東大学校SWコンテスト 奨励賞",
+        "en": "Handong Software Competition Encouragement Award"
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "조직 저장소",
+            "ja": "組織リポジトリ",
+            "en": "Organization repository"
+          },
+          "url": "https://github.com/LikeLionHGU/SSOBBI_Back"
+        }
+      ]
+    },
+    {
+      "id": "hot-spot",
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "Hot Spot — 맵기 전문 음식점 리뷰 커뮤니티",
+        "ja": "Hot Spot — 辛さ特化型飲食店レビューコミュニティ",
+        "en": "Hot Spot — Spicy-food Restaurant Review Community"
+      },
+      "period": {
+        "start": "2024-04",
+        "end": "2024-06",
+        "display": {
+          "ko": "2024.04 ~ 2024.06",
+          "ja": "2024.04〜2024.06",
+          "en": "April 2024 – June 2024"
+        }
+      },
+      "role": {
+        "ko": "5인 팀 · 기획·백엔드·인프라 · 기여도 60%",
+        "ja": "5名チーム・企画／バックエンド／インフラ・貢献度60%",
+        "en": "5-person Team · Product, Backend & Infrastructure · 60% contribution"
+      },
+      "summary": {
+        "ko": "사용자 검증을 바탕으로 진입 경험을 설계하고 캐시 전략으로 외부 API 비용과 응답 시간을 개선해 NCP에서 운영.",
+        "ja": "ユーザー検証を基に導入体験を設計し、キャッシュ戦略で外部API呼び出しと応答時間を改善してNCPで運用。",
+        "en": "Designed the entry experience from user research, reduced external API use and latency through caching, and operated the service on NCP."
+      },
+      "highlights": [
+        {
+          "ko": "MBTI식 맵기 레벨 테스트를 서비스 진입점으로 설계",
+          "ja": "MBTI形式の辛さレベル診断をサービスの入口として設計",
+          "en": "Designed an MBTI-style spice-level test as the service entry point"
+        },
+        {
+          "ko": "44명 설문을 직접 설계·진행해 81.8% 긍정 반응 확인",
+          "ja": "44名対象のアンケートを設計・実施し81.8%の肯定的反応を確認",
+          "en": "Designed and ran a 44-person survey that returned 81.8% positive responses"
+        },
+        {
+          "ko": "DB 저장과 실시간 호출을 비교해 Caffeine 캐시 하이브리드 전략 적용",
+          "ja": "DB保存とリアルタイム呼び出しを比較しCaffeineキャッシュのハイブリッド戦略を適用",
+          "en": "Compared database storage with real-time calls and adopted a hybrid Caffeine cache strategy"
+        },
+        {
+          "ko": "외부 API 호출 약 70% 절감, 응답 300ms에서 50ms로 개선",
+          "ja": "外部API呼び出しを約70%削減し、応答を300msから50msへ改善",
+          "en": "Reduced external API calls by about 70% and latency from 300 ms to 50 ms"
+        },
+        {
+          "ko": "NCP 실서비스 배포·운영과 Google OAuth2·Kakao Maps 연동",
+          "ja": "NCPでの本番デプロイ・運用とGoogle OAuth2・Kakao Maps連携",
+          "en": "Deployed and operated on NCP with Google OAuth2 and Kakao Maps integration"
+        },
+        {
+          "ko": "기획 담당자 이탈 후 기획 공백을 메우고 팀 구조 재정립",
+          "ja": "企画担当離脱後に企画の空白を補い、チーム体制を再構築",
+          "en": "Filled the product-planning gap after a teammate left and reorganized the team"
+        }
+      ],
+      "technologies": [
+        "Spring Boot",
+        "WebFlux",
+        "MySQL",
+        "Caffeine Cache",
+        "Spring Security",
+        "Google OAuth2",
+        "Kakao Maps API",
+        "NCP",
+        "AWS S3"
+      ],
+      "recognition": {
+        "ko": "멋쟁이사자처럼 포트폴리오 해커톤 대상 · 한동대 SW 공모전 우수상",
+        "ja": "LIKELIONポートフォリオハッカソン大賞・韓東大学校SWコンテスト優秀賞",
+        "en": "LIKELION Portfolio Hackathon Grand Prize · Handong Software Competition Excellence Award"
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/hotspot_local"
+        }
+      ]
+    }
+  ],
+  "other_projects": [
+    {
+      "id": "viaflight",
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "ViaFlight — 경유공항 맞춤 여행 도우미",
+        "ja": "ViaFlight — 乗継空港向け旅行アシスタント",
+        "en": "ViaFlight — Layover Airport Travel Assistant"
+      },
+      "period": {
+        "start": "2024-02",
+        "end": "2024-02",
+        "display": {
+          "ko": "2024.02 · 2주",
+          "ja": "2024.02・2週間",
+          "en": "February 2024 · 2 weeks"
+        }
+      },
+      "role": {
+        "ko": "5인 팀 · 백엔드·서비스 기획",
+        "ja": "5名チーム・バックエンド／サービス企画",
+        "en": "5-person Team · Backend & Product Planning"
+      },
+      "summary": {
+        "ko": "경유시간과 공항시설 운영시간을 매칭하는 JPQL 추천 로직 구현. 해외 좌표 미지원 문제로 Kakao Maps에서 Google Maps로 전환하고 데모데이 40명 동시 접속 운영.",
+        "ja": "乗継時間と空港施設の営業時間を照合するJPQL推薦ロジックを実装。海外座標未対応のためKakao MapsからGoogle Mapsへ移行し、デモ当日の同時接続40名を安定運用。",
+        "en": "Implemented JPQL recommendations matching layover duration with airport facility hours, migrated from Kakao Maps to Google Maps for overseas coordinates, and supported 40 concurrent demo users."
+      },
+      "technologies": [
+        "Spring Boot",
+        "JPA",
+        "JPQL",
+        "MySQL",
+        "AWS",
+        "Google Maps API"
+      ],
+      "recognition": {
+        "ko": "홀리데이 해커톤 대상 · 한동대 SW 공모전 우수상",
+        "ja": "ホリデーハッカソン大賞・韓東大学校SWコンテスト優秀賞",
+        "en": "Holiday Hackathon Grand Prize · Handong Software Competition Excellence Award"
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/viaflight_local"
+        }
+      ]
+    },
+    {
+      "id": "trip-advisor-llm",
+      "categories": [
+        "ai-data"
+      ],
+      "name": {
+        "ko": "Trip Advisor — 한국어 여행 QA LLM 파인튜닝",
+        "ja": "Trip Advisor — 韓国語旅行QA LLMファインチューニング",
+        "en": "Trip Advisor — Korean Travel QA LLM Fine-tuning"
+      },
+      "period": {
+        "start": "2024-09",
+        "end": "2024-09",
+        "display": {
+          "ko": "2024.09",
+          "ja": "2024.09",
+          "en": "September 2024"
+        }
+      },
+      "role": {
+        "ko": "개인 프로젝트 · 전체 담당",
+        "ja": "個人プロジェクト・全工程担当",
+        "en": "Solo Project · End-to-end ownership"
+      },
+      "summary": {
+        "ko": "AI Hub 여행 데이터를 바탕으로 한국어 QA 5,000건을 생성·전처리하고 Gemma-2-2B에 QLoRA를 적용해 도메인 특화 어댑터 공개.",
+        "ja": "AI Hub旅行データから韓国語QA 5,000件を生成・前処理し、Gemma-2-2BへQLoRAを適用してドメイン特化アダプターを公開。",
+        "en": "Generated and preprocessed 5,000 Korean QA pairs from AI Hub travel data, applied QLoRA to Gemma-2-2B, and published the domain adapter."
+      },
+      "highlights": [
+        {
+          "ko": "4bit 양자화와 LoRA rank 16·alpha 16 적용",
+          "ja": "4bit量子化とLoRA rank 16・alpha 16を適用",
+          "en": "Applied 4-bit quantization and LoRA rank 16, alpha 16"
+        },
+        {
+          "ko": "Attention과 FFN 전체 모듈을 대상으로 파인튜닝",
+          "ja": "AttentionとFFNの全モジュールを対象にファインチューニング",
+          "en": "Fine-tuned all Attention and FFN modules"
+        },
+        {
+          "ko": "Hugging Face에 어댑터 모델 공개",
+          "ja": "Hugging Faceでアダプターモデルを公開",
+          "en": "Published the adapter model on Hugging Face"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Transformers",
+        "Unsloth",
+        "Gemma-2-2B",
+        "QLoRA",
+        "PEFT",
+        "Hugging Face",
+        "Pandas"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "Hugging Face 모델",
+            "ja": "Hugging Faceモデル",
+            "en": "Hugging Face model"
+          },
+          "url": "https://huggingface.co/pinoc3157/trip_advisor"
+        }
+      ]
+    },
+    {
+      "id": "ondevice",
+      "categories": [
+        "embedded",
+        "ai-data"
+      ],
+      "name": {
+        "ko": "온디바이스 AI",
+        "ja": "オンデバイスAI",
+        "en": "On-device AI"
+      },
+      "period": {
+        "start": "2026-09",
+        "end": "2026-09",
+        "display": {
+          "ko": "2026.09",
+          "ja": "2026.09",
+          "en": "September 2026"
+        }
+      },
+      "role": {
+        "ko": "온디바이스 추론 작업",
+        "ja": "オンデバイス推論開発",
+        "en": "On-device Inference Work"
+      },
+      "summary": {
+        "ko": "제약된 장치 환경의 온디바이스 추론 관련 구현과 실험.",
+        "ja": "制約のあるデバイス環境でのオンデバイス推論に関する実装と実験。",
+        "en": "Implementation and experiments for on-device inference in constrained device environments."
+      },
+      "technologies": [
+        "Python",
+        "On-device AI"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "ondevice 저장소",
+            "ja": "ondeviceリポジトリ",
+            "en": "ondevice repository"
+          },
+          "url": "https://github.com/7SH7/ondevice"
+        },
+        {
+          "label": {
+            "ko": "on-device-project 저장소",
+            "ja": "on-device-projectリポジトリ",
+            "en": "on-device-project repository"
+          },
+          "url": "https://github.com/7SH7/on-device-project"
+        }
+      ]
+    },
+    {
+      "id": "slip-out",
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "name": {
+        "ko": "slip-out — 웹 서비스",
+        "ja": "slip-out — Webサービス",
+        "en": "slip-out — Web Service"
+      },
+      "period": {
+        "start": "2026-08",
+        "end": "2026-08",
+        "display": {
+          "ko": "2026.08",
+          "ja": "2026.08",
+          "en": "August 2026"
+        }
+      },
+      "role": {
+        "ko": "설계·구현·배포",
+        "ja": "設計・実装・デプロイ",
+        "en": "Design, Implementation & Deployment"
+      },
+      "summary": {
+        "ko": "웹 서비스를 설계·구현하고 배포한 뒤 시연 영상 공개.",
+        "ja": "Webサービスを設計・実装・デプロイし、デモ動画を公開。",
+        "en": "Designed, implemented, and deployed a web service with a public demo video."
+      },
+      "technologies": [
+        "JavaScript",
+        "Vercel"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "라이브 서비스",
+            "ja": "ライブサービス",
+            "en": "Live service"
+          },
+          "url": "https://slip-out-games.vercel.app"
+        },
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/slip-out"
+        },
+        {
+          "label": {
+            "ko": "시연 영상",
+            "ja": "デモ動画",
+            "en": "Demo video"
+          },
+          "url": "https://youtu.be/CuhUbiTrQsc"
+        }
+      ]
+    },
+    {
+      "id": "tanghulu-analysis",
+      "categories": [
+        "ai-data"
+      ],
+      "name": {
+        "ko": "싱푸탕후루 매출 데이터 분석",
+        "ja": "シンフータンフル売上データ分析",
+        "en": "Xingfu Tanghulu Sales Data Analysis"
+      },
+      "period": {
+        "start": "2025",
+        "end": "2025",
+        "display": {
+          "ko": "2025 · DIVE",
+          "ja": "2025・DIVE",
+          "en": "2025 · DIVE"
+        }
+      },
+      "role": {
+        "ko": "데이터 분석 학회 프로젝트",
+        "ja": "データ分析サークルプロジェクト",
+        "en": "Data Analytics Society Project"
+      },
+      "summary": {
+        "ko": "교내 매장 매출의 상품 연관성을 분석해 묶음 판매라는 비즈니스 질문으로 전환하고, 결과를 마케팅학회에 전달해 실제 이벤트 기획으로 연결.",
+        "ja": "学内店舗の売上から商品間の関連性を分析し、セット販売というビジネス課題へ変換。結果をマーケティング学会へ共有し、実際のイベント企画につなげた。",
+        "en": "Analyzed product associations in campus-store sales, reframed the result as a bundle-sales question, and handed it to the marketing society for a real campaign."
+      },
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy"
+      ]
+    },
+    {
+      "id": "ev-charging-dashboard",
+      "categories": [
+        "ai-data"
+      ],
+      "name": {
+        "ko": "전기차 충전소 대시보드",
+        "ja": "電気自動車充電所ダッシュボード",
+        "en": "EV Charging Station Dashboard"
+      },
+      "period": {
+        "start": "2024",
+        "end": "2024",
+        "display": {
+          "ko": "2024",
+          "ja": "2024",
+          "en": "2024"
+        }
+      },
+      "role": {
+        "ko": "데이터 병합·전처리·시각화",
+        "ja": "データ統合・前処理・可視化",
+        "en": "Data Integration, Preprocessing & Visualization"
+      },
+      "summary": {
+        "ko": "환경공단 API 데이터를 병합·전처리해 전기차 충전소 시각화 대시보드 구축.",
+        "ja": "韓国環境公団APIのデータを統合・前処理し、電気自動車充電所の可視化ダッシュボードを構築。",
+        "en": "Merged and preprocessed Korea Environment Corporation API data to build an EV charging-station visualization dashboard."
+      },
+      "recognition": {
+        "ko": "한동대 데이터 분석 경진대회 우수상",
+        "ja": "韓東大学校データ分析コンテスト 優秀賞",
+        "en": "Handong Data Analysis Competition Excellence Award"
+      }
+    }
+  ],
+  "awards": [
+    {
+      "date": "2025-08",
+      "title": {
+        "ko": "한국농수산식품유통공사 사장상(우수상)",
+        "ja": "韓国農水産食品流通公社 社長賞（優秀賞）",
+        "en": "Korea Agro-Fisheries & Food Trade Corporation President's Award"
+      },
+      "issuer": {
+        "ko": "한국농수산식품유통공사",
+        "ja": "韓国農水産食品流通公社",
+        "en": "Korea Agro-Fisheries & Food Trade Corporation"
+      },
+      "context": {
+        "ko": "제10회 농림축산식품 공공데이터 활용 창업경진대회 · Ugly Pick · 56팀 중 8위",
+        "ja": "第10回農林畜産食品公共データ活用創業コンテスト・Ugly Pick・56チーム中8位",
+        "en": "10th Agri-food Public Data Startup Competition · Ugly Pick · 8th of 56 teams"
+      }
+    },
+    {
+      "date": "2024-11",
+      "title": {
+        "ko": "SW 공모전 우수상",
+        "ja": "SWコンテスト 優秀賞",
+        "en": "Software Competition Excellence Award"
+      },
+      "issuer": {
+        "ko": "한동대 SW중심대학",
+        "ja": "韓東大学校 SW中心大学",
+        "en": "Handong SW-Centered University"
+      },
+      "context": {
+        "ko": "Hot Spot",
+        "ja": "Hot Spot",
+        "en": "Hot Spot"
+      }
+    },
+    {
+      "date": "2024-11",
+      "title": {
+        "ko": "SW 공모전 우수상",
+        "ja": "SWコンテスト 優秀賞",
+        "en": "Software Competition Excellence Award"
+      },
+      "issuer": {
+        "ko": "한동대 SW중심대학",
+        "ja": "韓東大学校 SW中心大学",
+        "en": "Handong SW-Centered University"
+      },
+      "context": {
+        "ko": "ViaFlight",
+        "ja": "ViaFlight",
+        "en": "ViaFlight"
+      }
+    },
+    {
+      "date": "2024-11",
+      "title": {
+        "ko": "SW 공모전 장려상",
+        "ja": "SWコンテスト 奨励賞",
+        "en": "Software Competition Encouragement Award"
+      },
+      "issuer": {
+        "ko": "한동대 SW중심대학",
+        "ja": "韓東大学校 SW中心大学",
+        "en": "Handong SW-Centered University"
+      },
+      "context": {
+        "ko": "SSOBBI",
+        "ja": "SSOBBI",
+        "en": "SSOBBI"
+      }
+    },
+    {
+      "date": "2024-11",
+      "title": {
+        "ko": "데이터 분석 경진대회 우수상",
+        "ja": "データ分析コンテスト 優秀賞",
+        "en": "Data Analysis Competition Excellence Award"
+      },
+      "issuer": {
+        "ko": "한동대 SW중심대학",
+        "ja": "韓東大学校 SW中心大学",
+        "en": "Handong SW-Centered University"
+      },
+      "context": {
+        "ko": "전기차 충전소 대시보드",
+        "ja": "電気自動車充電所ダッシュボード",
+        "en": "EV Charging Station Dashboard"
+      }
+    },
+    {
+      "date": "2024",
+      "title": {
+        "ko": "포트폴리오 해커톤 대상 · 5팀 중 1위",
+        "ja": "ポートフォリオハッカソン 大賞・5チーム中1位",
+        "en": "Portfolio Hackathon Grand Prize · 1st of 5 teams"
+      },
+      "issuer": {
+        "ko": "멋쟁이사자처럼",
+        "ja": "LIKELION",
+        "en": "LIKELION"
+      },
+      "context": {
+        "ko": "Hot Spot",
+        "ja": "Hot Spot",
+        "en": "Hot Spot"
+      }
+    },
+    {
+      "date": "2024",
+      "title": {
+        "ko": "홀리데이 해커톤 대상 · 5팀 중 1위",
+        "ja": "ホリデーハッカソン 大賞・5チーム中1位",
+        "en": "Holiday Hackathon Grand Prize · 1st of 5 teams"
+      },
+      "issuer": {
+        "ko": "멋쟁이사자처럼",
+        "ja": "LIKELION",
+        "en": "LIKELION"
+      },
+      "context": {
+        "ko": "ViaFlight",
+        "ja": "ViaFlight",
+        "en": "ViaFlight"
+      }
+    }
+  ],
+  "activities": [
+    {
+      "id": "ai-semiconductor-course",
+      "period": {
+        "start": "2026-05-27",
+        "end": "2026-12-16",
+        "display": {
+          "ko": "2026.05.27 ~ 2026.12.16",
+          "ja": "2026.05.27〜2026.12.16",
+          "en": "May 27 – December 16, 2026"
+        }
+      },
+      "name": {
+        "ko": "AI 시스템반도체 SW개발자 채용연계과정",
+        "ja": "AIシステム半導体SW開発者 就職連携課程",
+        "en": "AI System Semiconductor Software Developer Program"
+      },
+      "organization": {
+        "ko": "서울상공회의소 · 대한상공회의소 서울기술교육센터",
+        "ja": "ソウル商工会議所・大韓商工会議所ソウル技術教育センター",
+        "en": "Seoul Chamber of Commerce & Industry · Seoul Technical Training Center"
+      },
+      "description": {
+        "ko": "Telechips·넥스트칩 연계, AVR·STM32·온디바이스 AI·Jetson Orin·FPGA·임베디드 Linux 커널·디바이스 드라이버·디바이스 트리 학습.",
+        "ja": "Telechips・Nextchip連携、AVR・STM32・オンデバイスAI・Jetson Orin・FPGA・組み込みLinuxカーネル・デバイスドライバ・Device Treeを学習。",
+        "en": "Industry-linked training with Telechips and Nextchip covering AVR, STM32, on-device AI, Jetson Orin, FPGA, embedded Linux kernels, device drivers, and device trees."
+      }
+    },
+    {
+      "id": "kt-aivle",
+      "period": {
+        "start": "2025-03",
+        "end": "2025-08",
+        "display": {
+          "ko": "2025.03 ~ 2025.08",
+          "ja": "2025.03〜2025.08",
+          "en": "March 2025 – August 2025"
+        }
+      },
+      "name": {
+        "ko": "KT AIVLE School",
+        "ja": "KT AIVLE School",
+        "en": "KT AIVLE School"
+      },
+      "description": {
+        "ko": "AI 개발자 과정. 기초 모델링, LangChain·LangGraph, React·Spring Boot 웹개발, AWS·Docker 인프라 학습.",
+        "ja": "AI開発者課程。基礎モデリング、LangChain・LangGraph、React・Spring Boot Web開発、AWS・Dockerインフラを学習。",
+        "en": "AI developer program covering foundational modeling, LangChain, LangGraph, React and Spring Boot web development, AWS, and Docker."
+      }
+    },
+    {
+      "id": "aws-academy",
+      "period": {
+        "start": "2025-09",
+        "end": "2025-12",
+        "display": {
+          "ko": "2025.09 ~ 2025.12",
+          "ja": "2025.09〜2025.12",
+          "en": "September 2025 – December 2025"
+        }
+      },
+      "name": {
+        "ko": "AWS Academy",
+        "ja": "AWS Academy",
+        "en": "AWS Academy"
+      },
+      "description": {
+        "ko": "Cloud Foundations, Cloud Architecting, Machine Learning Foundations 이수.",
+        "ja": "Cloud Foundations、Cloud Architecting、Machine Learning Foundationsを修了。",
+        "en": "Completed Cloud Foundations, Cloud Architecting, and Machine Learning Foundations."
+      }
+    },
+    {
+      "id": "google-ml-bootcamp",
+      "period": {
+        "start": "2024-07",
+        "end": "2024-10",
+        "display": {
+          "ko": "2024.07 ~ 2024.10",
+          "ja": "2024.07〜2024.10",
+          "en": "July 2024 – October 2024"
+        }
+      },
+      "name": {
+        "ko": "Google Machine Learning Bootcamp",
+        "ja": "Google Machine Learning Bootcamp",
+        "en": "Google Machine Learning Bootcamp"
+      },
+      "description": {
+        "ko": "딥러닝, Kaggle, Gemma 기반 LLM 파인튜닝 학습.",
+        "ja": "ディープラーニング、Kaggle、GemmaベースのLLMファインチューニングを学習。",
+        "en": "Studied deep learning, Kaggle workflows, and Gemma-based LLM fine-tuning."
+      }
+    },
+    {
+      "id": "likelion-activity",
+      "period": {
+        "start": "2024-01",
+        "end": "2025-08",
+        "display": {
+          "ko": "2024.01 ~ 2025.08",
+          "ja": "2024.01〜2025.08",
+          "en": "January 2024 – August 2025"
+        }
+      },
+      "name": {
+        "ko": "멋쟁이사자처럼 대학",
+        "ja": "LIKELION University",
+        "en": "LIKELION University"
+      },
+      "description": {
+        "ko": "백엔드 과정 수료 후 13기 운영진·백엔드 멘토로 신입 교육과 해커톤 준비 지원.",
+        "ja": "バックエンド課程修了後、第13期運営・バックエンドメンターとして新人教育とハッカソン準備を支援。",
+        "en": "After completing the backend track, served as a 13th-cohort organizer and backend mentor for new-member training and hackathon preparation."
+      }
+    },
+    {
+      "id": "dive",
+      "period": {
+        "start": "2024-09",
+        "end": "2025-10",
+        "display": {
+          "ko": "2024.09 ~ 2025.10",
+          "ja": "2024.09〜2025.10",
+          "en": "September 2024 – October 2025"
+        }
+      },
+      "name": {
+        "ko": "DIVE 데이터 분석 학회",
+        "ja": "DIVE データ分析サークル",
+        "en": "DIVE Data Analytics Society"
+      },
+      "description": {
+        "ko": "싱푸탕후루 협력 프로젝트 수행, 신입 6명 대상 NumPy·Pandas 교육.",
+        "ja": "シンフータンフル協力プロジェクトを実施し、新規メンバー6名にNumPy・Pandasを指導。",
+        "en": "Completed the Xingfu Tanghulu collaboration project and taught NumPy and Pandas to six new members."
+      }
+    },
+    {
+      "id": "pytorch-korea",
+      "period": null,
+      "name": {
+        "ko": "PyTorch 공식 문서 한글화 기여",
+        "ja": "PyTorch公式ドキュメント韓国語化への貢献",
+        "en": "PyTorch Official Documentation Korean Translation"
+      },
+      "organization": {
+        "ko": "OSSCA · PyTorchKR",
+        "ja": "OSSCA・PyTorchKR",
+        "en": "OSSCA · PyTorchKR"
+      },
+      "description": {
+        "ko": "PyTorch 공식 튜토리얼 한국어 번역에 기여.",
+        "ja": "PyTorch公式チュートリアルの韓国語翻訳に貢献。",
+        "en": "Contributed to the Korean translation of official PyTorch tutorials."
+      },
+      "links": [
+        {
+          "label": {
+            "ko": "병합된 Pull Request",
+            "ja": "マージ済みPull Request",
+            "en": "Merged pull request"
+          },
+          "url": "https://github.com/PyTorchKR/tutorials-kr/pull/1049"
+        }
+      ]
+    },
+    {
+      "id": "kisa-nh-fintech",
+      "period": {
+        "start": "2022-02",
+        "end": "2022-02",
+        "display": {
+          "ko": "2022.02 · 군 복무 중 수강",
+          "ja": "2022.02・兵役中に受講",
+          "en": "February 2022 · Completed during military service"
+        }
+      },
+      "name": {
+        "ko": "KISA × NH Fintech Academy",
+        "ja": "KISA × NH Fintech Academy",
+        "en": "KISA × NH Fintech Academy"
+      },
+      "description": {
+        "ko": "금융위원회 오픈 API, 입출금 기능, React 뱅킹 UI, OAuth·JWT 실습.",
+        "ja": "金融委員会Open API、入出金機能、ReactバンキングUI、OAuth・JWTを実習。",
+        "en": "Practiced with Financial Services Commission open APIs, transfers, a React banking UI, OAuth, and JWT."
+      }
+    },
+    {
+      "id": "nfgs",
+      "period": null,
+      "name": {
+        "ko": "NFGS 퀀트 투자 학회",
+        "ja": "NFGS クオンツ投資サークル",
+        "en": "NFGS Quantitative Investing Society"
+      },
+      "description": {
+        "ko": "퀀트 투자 학회 활동.",
+        "ja": "クオンツ投資サークルで活動。",
+        "en": "Participated in a quantitative investing society."
+      }
+    },
+    {
+      "id": "vic-volunteering",
+      "period": {
+        "start": "2024-12",
+        "end": "2025-01",
+        "display": {
+          "ko": "2024.12 ~ 2025.01",
+          "ja": "2024.12〜2025.01",
+          "en": "December 2024 – January 2025"
+        }
+      },
+      "name": {
+        "ko": "VIC 봉사활동",
+        "ja": "VIC ボランティア活動",
+        "en": "VIC Volunteering"
+      },
+      "description": {
+        "ko": "VIC 봉사활동 참여.",
+        "ja": "VICのボランティア活動に参加。",
+        "en": "Participated in VIC volunteer activities."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": "backend",
+      "label": {
+        "ko": "백엔드",
+        "ja": "バックエンド",
+        "en": "Backend"
+      },
+      "items": [
+        "Java 17",
+        "Spring Boot 3.5",
+        "Spring MVC",
+        "QueryDSL",
+        "MyBatis",
+        "JPA/Hibernate",
+        "WebFlux",
+        "Spring Security",
+        "JWT",
+        "OAuth",
+        "Python",
+        "FastAPI",
+        "Shell Script"
+      ],
+      "context": {
+        "ko": "실무·창업·프로젝트에서 설계·구현",
+        "ja": "実務・創業・プロジェクトで設計／実装",
+        "en": "Designed and implemented across professional, startup, and project work"
+      }
+    },
+    {
+      "id": "architecture",
+      "label": {
+        "ko": "아키텍처",
+        "ja": "アーキテクチャ",
+        "en": "Architecture"
+      },
+      "items": [
+        "DDD",
+        "Multi-tenancy",
+        "Stateless",
+        "Privacy by Design",
+        "Idempotency",
+        "Atomic Commit",
+        "Read/Write Model Separation"
+      ],
+      "context": {
+        "ko": "서비스 요구사항과 운영 제약에 맞춘 시스템 설계",
+        "ja": "サービス要件と運用制約に応じたシステム設計",
+        "en": "System design aligned with service requirements and operational constraints"
+      }
+    },
+    {
+      "id": "distributed-systems",
+      "label": {
+        "ko": "분산 시스템",
+        "ja": "分散システム",
+        "en": "Distributed Systems"
+      },
+      "items": [
+        "Kafka",
+        "CDC",
+        "Event-driven Architecture",
+        "MSA",
+        "Saga",
+        "CQRS",
+        "Graceful Degradation"
+      ],
+      "context": {
+        "ko": "교육·팀 프로젝트에서 구현·배포·장애 분석",
+        "ja": "教育・チームプロジェクトで実装／デプロイ／障害解析",
+        "en": "Implemented, deployed, and debugged in coursework and team projects"
+      }
+    },
+    {
+      "id": "database-cache",
+      "label": {
+        "ko": "데이터베이스 · 캐시",
+        "ja": "データベース・キャッシュ",
+        "en": "Database & Cache"
+      },
+      "items": [
+        "MySQL 8",
+        "MariaDB",
+        "SQLite",
+        "Redis",
+        "Elasticsearch",
+        "ChromaDB",
+        "Caffeine Cache",
+        "Flyway",
+        "Testcontainers"
+      ],
+      "context": {
+        "ko": "실무·창업·프로젝트에서 운영",
+        "ja": "実務・創業・プロジェクトで運用",
+        "en": "Used across professional, startup, and project environments"
+      }
+    },
+    {
+      "id": "cloud",
+      "label": {
+        "ko": "클라우드",
+        "ja": "クラウド",
+        "en": "Cloud"
+      },
+      "items": [
+        "AWS EC2",
+        "VPC",
+        "S3",
+        "RDS",
+        "ALB",
+        "WAF",
+        "Auto Scaling",
+        "IAM",
+        "Secrets Manager",
+        "KMS",
+        "EBS",
+        "Route 53",
+        "CloudWatch",
+        "NCP"
+      ],
+      "context": {
+        "ko": "직접 구축·배포·운영과 장애 대응",
+        "ja": "構築・デプロイ・運用・障害対応",
+        "en": "Hands-on provisioning, deployment, operations, and incident response"
+      }
+    },
+    {
+      "id": "container-iac",
+      "label": {
+        "ko": "컨테이너 · IaC",
+        "ja": "コンテナ・IaC",
+        "en": "Containers & IaC"
+      },
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "AKS",
+        "Helm",
+        "Nginx",
+        "Terraform",
+        "GitHub Actions"
+      ],
+      "context": {
+        "ko": "컨테이너 배포·자동화·인프라 코드 관리",
+        "ja": "コンテナデプロイ・自動化・Infrastructure as Code",
+        "en": "Container deployment, automation, and infrastructure as code"
+      }
+    },
+    {
+      "id": "ai-llm",
+      "label": {
+        "ko": "AI · LLM",
+        "ja": "AI・LLM",
+        "en": "AI & LLM"
+      },
+      "items": [
+        "LangGraph",
+        "Multi-Agent Orchestration",
+        "GPT",
+        "Gemini",
+        "Claude",
+        "Clova",
+        "RAG",
+        "LoRA/QLoRA",
+        "Gemma",
+        "Unsloth",
+        "PyTorch",
+        "Spring AI"
+      ],
+      "context": {
+        "ko": "LLM 워크플로우·검색·파인튜닝·모델 서빙 연동",
+        "ja": "LLMワークフロー・検索・ファインチューニング・モデル配信連携",
+        "en": "LLM workflows, retrieval, fine-tuning, and model-serving integration"
+      }
+    },
+    {
+      "id": "os-linux",
+      "label": {
+        "ko": "OS · Linux",
+        "ja": "OS・Linux",
+        "en": "OS & Linux"
+      },
+      "items": [
+        "Amazon Linux",
+        "Ubuntu",
+        "Embedded Linux",
+        "Linux Kernel",
+        "Device Driver",
+        "Device Tree"
+      ],
+      "context": {
+        "ko": "서버 운영·스토리지 관리·임베디드 Linux 학습",
+        "ja": "サーバー運用・ストレージ管理・組み込みLinux学習",
+        "en": "Server operations, storage management, and embedded Linux training"
+      }
+    },
+    {
+      "id": "observability",
+      "label": {
+        "ko": "관측",
+        "ja": "可観測性",
+        "en": "Observability"
+      },
+      "items": [
+        "Micrometer",
+        "Prometheus",
+        "Structured Logging",
+        "Custom Metrics"
+      ],
+      "context": {
+        "ko": "메트릭과 구조화 로그 기반 운영 가시성",
+        "ja": "メトリクスと構造化ログによる運用可視性",
+        "en": "Operational visibility through metrics and structured logs"
+      }
+    },
+    {
+      "id": "data-analysis",
+      "label": {
+        "ko": "데이터 분석",
+        "ja": "データ分析",
+        "en": "Data Analysis"
+      },
+      "items": [
+        "Pandas",
+        "NumPy",
+        "Association Analysis",
+        "Public Data",
+        "Data Quality"
+      ],
+      "context": {
+        "ko": "매출·공공데이터·서비스 로그를 비즈니스 개선으로 연결",
+        "ja": "売上・公共データ・サービスログを業務改善へ接続",
+        "en": "Connected sales, public data, and service logs to practical improvements"
+      }
+    },
+    {
+      "id": "frontend",
+      "label": {
+        "ko": "프론트엔드",
+        "ja": "フロントエンド",
+        "en": "Frontend"
+      },
+      "items": [
+        "Next.js 16",
+        "React 19",
+        "Tailwind CSS 4",
+        "Thymeleaf",
+        "jQuery"
+      ],
+      "context": {
+        "ko": "풀스택 협업과 서비스 화면 구현",
+        "ja": "フルスタック協業とサービス画面実装",
+        "en": "Full-stack collaboration and service UI implementation"
+      }
+    },
+    {
+      "id": "embedded",
+      "label": {
+        "ko": "임베디드",
+        "ja": "組み込み",
+        "en": "Embedded"
+      },
+      "items": [
+        "STM32F411",
+        "ATmega128A",
+        "Register-level C",
+        "RCC",
+        "GPIO",
+        "TIM",
+        "EXTI",
+        "USART",
+        "NVIC",
+        "I2C",
+        "ADC",
+        "DMA",
+        "UART",
+        "PWM"
+      ],
+      "context": {
+        "ko": "레지스터 직접 설정·센서 수집·통신·안전 제어",
+        "ja": "レジスタ直接設定・センサー収集・通信・安全制御",
+        "en": "Direct register configuration, sensor acquisition, communications, and safety control"
+      }
+    }
+  ],
+  "education": {
+    "institution": {
+      "ko": "한동대학교",
+      "ja": "韓東大学校",
+      "en": "Handong Global University"
+    },
+    "school": {
+      "ko": "전산전자공학부",
+      "ja": "電算電子工学部",
+      "en": "School of Computer Science and Electrical Engineering"
+    },
+    "major": {
+      "ko": "전자공학 · 컴퓨터공학 전공",
+      "ja": "電子工学・コンピュータ工学専攻",
+      "en": "Electrical Engineering and Computer Science"
+    },
+    "period": {
+      "start": "2020-03",
+      "end": "2026-02",
+      "display": {
+        "ko": "2020.03 ~ 2026.02 · 졸업",
+        "ja": "2020.03〜2026.02・卒業",
+        "en": "March 2020 – February 2026 · Graduated"
+      }
+    },
+    "gpa": "3.55 / 4.50",
+    "details": {
+      "ko": "전공 평점 3.58 · 백분위 90.5 · 총 130학점",
+      "ja": "専攻GPA 3.58・百分位90.5・取得130単位",
+      "en": "Major GPA 3.58 · 90.5 percentile score · 130 credits"
+    }
+  },
+  "credentials": {
+    "certifications": [
+      {
+        "name": {
+          "ko": "데이터분석 준전문가 (ADsP)",
+          "ja": "データ分析準専門家（ADsP）",
+          "en": "Advanced Data Analytics Semi-Professional (ADsP)"
+        }
+      },
+      {
+        "name": {
+          "ko": "컴퓨터활용능력 1급",
+          "ja": "コンピュータ活用能力 1級",
+          "en": "Computer Specialist in Spreadsheet & Database, Level 1"
+        }
+      }
+    ],
+    "languages": [
+      {
+        "name": "TOEIC",
+        "score": "815"
+      },
+      {
+        "name": "TOEIC Speaking",
+        "score": "IH",
+        "date": "2025-08"
+      }
+    ],
+    "military": {
+      "ko": "병역 이행 · 의무경찰 · 2021.02 ~ 2022.08 · 병장 만기제대",
+      "ja": "兵役履行済み・義務警察・2021.02〜2022.08・兵長満期除隊",
+      "en": "Military service completed · Auxiliary Police · February 2021 – August 2022 · Honorably discharged as Sergeant"
+    }
+  },
+  "contacts": [
+    {
+      "id": "github",
+      "label": {
+        "ko": "GitHub",
+        "ja": "GitHub",
+        "en": "GitHub"
+      },
+      "value": "github.com/7SH7",
+      "url": "https://github.com/7SH7"
+    },
+    {
+      "id": "linkedin",
+      "label": {
+        "ko": "LinkedIn",
+        "ja": "LinkedIn",
+        "en": "LinkedIn"
+      },
+      "value": "linkedin.com/in/shkim498",
+      "url": "https://www.linkedin.com/in/shkim498"
+    },
+    {
+      "id": "email",
+      "label": {
+        "ko": "이메일",
+        "ja": "メール",
+        "en": "Email"
+      },
+      "value": "kimseunghwan7777@gmail.com",
+      "url": "mailto:kimseunghwan7777@gmail.com"
+    },
+    {
+      "id": "micemore",
+      "label": {
+        "ko": "라이브 서비스",
+        "ja": "ライブサービス",
+        "en": "Live service"
+      },
+      "value": "m.micemore.com",
+      "url": "https://m.micemore.com/"
+    }
+  ],
+  "repository_links": [
+    {
+      "name": "multi_agent",
+      "url": "https://github.com/7SH7/multi_agent",
+      "language": "Python",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "ai-data",
+        "backend"
+      ],
+      "description": {
+        "ko": "스마트 팩토리 Multi-LLM Agent 구현",
+        "ja": "スマートファクトリー向けMulti-LLM Agent実装",
+        "en": "Multi-LLM agent implementation for smart-factory issue resolution"
+      }
+    },
+    {
+      "name": "ugly_back",
+      "url": "https://github.com/7SH7/ugly_back",
+      "language": "Java",
+      "kind": "fork",
+      "featured": true,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "Ugly Pick Spring Boot 백엔드",
+        "ja": "Ugly Pick Spring Bootバックエンド",
+        "en": "Ugly Pick Spring Boot backend"
+      }
+    },
+    {
+      "name": "ugly_price_predict",
+      "url": "https://github.com/7SH7/ugly_price_predict",
+      "language": "Python",
+      "kind": "fork",
+      "featured": true,
+      "categories": [
+        "ai-data",
+        "backend"
+      ],
+      "description": {
+        "ko": "Ugly Pick 데이터 파이프라인·모델 서빙",
+        "ja": "Ugly Pickデータパイプライン・モデル配信",
+        "en": "Ugly Pick data pipeline and model serving"
+      }
+    },
+    {
+      "name": "llm_for_science",
+      "url": "https://github.com/7SH7/llm_for_science",
+      "language": "Python",
+      "kind": "fork",
+      "featured": false,
+      "categories": [
+        "ai-data",
+        "backend"
+      ],
+      "description": {
+        "ko": "DeepSpeed 기반 CPT · PDF 파싱 협업 포크",
+        "ja": "DeepSpeedベースCPT・PDF解析の共同Fork",
+        "en": "Collaborative fork for DeepSpeed-based CPT and PDF parsing"
+      }
+    },
+    {
+      "name": "hotspot_local",
+      "url": "https://github.com/7SH7/hotspot_local",
+      "language": "Java",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "Hot Spot 백엔드",
+        "ja": "Hot Spotバックエンド",
+        "en": "Hot Spot backend"
+      }
+    },
+    {
+      "name": "viaflight_local",
+      "url": "https://github.com/7SH7/viaflight_local",
+      "language": "Java",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "ViaFlight 백엔드",
+        "ja": "ViaFlightバックエンド",
+        "en": "ViaFlight backend"
+      }
+    },
+    {
+      "name": "ondevice",
+      "url": "https://github.com/7SH7/ondevice",
+      "language": "Python",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "embedded",
+        "ai-data"
+      ],
+      "description": {
+        "ko": "온디바이스 AI 실험",
+        "ja": "オンデバイスAI実験",
+        "en": "On-device AI experiments"
+      }
+    },
+    {
+      "name": "on-device-project",
+      "url": "https://github.com/7SH7/on-device-project",
+      "language": "Python",
+      "kind": "original",
+      "featured": false,
+      "categories": [
+        "embedded",
+        "ai-data"
+      ],
+      "description": {
+        "ko": "온디바이스 추론 프로젝트",
+        "ja": "オンデバイス推論プロジェクト",
+        "en": "On-device inference project"
+      }
+    },
+    {
+      "name": "slip-out",
+      "url": "https://github.com/7SH7/slip-out",
+      "language": "JavaScript",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "배포된 웹 서비스와 시연 자료",
+        "ja": "デプロイ済みWebサービスとデモ",
+        "en": "Deployed web service and demo"
+      }
+    },
+    {
+      "name": "choreography-with-deadline",
+      "url": "https://github.com/7SH7/choreography-with-deadline",
+      "language": "Vue",
+      "kind": "original",
+      "featured": true,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "마감시간을 고려한 choreography 실습",
+        "ja": "期限を考慮したchoreography実習",
+        "en": "Choreography practice with deadline handling"
+      }
+    },
+    {
+      "name": "kafka-scaling",
+      "url": "https://github.com/7SH7/kafka-scaling",
+      "language": null,
+      "kind": "fork",
+      "featured": false,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "Kafka 스케일링 학습 저장소",
+        "ja": "Kafkaスケーリング学習リポジトリ",
+        "en": "Kafka scaling study repository"
+      }
+    },
+    {
+      "name": "CMS",
+      "url": "https://github.com/7SH7/CMS",
+      "language": "TypeScript",
+      "kind": "fork",
+      "featured": false,
+      "categories": [
+        "backend",
+        "cloud"
+      ],
+      "description": {
+        "ko": "동아리 관리 서비스",
+        "ja": "サークル管理サービス",
+        "en": "Club management service"
+      }
+    },
+    {
+      "name": "study_spring",
+      "url": "https://github.com/7SH7/study_spring",
+      "language": "Java",
+      "kind": "original",
+      "featured": false,
+      "categories": [
+        "backend"
+      ],
+      "description": {
+        "ko": "Spring 학습 기록",
+        "ja": "Spring学習記録",
+        "en": "Spring study notes"
+      }
+    },
+    {
+      "name": "_webflux_",
+      "url": "https://github.com/7SH7/_webflux_",
+      "language": "Java",
+      "kind": "original",
+      "featured": false,
+      "categories": [
+        "backend"
+      ],
+      "description": {
+        "ko": "Reactive Spring·WebFlux 학습",
+        "ja": "Reactive Spring・WebFlux学習",
+        "en": "Reactive Spring and WebFlux study"
+      }
+    },
+    {
+      "name": "opensource_copet",
+      "url": "https://github.com/7SH7/opensource_copet",
+      "language": "Python",
+      "kind": "original",
+      "featured": false,
+      "categories": [
+        "ai-data"
+      ],
+      "description": {
+        "ko": "포렌식 자동 분류 CLI · 규칙/RAG/로컬 LLM 기반 리포팅",
+        "ja": "フォレンジック自動分類CLI・ルール／RAG／ローカルLLMによるレポート",
+        "en": "Forensic auto-classification CLI with rule, RAG, and local-LLM reporting"
+      }
+    },
+    {
+      "name": "unsloth",
+      "url": "https://github.com/7SH7/unsloth",
+      "language": null,
+      "kind": "fork",
+      "featured": false,
+      "categories": [
+        "ai-data"
+      ],
+      "description": {
+        "ko": "Unsloth 커널 학습용 포크",
+        "ja": "Unslothカーネル学習用フォーク",
+        "en": "Fork for studying Unsloth kernels"
+      }
+    }
+  ]
+}
