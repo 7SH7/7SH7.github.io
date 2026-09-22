@@ -765,7 +765,6 @@ class Renderer:
             '<section class="section" id="contact"><div class="container">'
             f'{self.section_heading("08", "contact", sections["contact"], "contact_intro")}'
             f'<div class="compact-grid">{"".join(cards)}</div>'
-            f'{self.localized("p", "generated.note", COPY["generated_note"], ATTR_GENERATED_NOTE)}'
             '</div></section>'
         )
 
@@ -890,7 +889,6 @@ def build(offline: bool) -> str:
             separators=(",", ":"),
             sort_keys=True,
         ).replace("<", "\\u003c"),
-        "{{BUILD_DATE}}": f'CONTENT UPDATED · {esc(content["meta"]["updated_at"])}',
     }
     for placeholder, replacement in replacements.items():
         if placeholder not in template:
