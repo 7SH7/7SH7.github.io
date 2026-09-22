@@ -490,14 +490,9 @@
       },
       "highlights": [
         {
-          "ko": "Terraform으로 인프라를 코드로 관리하고, GitHub Actions에서 빌드·테스트 검증을 통과한 것만 배포",
-          "ja": "Terraformでインフラをコードとして管理し、GitHub Actionsのビルド・テスト検証を通過したものだけをデプロイ",
-          "en": "Infrastructure as code with Terraform, deploying only what passes build and test validation in GitHub Actions"
-        },
-        {
-          "ko": "AWS 서울 리전에서 두 개의 가용영역에 걸친 구성으로 운영",
-          "ja": "AWSソウルリージョンで2つのアベイラビリティゾーンにまたがる構成で運用",
-          "en": "Running across two availability zones in the AWS Seoul Region"
+          "ko": "Terraform으로 인프라를 코드로 관리하고, GitHub Actions에서 빌드·테스트 검증을 통과한 것만 두 개의 가용영역에 배포",
+          "ja": "Terraformでインフラをコードとして管理し、GitHub Actionsの検証を通過したものだけを2つのアベイラビリティゾーンへデプロイ",
+          "en": "Infrastructure as code with Terraform, deploying only what passes GitHub Actions validation across two availability zones"
         },
         {
           "ko": "NFC 태깅 응답 경로를 AI 처리와 분리해, AI가 느려져도 태깅 자체는 지연되지 않도록 설계",
@@ -518,6 +513,16 @@
           "ko": "한국어·영어·일본어를 지원하고, 번역문은 사람이 승인한 뒤에만 발행",
           "ja": "韓国語・英語・日本語に対応し、翻訳文は人の承認を経てから公開",
           "en": "Serves Korean, English and Japanese, with translations published only after a human approves them"
+        },
+        {
+          "ko": "개막 피크를 가정한 부하 테스트에서 720 rps를 5분간 유지해 214,900건을 처리하고 5xx 0건 확인, 쓰기 경로 p95 115ms",
+          "ja": "開幕ピークを想定した負荷試験で720 rpsを5分間維持し214,900件を処理、5xx 0件を確認。書き込み経路のp95は115ms",
+          "en": "Held 720 rps for five minutes in a peak-opening load test: 214,900 requests, zero 5xx, and a 115 ms p95 on the write path"
+        },
+        {
+          "ko": "같은 테스트에서 오토스케일 확장·축소가 실제로 동작함을 확인하고, 확장 완료까지 약 4분이 걸려 개막 순간의 급증에는 늦다는 한계를 기록",
+          "ja": "同テストでオートスケールの拡張・縮小が実際に動作することを確認し、拡張完了まで約4分かかり開幕直後の急増には間に合わない限界を記録",
+          "en": "Confirmed autoscaling out and back in during the same test, and recorded that scale-out takes about four minutes — too slow for the opening surge"
         }
       ],
       "technologies": [

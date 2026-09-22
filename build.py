@@ -846,6 +846,16 @@ def validate_output(document: str) -> None:
         raise ValueError(f"Generated HTML is missing required content: {missing}")
 
     prohibited = (
+        "micemore-" + "prod",
+        "micemore-" + "login",
+        "REPLACE" + "_ME",
+        "SECURITY_" + "BACKLOG",
+        "LOADTEST_" + "PLAN",
+        "bas" + "tion",
+        "actuator/" + "health",
+        "ELEVEN" + "LABS",
+        "flyway_schema_" + "history",
+        "image-" + "tag",
         "포트폴리오 " + "해커톤 대상",
         "홀리데이 " + "해커톤 대상",
         "한동" + "대 SW",
