@@ -23,10 +23,10 @@ PROJECT_CATEGORIES = {"cloud", "embedded", "backend", "ai-data"}
 # MICEMore leads the live section already, so the project grid opens with the next
 # strongest cloud and backend work. Every card is the same size.
 FEATURED_ORDER = (
-    "ugly-pick",
-    "llm-for-science",
-    "vehicle-diagnostics-r300",
     "micemore",
+    "llm-for-science",
+    "ugly-pick",
+    "vehicle-diagnostics-r300",
 )
 ATTR_SECTION_INTRO = 'class="section-intro"'
 ATTR_EYEBROW = 'class="eyebrow"'
@@ -72,9 +72,9 @@ COPY: dict[str, dict[str, str]] = {
     "featured_projects": {"ko": "대표 프로젝트", "ja": "主要プロジェクト", "en": "Featured projects"},
     "additional_projects": {"ko": "추가 프로젝트", "ja": "その他のプロジェクト", "en": "Additional projects"},
     "more_projects_summary": {
-        "ko": "추가 프로젝트와 공개 저장소 보기",
-        "ja": "その他のプロジェクトと公開リポジトリを見る",
-        "en": "View additional projects and public repositories",
+        "ko": "추가 프로젝트 보기",
+        "ja": "その他のプロジェクトを見る",
+        "en": "View additional projects",
     },
     "more_activities_summary": {
         "ko": "활동 전체 보기",
@@ -210,14 +210,14 @@ class Renderer:
             items.append(f'<a class="{classes}" href="{esc(link["url"])}">{label}</a>')
         return f'<div class="actions">{"".join(items)}</div>'
 
-    def section_heading(self, number: str, key: str, title: dict[str, str], intro_key: str) -> str:
+    def section_heading(self, number: str, key: str, title: dict[str, str], intro_key: str | None = None) -> str:
         return (
             '<div class="section-heading">'
             '<div>'
             f'<p class="section-label">{esc(number)} // {esc(key.upper())}</p>'
             f'{self.localized("h2", f"section.{key}.title", title)}'
             '</div>'
-            f'{self.localized("p", f"section.{key}.intro", COPY[intro_key], ATTR_SECTION_INTRO)}'
+            f'{self.localized("p", f"section.{key}.intro", COPY[intro_key], ATTR_SECTION_INTRO) if intro_key else ""}'
             '</div>'
         )
 
@@ -573,24 +573,6 @@ class Renderer:
         )
         return card, dialog
 
-    def repository_card(self, repository: dict[str, Any], index: int) -> str:
-        categories = repository["categories"]
-        kind = repository.get("kind", "original")
-        kind_label = self.content["meta"]["ui"]["fork" if kind == "fork" else "original"]
-        language = f'<span class="tag">{esc(repository["language"])}</span>' if repository.get("language") else ""
-        return (
-            f'<article class="card repo-card" data-project-categories="{esc(" ".join(categories))}">'
-            '<div class="tag-list">'
-            f'{self.localized("span", f"repository.{index}.kind", kind_label, ATTR_BADGE)}'
-            f'{language}'
-            '</div>'
-            f'<h3><code>{esc(repository["name"])}</code></h3>'
-            f'{self.localized("p", f"repository.{index}.description", repository["description"])}'
-            '<div class="actions">'
-            f'<a class="button" href="{esc(repository["url"])}">{self.localized_text(f"repository.{index}.open", COPY["open_repository"])}</a>'
-            '</div></article>'
-        )
-
     def projects_section(self) -> str:
         sections = self.content["meta"]["sections"]
         labels = self.content["meta"]["category_labels"]
@@ -617,10 +599,6 @@ class Renderer:
             card, dialog = self.project_card(project, compact=True)
             additional_cards += card
             dialogs.append(dialog)
-        repositories = "".join(
-            self.repository_card(repository, index)
-            for index, repository in enumerate(self.content["repository_links"])
-        )
         return (
             '<section class="section" id="projects"><div class="container">'
             f'{self.section_heading("03", "projects", sections["projects"], "projects_intro")}'
@@ -634,10 +612,6 @@ class Renderer:
             '<div class="more-disclosure-body">'
             f'{self.localized("h3", "projects.additional.heading", COPY["additional_projects"])}'
             f'<div class="compact-grid">{additional_cards}</div>'
-            '<hr>'
-            f'{self.localized("h3", "projects.repositories.heading", sections["repositories"])}'
-            f'{self.localized("p", "projects.repositories.intro", COPY["repositories_intro"], ATTR_SECTION_INTRO)}'
-            f'<div class="compact-grid repo-grid">{repositories}</div>'
             '</div></details>'
             f'{"".join(dialogs)}'
             '</div></section>'
@@ -751,7 +725,7 @@ class Renderer:
             )
         return (
             '<section class="section" id="education"><div class="container">'
-            f'{self.section_heading("07", "education", sections["education"], "education_intro")}'
+            f'{self.section_heading("07", "education", sections["education"])}'
             '<div class="split-grid">'
             '<article class="panel">'
             f'{self.localized("p", "education.card.label", COPY["education_card"], ATTR_EYEBROW)}'
@@ -789,7 +763,7 @@ class Renderer:
             )
         return (
             '<section class="section" id="contact"><div class="container">'
-            f'{self.section_heading("08", "contact", sections["contact"], "contact_intro")}'
+            f'{self.section_heading("08", "contact", sections["contact"])}'
             f'<div class="compact-grid">{"".join(cards)}</div>'
             '</div></section>'
         )
@@ -808,7 +782,7 @@ def validate_content(content: dict[str, Any]) -> None:
     expected_counts = {
         "experience": 5,
         "featured_projects": 4,
-        "other_projects": 8,
+        "other_projects": 9,
         "activities": 10,
         # External organizers only; on-campus and club wins were removed
         # deliberately, so a change here should be deliberate too.

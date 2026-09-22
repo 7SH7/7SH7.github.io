@@ -1175,6 +1175,17 @@
       word-break: keep-all;
     }
 
+    /* A link inside a table row is a footnote, not a call to action. */
+    .responsive-table .actions {
+      margin-top: 0.6rem;
+    }
+
+    .responsive-table .button {
+      min-height: 2rem;
+      padding: 0.4rem 0.7rem;
+      font-size: 0.7rem;
+    }
+
     @media (max-width: 860px) {
       :root {
         --header-height: 4rem;

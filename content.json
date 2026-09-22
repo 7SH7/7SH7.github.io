@@ -743,6 +743,77 @@
   ],
   "other_projects": [
     {
+      "id": "forensicagent",
+      "categories": [
+        "ai-data",
+        "backend"
+      ],
+      "name": {
+        "ko": "forensicagent — 포렌식 자동 분류 CLI 에이전트",
+        "ja": "forensicagent — フォレンジック自動分類CLIエージェント",
+        "en": "forensicagent — Forensic triage CLI agent"
+      },
+      "period": {
+        "start": "2026-08",
+        "end": "2026-09",
+        "display": {
+          "ko": "2026.08 ~ 2026.09",
+          "ja": "2026.08〜2026.09",
+          "en": "August – September 2026"
+        }
+      },
+      "role": {
+        "ko": "오픈소스 개인 프로젝트 · 설계·구현",
+        "ja": "オープンソース個人プロジェクト・設計／実装",
+        "en": "Open-source solo project · Design & implementation"
+      },
+      "summary": {
+        "ko": "증거를 식별해 어떤 도구를 어떤 순서로 돌릴지 정하고, 도구 출력에서 알려진 의심 패턴만 뽑아 리포트로 묶는 triage 단계를 자동화.",
+        "ja": "証拠を識別してどのツールをどの順で実行するかを決め、ツール出力から既知の疑わしいパターンのみを抽出してレポートにまとめるtriage工程を自動化。",
+        "en": "Automates the triage step: identify the evidence, decide which tools run in what order, and pull only known suspicious patterns from their output into a report."
+      },
+      "highlights": [
+        {
+          "ko": "Scanner → Selector → Executor → Analyzer → Reporter 5단계를 순수 함수와 데이터클래스로 분리해 어느 단계든 stub으로 교체해도 나머지가 깨지지 않게 구성",
+          "ja": "Scanner→Selector→Executor→Analyzer→Reporterの5段階を純粋関数とデータクラスで分離し、どの段階をstubに差し替えても他が壊れない構成に",
+          "en": "Split the pipeline into five stages of pure functions and dataclasses so any stage can be swapped for a stub without breaking the others"
+        },
+        {
+          "ko": "도구 선별을 결정론 필터 → RAG 재정렬 → LLM 우선순위 3단계로 나누고, RAG는 순서와 컨텍스트만 바꾸고 실행 자격은 바꾸지 못하도록 제한",
+          "ja": "ツール選別を決定論フィルタ→RAG再整列→LLM優先順位の3段階に分け、RAGは順序と文脈のみに影響し実行資格は変更できないよう制限",
+          "en": "Staged tool selection as deterministic filter, then RAG re-ranking, then LLM prioritization, with RAG able to change order and context but never eligibility"
+        },
+        {
+          "ko": "RAG 의존성이나 인덱스가 없으면 결정론 경로로 조용히 폴백하고, LLM 파싱 실패 시에도 앞 단계 결과를 그대로 사용해 파이프라인이 항상 동작",
+          "ja": "RAGの依存関係やインデックスが無ければ決定論経路へ静かにフォールバックし、LLMの解析失敗時も前段の結果をそのまま使用してパイプラインが常に動作",
+          "en": "Falls back silently to the deterministic path when RAG dependencies or the index are absent, and reuses the prior stage when LLM parsing fails, so the pipeline always runs"
+        },
+        {
+          "ko": "증거를 외부로 보내지 않도록 로컬 LLM을 사용하고, 도메인 지식은 모델이 아니라 도구 메타데이터 YAML에 두어 도구 추가 비용을 파일 하나로 축소",
+          "ja": "証拠を外部に送らないようローカルLLMを使用し、ドメイン知識はモデルではなくツールメタデータのYAMLに置くことでツール追加コストをファイル1つに",
+          "en": "Runs a local LLM so evidence never leaves the machine, and keeps domain knowledge in tool-metadata YAML rather than the model, reducing a new tool to one file"
+        }
+      ],
+      "technologies": [
+        "Python",
+        "Pydantic",
+        "Ollama",
+        "ChromaDB",
+        "RAG",
+        "CLI"
+      ],
+      "links": [
+        {
+          "label": {
+            "ko": "저장소",
+            "ja": "リポジトリ",
+            "en": "Repository"
+          },
+          "url": "https://github.com/7SH7/opensource_copet"
+        }
+      ]
+    },
+    {
       "id": "smart-factory-multi-agent",
       "categories": [
         "ai-data",
@@ -1380,33 +1451,6 @@
       }
     },
     {
-      "id": "kt-aivle",
-      "period": {
-        "start": "2025-03",
-        "end": "2025-08",
-        "display": {
-          "ko": "2025.03 ~ 2025.08",
-          "ja": "2025.03〜2025.08",
-          "en": "March 2025 – August 2025"
-        }
-      },
-      "name": {
-        "ko": "KT AIVLE School",
-        "ja": "KT AIVLE School",
-        "en": "KT AIVLE School"
-      },
-      "description": {
-        "ko": "AI 개발자 과정. 기초 모델링, LangChain·LangGraph, React·Spring Boot 웹개발, AWS·Docker 인프라 학습.",
-        "ja": "AI開発者課程。基礎モデリング、LangChain・LangGraph、React・Spring Boot Web開発、AWS・Dockerインフラを学習。",
-        "en": "AI developer program covering foundational modeling, LangChain, LangGraph, React and Spring Boot web development, AWS, and Docker."
-      },
-      "organization": {
-        "ko": "KT",
-        "ja": "KT",
-        "en": "KT"
-      }
-    },
-    {
       "id": "aws-academy",
       "period": {
         "start": "2025-09",
@@ -1431,82 +1475,6 @@
         "ko": "AWS",
         "ja": "AWS",
         "en": "AWS"
-      }
-    },
-    {
-      "id": "google-ml-bootcamp",
-      "period": {
-        "start": "2024-07",
-        "end": "2024-10",
-        "display": {
-          "ko": "2024.07 ~ 2024.10",
-          "ja": "2024.07〜2024.10",
-          "en": "July 2024 – October 2024"
-        }
-      },
-      "name": {
-        "ko": "Google Machine Learning Bootcamp",
-        "ja": "Google Machine Learning Bootcamp",
-        "en": "Google Machine Learning Bootcamp"
-      },
-      "description": {
-        "ko": "딥러닝, Kaggle, Gemma 기반 LLM 파인튜닝 학습.",
-        "ja": "ディープラーニング、Kaggle、GemmaベースのLLMファインチューニングを学習。",
-        "en": "Studied deep learning, Kaggle workflows, and Gemma-based LLM fine-tuning."
-      },
-      "organization": {
-        "ko": "Google",
-        "ja": "Google",
-        "en": "Google"
-      }
-    },
-    {
-      "id": "likelion-activity",
-      "period": {
-        "start": "2024-01",
-        "end": "2025-08",
-        "display": {
-          "ko": "2024.01 ~ 2025.08",
-          "ja": "2024.01〜2025.08",
-          "en": "January 2024 – August 2025"
-        }
-      },
-      "name": {
-        "ko": "멋쟁이사자처럼 대학",
-        "ja": "LIKELION University",
-        "en": "LIKELION University"
-      },
-      "description": {
-        "ko": "백엔드 과정 수료 후 13기 운영진·백엔드 멘토로 신입 교육과 해커톤 준비 지원.",
-        "ja": "バックエンド課程修了後、第13期運営・バックエンドメンターとして新人教育とハッカソン準備を支援。",
-        "en": "After completing the backend track, served as a 13th-cohort organizer and backend mentor for new-member training and hackathon preparation."
-      },
-      "organization": {
-        "ko": "멋쟁이사자처럼",
-        "ja": "LIKELION",
-        "en": "LIKELION"
-      }
-    },
-    {
-      "id": "dive",
-      "period": {
-        "start": "2024-09",
-        "end": "2025-10",
-        "display": {
-          "ko": "2024.09 ~ 2025.10",
-          "ja": "2024.09〜2025.10",
-          "en": "September 2024 – October 2025"
-        }
-      },
-      "name": {
-        "ko": "DIVE 데이터 분석 학회",
-        "ja": "DIVE データ分析サークル",
-        "en": "DIVE Data Analytics Society"
-      },
-      "description": {
-        "ko": "싱푸탕후루 협력 프로젝트 수행, 신입 6명 대상 NumPy·Pandas 교육.",
-        "ja": "シンフータンフル協力プロジェクトを実施し、新規メンバー6名にNumPy・Pandasを指導。",
-        "en": "Completed the Xingfu Tanghulu collaboration project and taught NumPy and Pandas to six new members."
       }
     },
     {
@@ -1547,52 +1515,30 @@
       ]
     },
     {
-      "id": "kisa-nh-fintech",
+      "id": "kt-aivle",
       "period": {
-        "start": "2022-02",
-        "end": "2022-02",
+        "start": "2025-03",
+        "end": "2025-08",
         "display": {
-          "ko": "2022.02 · 군 복무 중 수강",
-          "ja": "2022.02・兵役中に受講",
-          "en": "February 2022 · Completed during military service"
+          "ko": "2025.03 ~ 2025.08",
+          "ja": "2025.03〜2025.08",
+          "en": "March 2025 – August 2025"
         }
       },
       "name": {
-        "ko": "KISA × NH Fintech Academy",
-        "ja": "KISA × NH Fintech Academy",
-        "en": "KISA × NH Fintech Academy"
+        "ko": "KT AIVLE School",
+        "ja": "KT AIVLE School",
+        "en": "KT AIVLE School"
       },
       "description": {
-        "ko": "금융위원회 오픈 API, 입출금 기능, React 뱅킹 UI, OAuth·JWT 실습.",
-        "ja": "金融委員会Open API、入出金機能、ReactバンキングUI、OAuth・JWTを実習。",
-        "en": "Practiced with Financial Services Commission open APIs, transfers, a React banking UI, OAuth, and JWT."
+        "ko": "AI 개발자 과정. 기초 모델링, LangChain·LangGraph, React·Spring Boot 웹개발, AWS·Docker 인프라 학습.",
+        "ja": "AI開発者課程。基礎モデリング、LangChain・LangGraph、React・Spring Boot Web開発、AWS・Dockerインフラを学習。",
+        "en": "AI developer program covering foundational modeling, LangChain, LangGraph, React and Spring Boot web development, AWS, and Docker."
       },
       "organization": {
-        "ko": "KISA",
-        "ja": "KISA",
-        "en": "KISA"
-      }
-    },
-    {
-      "id": "nfgs",
-      "period": {
-        "start": "2024-03",
-        "end": "2024-12",
-        "display": {
-          "ko": "2024.03 ~ 2024.12",
-          "ja": "2024.03〜2024.12",
-          "en": "March – December 2024"
-        }
-      },
-      "name": {
-        "ko": "NFGS 퀀트 투자 학회",
-        "ja": "NFGS クオンツ投資サークル",
-        "en": "NFGS Quantitative Investing Society"
-      },
-      "description": {
-        "ko": "퀀트 투자 학회 활동.",
-        "ja": "クオンツ投資サークルで活動。",
-        "en": "Participated in a quantitative investing society."
+        "ko": "KT",
+        "ja": "KT",
+        "en": "KT"
       }
     },
     {
@@ -1620,6 +1566,131 @@
         "ko": "VIC",
         "ja": "VIC",
         "en": "VIC"
+      }
+    },
+    {
+      "id": "dive",
+      "period": {
+        "start": "2024-09",
+        "end": "2025-10",
+        "display": {
+          "ko": "2024.09 ~ 2025.10",
+          "ja": "2024.09〜2025.10",
+          "en": "September 2024 – October 2025"
+        }
+      },
+      "name": {
+        "ko": "DIVE 데이터 분석 학회",
+        "ja": "DIVE データ分析サークル",
+        "en": "DIVE Data Analytics Society"
+      },
+      "description": {
+        "ko": "싱푸탕후루 협력 프로젝트 수행, 신입 6명 대상 NumPy·Pandas 교육.",
+        "ja": "シンフータンフル協力プロジェクトを実施し、新規メンバー6名にNumPy・Pandasを指導。",
+        "en": "Completed the Xingfu Tanghulu collaboration project and taught NumPy and Pandas to six new members."
+      }
+    },
+    {
+      "id": "google-ml-bootcamp",
+      "period": {
+        "start": "2024-07",
+        "end": "2024-10",
+        "display": {
+          "ko": "2024.07 ~ 2024.10",
+          "ja": "2024.07〜2024.10",
+          "en": "July 2024 – October 2024"
+        }
+      },
+      "name": {
+        "ko": "Google Machine Learning Bootcamp",
+        "ja": "Google Machine Learning Bootcamp",
+        "en": "Google Machine Learning Bootcamp"
+      },
+      "description": {
+        "ko": "딥러닝, Kaggle, Gemma 기반 LLM 파인튜닝 학습.",
+        "ja": "ディープラーニング、Kaggle、GemmaベースのLLMファインチューニングを学習。",
+        "en": "Studied deep learning, Kaggle workflows, and Gemma-based LLM fine-tuning."
+      },
+      "organization": {
+        "ko": "Google",
+        "ja": "Google",
+        "en": "Google"
+      }
+    },
+    {
+      "id": "nfgs",
+      "period": {
+        "start": "2024-03",
+        "end": "2024-12",
+        "display": {
+          "ko": "2024.03 ~ 2024.12",
+          "ja": "2024.03〜2024.12",
+          "en": "March – December 2024"
+        }
+      },
+      "name": {
+        "ko": "NFGS 퀀트 투자 학회",
+        "ja": "NFGS クオンツ投資サークル",
+        "en": "NFGS Quantitative Investing Society"
+      },
+      "description": {
+        "ko": "퀀트 투자 학회 활동.",
+        "ja": "クオンツ投資サークルで活動。",
+        "en": "Participated in a quantitative investing society."
+      }
+    },
+    {
+      "id": "likelion-activity",
+      "period": {
+        "start": "2024-01",
+        "end": "2025-08",
+        "display": {
+          "ko": "2024.01 ~ 2025.08",
+          "ja": "2024.01〜2025.08",
+          "en": "January 2024 – August 2025"
+        }
+      },
+      "name": {
+        "ko": "멋쟁이사자처럼 대학",
+        "ja": "LIKELION University",
+        "en": "LIKELION University"
+      },
+      "description": {
+        "ko": "백엔드 과정 수료 후 13기 운영진·백엔드 멘토로 신입 교육과 해커톤 준비 지원.",
+        "ja": "バックエンド課程修了後、第13期運営・バックエンドメンターとして新人教育とハッカソン準備を支援。",
+        "en": "After completing the backend track, served as a 13th-cohort organizer and backend mentor for new-member training and hackathon preparation."
+      },
+      "organization": {
+        "ko": "멋쟁이사자처럼",
+        "ja": "LIKELION",
+        "en": "LIKELION"
+      }
+    },
+    {
+      "id": "kisa-nh-fintech",
+      "period": {
+        "start": "2022-02",
+        "end": "2022-02",
+        "display": {
+          "ko": "2022.02 · 군 복무 중 수강",
+          "ja": "2022.02・兵役中に受講",
+          "en": "February 2022 · Completed during military service"
+        }
+      },
+      "name": {
+        "ko": "KISA × NH Fintech Academy",
+        "ja": "KISA × NH Fintech Academy",
+        "en": "KISA × NH Fintech Academy"
+      },
+      "description": {
+        "ko": "금융위원회 오픈 API, 입출금 기능, React 뱅킹 UI, OAuth·JWT 실습.",
+        "ja": "金融委員会Open API、入出金機能、ReactバンキングUI、OAuth・JWTを実習。",
+        "en": "Practiced with Financial Services Commission open APIs, transfers, a React banking UI, OAuth, and JWT."
+      },
+      "organization": {
+        "ko": "KISA",
+        "ja": "KISA",
+        "en": "KISA"
       }
     }
   ],
@@ -1979,183 +2050,6 @@
       },
       "value": "m.micemore.com",
       "url": "https://m.micemore.com/"
-    }
-  ],
-  "repository_links": [
-    {
-      "name": "multi_agent",
-      "url": "https://github.com/7SH7/multi_agent",
-      "language": "Python",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "ai-data",
-        "backend"
-      ],
-      "description": {
-        "ko": "스마트 팩토리 Multi-LLM Agent 구현",
-        "ja": "スマートファクトリー向けMulti-LLM Agent実装",
-        "en": "Multi-LLM agent implementation for smart-factory issue resolution"
-      }
-    },
-    {
-      "name": "ugly_back",
-      "url": "https://github.com/7SH7/ugly_back",
-      "language": "Java",
-      "kind": "fork",
-      "featured": true,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "Ugly Pick Spring Boot 백엔드",
-        "ja": "Ugly Pick Spring Bootバックエンド",
-        "en": "Ugly Pick Spring Boot backend"
-      }
-    },
-    {
-      "name": "ugly_price_predict",
-      "url": "https://github.com/7SH7/ugly_price_predict",
-      "language": "Python",
-      "kind": "fork",
-      "featured": true,
-      "categories": [
-        "ai-data",
-        "backend"
-      ],
-      "description": {
-        "ko": "Ugly Pick 데이터 파이프라인·모델 서빙",
-        "ja": "Ugly Pickデータパイプライン・モデル配信",
-        "en": "Ugly Pick data pipeline and model serving"
-      }
-    },
-    {
-      "name": "llm_for_science",
-      "url": "https://github.com/7SH7/llm_for_science",
-      "language": "Python",
-      "kind": "fork",
-      "featured": false,
-      "categories": [
-        "ai-data",
-        "backend"
-      ],
-      "description": {
-        "ko": "DeepSpeed 기반 CPT · PDF 파싱 협업 포크",
-        "ja": "DeepSpeedベースCPT・PDF解析の共同Fork",
-        "en": "Collaborative fork for DeepSpeed-based CPT and PDF parsing"
-      }
-    },
-    {
-      "name": "hotspot_local",
-      "url": "https://github.com/7SH7/hotspot_local",
-      "language": "Java",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "Hot Spot 백엔드",
-        "ja": "Hot Spotバックエンド",
-        "en": "Hot Spot backend"
-      }
-    },
-    {
-      "name": "viaflight_local",
-      "url": "https://github.com/7SH7/viaflight_local",
-      "language": "Java",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "ViaFlight 백엔드",
-        "ja": "ViaFlightバックエンド",
-        "en": "ViaFlight backend"
-      }
-    },
-    {
-      "name": "ondevice",
-      "url": "https://github.com/7SH7/ondevice",
-      "language": "Python",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "embedded",
-        "ai-data"
-      ],
-      "description": {
-        "ko": "온디바이스 AI 실험",
-        "ja": "オンデバイスAI実験",
-        "en": "On-device AI experiments"
-      }
-    },
-    {
-      "name": "on-device-project",
-      "url": "https://github.com/7SH7/on-device-project",
-      "language": "Python",
-      "kind": "original",
-      "featured": false,
-      "categories": [
-        "embedded",
-        "ai-data"
-      ],
-      "description": {
-        "ko": "온디바이스 추론 프로젝트",
-        "ja": "オンデバイス推論プロジェクト",
-        "en": "On-device inference project"
-      }
-    },
-    {
-      "name": "slip-out",
-      "url": "https://github.com/7SH7/slip-out",
-      "language": "JavaScript",
-      "kind": "original",
-      "featured": true,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "배포된 웹 서비스와 시연 자료",
-        "ja": "デプロイ済みWebサービスとデモ",
-        "en": "Deployed web service and demo"
-      }
-    },
-    {
-      "name": "CMS",
-      "url": "https://github.com/7SH7/CMS",
-      "language": "TypeScript",
-      "kind": "fork",
-      "featured": false,
-      "categories": [
-        "backend",
-        "cloud"
-      ],
-      "description": {
-        "ko": "동아리 관리 서비스",
-        "ja": "サークル管理サービス",
-        "en": "Club management service"
-      }
-    },
-    {
-      "name": "opensource_copet",
-      "url": "https://github.com/7SH7/opensource_copet",
-      "language": "Python",
-      "kind": "original",
-      "featured": false,
-      "categories": [
-        "ai-data"
-      ],
-      "description": {
-        "ko": "포렌식 자동 분류 CLI · 규칙/RAG/로컬 LLM 기반 리포팅",
-        "ja": "フォレンジック自動分類CLI・ルール／RAG／ローカルLLMによるレポート",
-        "en": "Forensic auto-classification CLI with rule, RAG, and local-LLM reporting"
-      }
     }
   ],
   "screenshots": [
