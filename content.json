@@ -301,14 +301,6 @@
       }
     },
     {
-      "value": "1",
-      "label": {
-        "ko": "개발 인력으로 라이브 운영",
-        "ja": "開発担当1名でライブ運用",
-        "en": "Developer operating a live service"
-      }
-    },
-    {
       "value": "70",
       "label": {
         "ko": "GitHub 공개 저장소",
@@ -360,16 +352,16 @@
       "id": "pseudo-lab",
       "period": {
         "start": "2026-02",
-        "end": null,
+        "end": "2026-08",
         "display": {
-          "ko": "2026.02 ~ 현재",
-          "ja": "2026.02〜現在",
-          "en": "February 2026 – Present"
+          "ko": "2026.02 ~ 2026.08",
+          "ja": "2026.02〜2026.08",
+          "en": "February – August 2026"
         }
       },
       "organization": {
         "ko": "가짜연구소 (Pseudo Lab)",
-        "ja": "Pseudo Lab（ガチャ研究所）",
+        "ja": "Pseudo Lab",
         "en": "Pseudo Lab"
       },
       "role": {
@@ -770,11 +762,11 @@
       },
       "period": {
         "start": "2026-02",
-        "end": null,
+        "end": "2026-08",
         "display": {
-          "ko": "2026.02 ~ 현재",
-          "ja": "2026.02〜現在",
-          "en": "February 2026 – Present"
+          "ko": "2026.02 ~ 2026.08",
+          "ja": "2026.02〜2026.08",
+          "en": "February – August 2026"
         }
       },
       "role": {
@@ -1531,7 +1523,15 @@
     },
     {
       "id": "pytorch-korea",
-      "period": null,
+      "period": {
+        "start": "2025-08",
+        "end": "2025-09",
+        "display": {
+          "ko": "2025.08 ~ 2025.09",
+          "ja": "2025.08〜2025.09",
+          "en": "August – September 2025"
+        }
+      },
       "name": {
         "ko": "PyTorch 공식 문서 한글화 기여",
         "ja": "PyTorch公式ドキュメント韓国語化への貢献",
@@ -1578,11 +1578,24 @@
         "ko": "금융위원회 오픈 API, 입출금 기능, React 뱅킹 UI, OAuth·JWT 실습.",
         "ja": "金融委員会Open API、入出金機能、ReactバンキングUI、OAuth・JWTを実習。",
         "en": "Practiced with Financial Services Commission open APIs, transfers, a React banking UI, OAuth, and JWT."
+      },
+      "organization": {
+        "ko": "KISA",
+        "ja": "KISA",
+        "en": "KISA"
       }
     },
     {
       "id": "nfgs",
-      "period": null,
+      "period": {
+        "start": "2024-03",
+        "end": "2024-12",
+        "display": {
+          "ko": "2024.03 ~ 2024.12",
+          "ja": "2024.03〜2024.12",
+          "en": "March – December 2024"
+        }
+      },
       "name": {
         "ko": "NFGS 퀀트 투자 학회",
         "ja": "NFGS クオンツ投資サークル",
@@ -1614,6 +1627,11 @@
         "ko": "VIC 봉사활동 참여.",
         "ja": "VICのボランティア活動に参加。",
         "en": "Participated in VIC volunteer activities."
+      },
+      "organization": {
+        "ko": "VIC",
+        "ja": "VIC",
+        "en": "VIC"
       }
     }
   ],
