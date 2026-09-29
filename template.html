@@ -1581,21 +1581,9 @@
         }
 
         const availableLanguages = languageButtons.map(languageOf);
-        const browserLanguage = () => {
-          const tags = [...(navigator.languages || []), navigator.language || ""];
-          for (const tag of tags) {
-            const base = String(tag).toLowerCase().split("-")[0];
-            const normalized = base === "jp" ? "ja" : base;
-            if (availableLanguages.includes(normalized)) {
-              return normalized;
-            }
-          }
-          return "";
-        };
         const initialLanguage = availableLanguages.includes(savedLanguage)
           ? savedLanguage
-          : browserLanguage()
-            || (availableLanguages.includes("ko") ? "ko" : availableLanguages[0]);
+          : (availableLanguages.includes("ko") ? "ko" : availableLanguages[0]);
         setLanguage(initialLanguage);
       }
 

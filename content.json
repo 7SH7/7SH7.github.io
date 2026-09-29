@@ -8,14 +8,14 @@
       "en"
     ],
     "site_title": {
-      "ko": "김승환 | 인프라 · 클라우드 엔지니어",
-      "ja": "キム・スンファン | インフラ・クラウドエンジニア",
-      "en": "Seunghwan Kim | Infrastructure & Cloud Engineer"
+      "ko": "김승환 | 소프트웨어 개발자 · 백엔드",
+      "ja": "キム・スンファン | ソフトウェア開発者・バックエンド",
+      "en": "Seunghwan Kim | Software Engineer · Backend"
     },
     "description": {
-      "ko": "AWS 라이브 운영부터 레지스터 수준 임베디드까지, 구현과 운영의 증거를 모은 포트폴리오.",
-      "ja": "AWSライブ運用からレジスタレベルの組み込み開発まで、実装と運用の実績をまとめたポートフォリオ。",
-      "en": "A portfolio of implementation and operations evidence, from live AWS operations to register-level embedded systems."
+      "ko": "Java · Spring 백엔드 개발과 AWS 서비스 운영 경험을 프로젝트별 역할과 결과로 정리한 포트폴리오.",
+      "ja": "Java・Springバックエンド開発とAWSサービス運用の経験を、プロジェクトごとの役割と成果でまとめたポートフォリオ。",
+      "en": "A portfolio of Java and Spring backend development and AWS service operations, organized by role and result for each project."
     },
     "sections": {
       "live": {
@@ -147,19 +147,19 @@
     },
     "romanized_name": "KIM, SEUNGHWAN",
     "title": {
-      "ko": "인프라 · 클라우드 엔지니어",
-      "ja": "インフラ・クラウドエンジニア",
-      "en": "Infrastructure & Cloud Engineer"
+      "ko": "소프트웨어 개발자 · 백엔드",
+      "ja": "ソフトウェア開発者・バックエンド",
+      "en": "Software Engineer · Backend"
     },
     "headline": {
-      "ko": "AWS 라이브 운영부터 레지스터 수준 임베디드까지",
-      "ja": "AWSライブ運用からレジスタレベルの組み込み開発まで",
-      "en": "From live AWS operations to register-level embedded systems"
+      "ko": "설계부터 운영까지 직접 책임지는 Java · Spring 개발자",
+      "ja": "設計から運用まで自ら責任を持つJava・Spring開発者",
+      "en": "A Java and Spring developer who owns services from design to operation"
     },
     "summary": {
-      "ko": "Java와 Spring Boot 기반 백엔드, Terraform 기반 클라우드 인프라, STM32 레지스터 제어를 프로젝트와 운영 환경에서 구현. 문제를 코드·인프라·하드웨어 경계에서 추적하고 재발하기 어려운 구조로 개선.",
-      "ja": "Java／Spring Bootバックエンド、Terraformによるクラウド基盤、STM32のレジスタ制御をプロジェクトと運用環境で実装。問題をコード・インフラ・ハードウェアの境界まで追跡し、再発しにくい構造へ改善。",
-      "en": "Built Java and Spring Boot backends, Terraform-managed cloud infrastructure, and STM32 register-level control in projects and live environments. Traces failures across software, infrastructure, and hardware boundaries, then removes their structural causes."
+      "ko": "Java와 Spring Boot로 KISTI 업무시스템을 DB 설계부터 화면 연동까지 개발했고, 행사용 AI 서비스의 백엔드와 AWS 인프라를 혼자 맡아 서울 리전에서 운영하고 있습니다. 고객 테스트 이슈 200건 이상을 처리하며 요구사항을 코드로 옮기는 법을 익혔고, 장애는 원인까지 추적해 다시 생기지 않는 구조로 고칩니다.",
+      "ja": "JavaとSpring BootでKISTIの業務システムをDB設計から画面連携まで開発し、イベント向けAIサービスのバックエンドとAWSインフラを一人で担当してソウルリージョンで運用しています。顧客テストの課題200件以上に対応しながら要件をコードに落とし込む方法を身につけ、障害は原因まで追跡して再発しない構造に直します。",
+      "en": "I built a KISTI business system in Java and Spring Boot from database design to UI integration, and I run the backend and AWS infrastructure of an event AI service on my own in the Seoul Region. Resolving more than 200 customer test issues taught me to turn requirements into code, and I trace failures to their cause and fix the structure so they do not recur."
     },
     "location": {
       "ko": "대한민국 대전",

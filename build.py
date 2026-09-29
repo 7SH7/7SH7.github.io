@@ -49,9 +49,9 @@ COPY: dict[str, dict[str, str]] = {
     "nav_label": {"ko": "주요 메뉴", "ja": "メインメニュー", "en": "Primary navigation"},
     "language_label": {"ko": "언어 선택", "ja": "言語選択", "en": "Choose language"},
     "hero_eyebrow": {
-        "ko": "INFRASTRUCTURE · CLOUD · EMBEDDED",
-        "ja": "INFRASTRUCTURE · CLOUD · EMBEDDED",
-        "en": "INFRASTRUCTURE · CLOUD · EMBEDDED",
+        "ko": "BACKEND · CLOUD · AI SERVICE",
+        "ja": "BACKEND · CLOUD · AI SERVICE",
+        "en": "BACKEND · CLOUD · AI SERVICE",
     },
     "live_intro": {
         "ko": "MICEMore를 서울 리전에서 직접 운영하며, 배포 구조와 부하 테스트 결과, 장애 대응 방식을 실제 운영 기준으로 정리했습니다.",
