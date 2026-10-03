@@ -470,8 +470,8 @@
         "start": "2026-09",
         "end": null,
         "display": {
-          "ko": "2026.09 ~ 현재 · SoftBank Hackathon 2026",
-          "ja": "2026.09〜現在・SoftBank Hackathon 2026",
+          "ko": "2026.09 ~ 현재 · SoftBank 해커톤 2026",
+          "ja": "2026.09〜現在・SoftBank ハッカソン 2026",
           "en": "September 2026 – Present · SoftBank Hackathon 2026"
         }
       },
@@ -481,9 +481,9 @@
         "en": "6-person team · Deployment control and consistency within a two-person backend team; later server integration verification"
       },
       "summary": {
-        "ko": "온프레미스·퍼블릭 클라우드 배포를 위한 승인·멱등성·state 락·응답 유실 복구를 구현하고, 웹·앱·인프라 사이 실행 계약을 정리했습니다.",
-        "ja": "オンプレミスとパブリッククラウドへのデプロイに向け、承認・冪等性・stateロック・応答喪失時の復旧を実装し、Web・アプリ・インフラ間の実行契約を整理。",
-        "en": "Implemented approvals, idempotency, state locks, and recovery from lost responses, and aligned execution contracts across web, native app, and infrastructure teams."
+        "ko": "SoftBank 해커톤 2026에서 개발한 팀 프로젝트입니다. 온프레미스·퍼블릭 클라우드 배포를 위한 승인·멱등성·state 락·응답 유실 복구를 구현하고, 웹·앱·인프라 사이 실행 계약을 정리했습니다.",
+        "ja": "SoftBank ハッカソン 2026で開発したチームプロジェクト。オンプレミスとパブリッククラウドへのデプロイに向け、承認・冪等性・stateロック・応答喪失時の復旧を実装し、Web・アプリ・インフラ間の実行契約を整理。",
+        "en": "A team project built for SoftBank Hackathon 2026. Implemented approvals, idempotency, state locks, and recovery from lost responses, and aligned execution contracts across web, native app, and infrastructure teams."
       },
       "highlights": [
         {
