@@ -24,6 +24,7 @@ PROJECT_CATEGORIES = {"cloud", "embedded", "backend", "ai-data"}
 # strongest cloud and backend work. Every card is the same size.
 FEATURED_ORDER = (
     "micemore",
+    "unibloom",
     "llm-for-science",
     "ugly-pick",
     "vehicle-diagnostics-r300",
@@ -506,6 +507,15 @@ class Renderer:
                 project["period"]["display"],
             )
         role = self.localized_text(f"project.{project_id}.role", project["role"])
+        case_study = ""
+        for index, section in enumerate(project.get("sections", [])):
+            prefix = f"project.{project_id}.section.{index}"
+            heading = self.localized_text(f"{prefix}.title", section["title"])
+            items = "".join(
+                f'<li>{self.localized_text(f"{prefix}.item.{item_index}", item)}</li>'
+                for item_index, item in enumerate(section["items"])
+            )
+            case_study += f'<details><summary>{heading}</summary><ul class="evidence-list">{items}</ul></details>'
         meta = " · ".join(part for part in (period, role) if part)
         recognition = ""
         if project.get("recognition"):
@@ -567,6 +577,7 @@ class Renderer:
             f'{recognition}<p class="meta">{meta}</p>'
             f'{self.localized("p", f"dialog.{project_id}.summary", project["summary"], ATTR_DIALOG_LEDE)}'
             f'{evidence}'
+            f'{case_study}'
             f'{self.tags(project.get("technologies", []))}'
             f'{self.links(project.get("links"), f"dialog.{project_id}")}'
             '</div></dialog>'
@@ -781,7 +792,7 @@ class Renderer:
 def validate_content(content: dict[str, Any]) -> None:
     expected_counts = {
         "experience": 5,
-        "featured_projects": 4,
+        "featured_projects": 5,
         "other_projects": 9,
         "activities": 10,
         # External organizers only; on-campus and club wins were removed
@@ -832,6 +843,7 @@ def validate_output(document: str) -> None:
         'id="live"',
         'id="experience"',
         'id="projects"',
+        'id="project-unibloom"',
         'id="awards"',
         'id="activities"',
         'id="skills"',
@@ -873,7 +885,6 @@ def validate_output(document: str) -> None:
         "정확도 30" + "% 향상",
         "정보처리" + "기사" + " 필기",
         "AWS " + "SAA" + " 준비",
-        "Azu" + "re",
         "/v1/" + "taps",
         "10.20." + "0.0" + "/16",
         "micemore" + ".dev",
