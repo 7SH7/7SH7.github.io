@@ -422,18 +422,6 @@
       border-top: 3px solid var(--signal);
     }
 
-    .live-card::before {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 50%;
-      background: var(--signal);
-      box-shadow: 0 0 0 0.28rem rgba(79, 209, 197, 0.12);
-      content: "";
-    }
-
     .live-card .actions {
       margin-top: 1.5rem;
     }
@@ -702,7 +690,6 @@
       white-space: normal;
     }
 
-    .badge--live,
     .badge--signal {
       border-color: var(--signal);
       color: var(--signal);
@@ -860,24 +847,6 @@
 
     .live-card {
       background: linear-gradient(152deg, var(--panel-raised), var(--panel) 58%);
-    }
-
-    .live-card::before {
-      animation: live-pulse 2.6s ease-out infinite;
-    }
-
-    @keyframes live-pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(79, 209, 197, 0.5);
-      }
-
-      70% {
-        box-shadow: 0 0 0 0.8rem rgba(79, 209, 197, 0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(79, 209, 197, 0);
-      }
     }
 
     .project-card,

@@ -34,7 +34,6 @@ ATTR_EYEBROW = 'class="eyebrow"'
 ATTR_HERO_LEDE = 'class="hero-lede"'
 ATTR_BADGE = 'class="badge"'
 ATTR_STAT_LABEL = 'class="stat-label"'
-ATTR_LIVE_BADGE = 'class="badge badge--live"'
 ATTR_META = 'class="meta"'
 ATTR_DIALOG_LEDE = 'class="dialog-lede"'
 ATTR_MUTED = 'class="muted"'
@@ -55,9 +54,9 @@ COPY: dict[str, dict[str, str]] = {
         "en": "BACKEND · CLOUD · AI SERVICE",
     },
     "live_intro": {
-        "ko": "MICEMore를 서울 리전에서 직접 운영하며, 배포 구조와 부하 테스트 결과, 장애 대응 방식을 실제 운영 기준으로 정리했습니다.",
-        "ja": "MICEMoreをソウルリージョンで自ら運用し、デプロイ構成・負荷テスト結果・障害対応の方式を実運用の基準でまとめました。",
-        "en": "I run MICEMore in the AWS Seoul Region myself; this section covers its deployment setup, load test results, and incident handling as they work in production.",
+        "ko": "MICEMore를 직접 구축·배포해 2026년 10월 10일 포항 빵 축제에서 운영했습니다. 아래는 행사 운영 당시의 배포 구조, 부하 테스트 결과와 장애 대응 경험입니다.",
+        "ja": "MICEMoreを自ら構築・デプロイし、2026年10月10日の浦項パン祭りで運用しました。以下はイベント運用当時のデプロイ構成、負荷試験結果、障害対応の経験です。",
+        "en": "I built and deployed MICEMore and operated it at the Pohang bread festival on October 10, 2026. This section records the deployment setup, load test results, and incident handling from that period.",
     },
     "stats_label": {"ko": "핵심 수치", "ja": "主要指標", "en": "Key metrics"},
     "experience_intro": {
@@ -66,9 +65,9 @@ COPY: dict[str, dict[str, str]] = {
         "en": "From leading development at an event AI startup to open-source paper-data curation, university academic data quality work, and building a KISTI business system, here is what I owned and what came of it.",
     },
     "projects_intro": {
-        "ko": "AWS 서울 리전에서 단독 운영 중인 행사용 AI 통합 서비스를 비롯해, 인프라 코드 관리와 Spring Boot 백엔드, 캐시 전략, 다중 모델 워크플로우까지 프로젝트별 역할과 결과를 정리했습니다.",
-        "ja": "AWSソウルリージョンで単独運用中のイベント向けAI統合サービスをはじめ、インフラのコード管理、Spring Bootバックエンド、キャッシュ戦略、マルチモデルワークフローまで、プロジェクトごとの役割と成果をまとめました。",
-        "en": "From an event AI service I run solo in the AWS Seoul Region to infrastructure as code, Spring Boot backends, caching strategy, and multi-model workflows, each project lists my role and its results.",
+        "ko": "AWS 서울 리전에서 구축해 실제 행사에 적용한 AI 통합 서비스를 비롯해, 인프라 코드 관리와 Spring Boot 백엔드, 캐시 전략, 다중 모델 워크플로우까지 프로젝트별 역할과 결과를 정리했습니다.",
+        "ja": "AWSソウルリージョンで構築し実際のイベントで運用したAI統合サービスをはじめ、インフラのコード管理、Spring Bootバックエンド、キャッシュ戦略、マルチモデルワークフローまで、プロジェクトごとの役割と成果をまとめました。",
+        "en": "From an AI service built in the AWS Seoul Region and used at an actual event to infrastructure as code, Spring Boot backends, caching strategy, and multi-model workflows, each project lists my role and its results.",
     },
     "featured_projects": {"ko": "대표 프로젝트", "ja": "主要プロジェクト", "en": "Featured projects"},
     "additional_projects": {"ko": "추가 프로젝트", "ja": "その他のプロジェクト", "en": "Additional projects"},
@@ -311,7 +310,6 @@ class Renderer:
             for index, stat in enumerate(self.content["stats"])
         )
         stats_aria = self.translated_aria_attrs("stats.label", COPY["stats_label"])
-        live_links = [{"label": self.content["meta"]["ui"]["view_live"], "url": live["url"]}]
         architecture_markup = ""
         if architecture := live.get("architecture"):
             architecture_markup = self.architecture_figure(architecture)
@@ -321,13 +319,15 @@ class Renderer:
             f'{self.section_heading("01", "live", sections["live"], "live_intro")}'
             '<article class="live-card">'
             '<div>'
-            f'{self.localized("span", "live.status", live["status"], ATTR_LIVE_BADGE)}'
+            f'{self.localized("span", "live.status", live["status"], ATTR_BADGE)}'
             f'<h3>{esc(live["name"])}</h3>'
             f'{self.localized("p", "live.tagline", live["tagline"], ATTR_META)}'
             f'{self.localized("p", "live.role", live["role"])}'
             f'{self.localized("p", "live.summary", live["summary"], ATTR_MUTED)}'
             f'{self.tags(live["technologies"])}'
-            f'{self.links(live_links, "live", primary=True)}'
+            '<div class="actions"><button type="button" class="button button--primary" data-open-dialog="project-micemore">'
+            f'{self.localized_text("live.details", self.content["meta"]["ui"]["details"])}'
+            '</button></div>'
             '</div>'
             f'<ul class="evidence-list">{evidence}</ul>'
             '</article>'
@@ -850,7 +850,7 @@ def validate_output(document: str) -> None:
         'id="education"',
         'id="contact"',
         'data-filter="embedded"',
-        'https://m.micemore.com/',
+        'id="project-micemore"',
         'kimseunghwan7777@gmail.com',
     )
     missing = [needle for needle in required if needle not in document]

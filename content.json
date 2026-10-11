@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-09-22",
+    "updated_at": "2026-10-11",
     "default_locale": "ko",
     "locales": [
       "ko",
@@ -19,9 +19,9 @@
     },
     "sections": {
       "live": {
-        "ko": "라이브 서비스",
-        "ja": "ライブサービス",
-        "en": "Live Service"
+        "ko": "서비스 운영 경험",
+        "ja": "サービス運用経験",
+        "en": "Service Operations"
       },
       "experience": {
         "ko": "경력",
@@ -93,9 +93,9 @@
     },
     "ui": {
       "view_live": {
-        "ko": "라이브 서비스 보기",
-        "ja": "ライブサービスを見る",
-        "en": "View live service"
+        "ko": "운영 이력 보기",
+        "ja": "運用実績を見る",
+        "en": "View operating history"
       },
       "view_code": {
         "ko": "코드 보기",
@@ -118,9 +118,9 @@
         "en": "Present"
       },
       "live": {
-        "ko": "운영 중",
-        "ja": "運用中",
-        "en": "Live"
+        "ko": "운영 일시 중단",
+        "ja": "運用を一時停止中",
+        "en": "Operations paused"
       },
       "fork": {
         "ko": "포크 저장소",
@@ -157,9 +157,9 @@
       "en": "A Java and Spring developer who owns services from design to operation"
     },
     "summary": {
-      "ko": "Java와 Spring Boot로 KISTI 업무시스템을 DB 설계부터 화면 연동까지 개발했고, 행사용 AI 서비스의 백엔드와 AWS 인프라를 혼자 맡아 서울 리전에서 운영하고 있습니다. 고객 테스트 이슈 200건 이상을 처리하며 요구사항을 코드로 옮기는 법을 익혔고, 장애는 원인까지 추적해 다시 생기지 않는 구조로 고칩니다.",
-      "ja": "JavaとSpring BootでKISTIの業務システムをDB設計から画面連携まで開発し、イベント向けAIサービスのバックエンドとAWSインフラを一人で担当してソウルリージョンで運用しています。顧客テストの課題200件以上に対応しながら要件をコードに落とし込む方法を身につけ、障害は原因まで追跡して再発しない構造に直します。",
-      "en": "I built a KISTI business system in Java and Spring Boot from database design to UI integration, and I run the backend and AWS infrastructure of an event AI service on my own in the Seoul Region. Resolving more than 200 customer test issues taught me to turn requirements into code, and I trace failures to their cause and fix the structure so they do not recur."
+      "ko": "Java와 Spring Boot로 KISTI 업무시스템을 DB 설계부터 화면 연동까지 개발했고, 행사용 AI 서비스 MICEMore의 백엔드와 AWS 인프라를 혼자 맡아 2026년 10월 10일 포항 빵 축제까지 운영했습니다. MICEMore는 행사 종료 후 현재 운영을 일시 중단한 상태입니다. 고객 테스트 이슈 200건 이상을 처리하며 요구사항을 코드로 옮기는 법을 익혔고, 장애는 원인까지 추적해 다시 생기지 않는 구조로 고칩니다.",
+      "ja": "JavaとSpring BootでKISTIの業務システムをDB設計から画面連携まで開発し、イベント向けAIサービスMICEMoreのバックエンドとAWSインフラを一人で担当して、2026年10月10日の浦項パン祭りまで運用しました。MICEMoreはイベント終了後、現在運用を一時停止しています。顧客テストの課題200件以上に対応しながら要件をコードに落とし込む方法を身につけ、障害は原因まで追跡して再発しない構造に直します。",
+      "en": "I built a KISTI business system in Java and Spring Boot from database design to UI integration, and solely managed the backend and AWS infrastructure of MICEMore through the Pohang bread festival on October 10, 2026. MICEMore operations are currently paused following the event. Resolving more than 200 customer test issues taught me to turn requirements into code, and I trace failures to their cause and fix the structure so they do not recur."
     },
     "location": {
       "ko": "대한민국 대전",
@@ -175,11 +175,10 @@
   "live_service": {
     "id": "micemore",
     "name": "MICEMore",
-    "url": "https://m.micemore.com/",
     "status": {
-      "ko": "AWS 서울 리전 운영 중",
-      "ja": "AWSソウルリージョンで運用中",
-      "en": "Live in the AWS Seoul Region"
+      "ko": "2026.10.10 행사 운영 · 현재 일시 중단",
+      "ja": "2026.10.10 イベント運用・現在一時停止中",
+      "en": "Operated at the Oct 10, 2026 event · Currently paused"
     },
     "tagline": {
       "ko": "AI 기반 MICE 통합 인터랙션 서비스",
@@ -192,9 +191,9 @@
       "en": "Development Lead · Sole Developer"
     },
     "summary": {
-      "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당하고 라이브 서비스를 운영.",
-      "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当し、ライブサービスを運用。",
-      "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations."
+      "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당하고, 2026년 10월 10일 포항 빵 축제 현장에서 서비스를 운영했습니다. 행사 종료 후 운영 비용을 줄이기 위해 운영 환경을 정리했으며, 현재 서비스는 일시 중단한 상태입니다.",
+      "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当し、2026年10月10日の浦項パン祭りでサービスを運用しました。イベント終了後は運用コスト削減のため運用環境を撤去し、現在サービスを一時停止しています。",
+      "en": "Solely managed the complete backend, AWS infrastructure, and deployment, operating the service at the Pohang bread festival on October 10, 2026. After the event, I decommissioned the hosting infrastructure to reduce costs; the service is currently paused."
     },
     "evidence": [
       {
@@ -208,9 +207,9 @@
         "en": "Deployment through GitHub Actions after build and test validation"
       },
       {
-        "ko": "AWS 서울 리전 라이브 운영",
-        "ja": "AWSソウルリージョンでライブ運用",
-        "en": "Live operations in the AWS Seoul Region"
+        "ko": "AWS 서울 리전에서 구축·배포하고 2026.10.10 포항 빵 축제 현장 운영에 적용",
+        "ja": "AWSソウルリージョンで構築・デプロイし、2026.10.10の浦項パン祭りで現場運用",
+        "en": "Built and deployed in the AWS Seoul Region, then used at the Pohang bread festival on October 10, 2026"
       },
       {
         "ko": "장애 감지 시 AI가 원인 분석 초안을 작성하고, 사람이 검토해 PR로 반영. 자동 배포는 하지 않음",
@@ -225,9 +224,9 @@
     ],
     "architecture": {
       "title": {
-        "ko": "MICEMore 운영 구성 보기",
-        "ja": "MICEMoreの運用構成を見る",
-        "en": "View the MICEMore operating setup"
+        "ko": "행사 운영 당시 구성 보기",
+        "ja": "イベント運用時の構成を見る",
+        "en": "View the setup used during the event"
       },
       "caption": {
         "ko": "공개용으로 일반화한 구성도입니다. 서브넷 구조, 탐지·알림 스택, 내부 식별자와 운영 자동화 경로는 포함하지 않습니다.",
@@ -333,20 +332,11 @@
         "en": "Development Lead, Founding Team"
       },
       "summary": {
-        "ko": "개발 인력 1명으로 백엔드 전량과 AWS 인프라·배포를 단독 담당하고 서울 리전 라이브 운영.",
-        "ja": "開発担当1名としてバックエンド全体とAWSインフラ・デプロイを単独で担当し、ソウルリージョンでライブ運用。",
-        "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations in the Seoul Region."
+        "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당. 2026.10.10 포항 빵 축제 현장 운영 후, 현재 서비스는 일시 중단.",
+        "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当。2026.10.10の浦項パン祭りで運用後、現在サービスは一時停止中。",
+        "en": "Solely managed the complete backend, AWS infrastructure, and deployment. Operated at the Pohang bread festival on October 10, 2026; the service is currently paused."
       },
-      "links": [
-        {
-          "label": {
-            "ko": "라이브 서비스",
-            "ja": "ライブサービス",
-            "en": "Live service"
-          },
-          "url": "https://m.micemore.com/"
-        }
-      ]
+      "links": []
     },
     {
       "id": "pseudo-lab",
@@ -689,9 +679,9 @@
         "en": "Development Lead · Sole Developer"
       },
       "summary": {
-        "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당하고 서울 리전에서 라이브 서비스 운영.",
-        "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当し、ソウルリージョンでライブサービスを運用。",
-        "en": "Solely responsible for the complete backend, AWS infrastructure, deployment, and live operations in the Seoul Region."
+        "ko": "백엔드 전량과 AWS 인프라·배포를 단독 담당. 2026.10.10 포항 빵 축제 현장 운영 후, 현재 서비스는 일시 중단.",
+        "ja": "バックエンド全体とAWSインフラ・デプロイを単独で担当。2026.10.10の浦項パン祭りで運用後、現在サービスは一時停止中。",
+        "en": "Solely managed the complete backend, AWS infrastructure, and deployment. Operated at the Pohang bread festival on October 10, 2026; the service is currently paused."
       },
       "highlights": [
         {
@@ -735,16 +725,7 @@
         "Terraform",
         "GitHub Actions"
       ],
-      "links": [
-        {
-          "label": {
-            "ko": "라이브 서비스",
-            "ja": "ライブサービス",
-            "en": "Live service"
-          },
-          "url": "https://m.micemore.com/"
-        }
-      ]
+      "links": []
     },
     {
       "id": "vehicle-diagnostics-r300",
@@ -2259,16 +2240,6 @@
       },
       "value": "kimseunghwan7777@gmail.com",
       "url": "mailto:kimseunghwan7777@gmail.com"
-    },
-    {
-      "id": "micemore",
-      "label": {
-        "ko": "라이브 서비스",
-        "ja": "ライブサービス",
-        "en": "Live service"
-      },
-      "value": "m.micemore.com",
-      "url": "https://m.micemore.com/"
     }
   ],
   "screenshots": [
